@@ -1,0 +1,66 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Local databases and runtime data
+*.db
+*.sqlite
+*.sqlite3
+*.sqbpro
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Generated certificates and local images
+certificates/png/
+certificates/pdf/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+*.pdf
+
+# Personal runtime data
+json_files/[0-9]*.json
+reyting.json
+users_results.json
+wrong_ans.json
+
+# Local documents and duplicate assets
+*.docx
+*.odt
+*.txt
+!requirements.txt
+GreatVibes-Regular.ttf
+
+# Logs and editor output
+*.log
+debug.txt
+output.txt
+extracted.txt
+pyflakes_output.txt
+.idea/
+.vscode/
+
+# Diagnostic temporary files
+*_test.png
+*_test_*.png
+_last_check.png
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini

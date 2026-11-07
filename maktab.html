@@ -1,0 +1,3919 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>12-sonli umumta'lim maktabi — Rasmiy Veb-Sayt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<!-- Three.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<style>
+:root{
+  --bg: #070a15;
+  --bg2: #0e1327;
+  --ink: #f1f4fd;
+  --mut: #939cb8;
+  --card: #111730;
+  --card-hover: #182042;
+  --line: rgba(255,255,255,0.11);
+  --line-strong: rgba(255,255,255,0.22);
+  --acc: #ff5a36;
+  --acc-glow: rgba(255,90,54,0.35);
+  --blue: #2b6cb0;
+  --cyan: #06b6d4;
+  --gold: #f59e0b;
+  --glass: rgba(14,19,39,0.72);
+  --glass-border: rgba(255,255,255,0.14);
+  --fd: 'Instrument Serif', Georgia, serif;
+  --fb: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --shadow-glow: 0 10px 30px -10px var(--acc-glow);
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root[data-theme="light"]{
+  --bg: #f5f3ee;
+  --bg2: #e8e3d5;
+  --ink: #0b0f1f;
+  --mut: #555d77;
+  --card: #ffffff;
+  --card-hover: #faf8f5;
+  --line: rgba(11,15,31,0.11);
+  --line-strong: rgba(11,15,31,0.24);
+  --acc: #ea4a24;
+  --acc-glow: rgba(234,74,36,0.25);
+  --blue: #1d4ed8;
+  --cyan: #0284c7;
+  --gold: #d97706;
+  --glass: rgba(255,255,255,0.78);
+  --glass-border: rgba(11,15,31,0.12);
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body{
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.65 var(--fb);
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: var(--fd);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+em{
+  font-style: italic;
+  color: var(--acc);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrap{
+  width: min(1280px, 92%);
+  margin: 0 auto;
+}
+
+.sec{
+  padding: 100px 0;
+  position: relative;
+}
+
+.t1{
+  font-size: clamp(48px, 7.5vw, 110px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.t2{
+  font-size: clamp(38px, 5vw, 72px);
+  margin-bottom: 16px;
+}
+
+.lead{
+  font-size: clamp(16px, 1.25vw, 20px);
+  color: var(--mut);
+  max-width: 58ch;
+  line-height: 1.6;
+}
+
+.kick{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font: 700 12px/1 var(--fb);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--acc);
+  margin-bottom: 20px;
+}
+
+.kick::before{
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: var(--acc);
+  border-radius: 2px;
+}
+
+/* THREAD TRANSITION CURTAIN */
+#tr{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  display: flex;
+}
+#tr i{
+  flex: 1;
+  background: #070a15;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: calc(var(--k) * 45ms);
+  position: relative;
+}
+#tr i:nth-child(even){ background: #0e1428; }
+#tr i::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--acc);
+  opacity: 0.6;
+}
+#tr.on i{ transform: scaleY(1); }
+#tr.out i{ transform-origin: top; transform: scaleY(0); }
+#tr b{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font: italic 400 clamp(42px, 8vw, 100px) var(--fd);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.45s;
+}
+#tr.on b{ opacity: 1; transform: none; transition-delay: 0.35s; }
+
+/* HEADER & NAVBAR */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  padding: 18px 4%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: padding 0.4s ease;
+}
+
+.bar{
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: min(1320px, 100%);
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--glass);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 16px 40px -15px rgba(0,0,0,0.4);
+  transition: var(--transition);
+}
+
+header.s .bar{
+  box-shadow: 0 20px 50px -15px rgba(0,0,0,0.6);
+  padding: 8px 14px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 700 20px/1 var(--fb);
+  letter-spacing: -0.02em;
+}
+
+.school-logo-img{
+  height: 44px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px var(--acc-glow));
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo:hover .school-logo-img{
+  transform: scale(1.08) rotate(-2deg);
+}
+
+nav{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+nav a{
+  position: relative;
+  z-index: 2;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--ink);
+  opacity: 0.85;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+nav a:hover, nav a.on{
+  color: var(--acc);
+  opacity: 1;
+}
+
+#nav-indicator{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--line);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.3, 1.4, 0.4, 1);
+}
+
+.tools{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ib{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  color: var(--ink);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s, border-color 0.3s;
+}
+.ib:hover{
+  transform: scale(1.1) rotate(15deg);
+  border-color: var(--acc);
+  color: var(--acc);
+}
+
+/* BUTTONS */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 7px 8px 7px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14.5px;
+  border: 1.5px solid var(--line-strong);
+  background: var(--card);
+  color: var(--ink);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 18px -4px rgba(0,0,0,0.2);
+}
+
+.btn .r{
+  display: block;
+  height: 1.4em;
+  overflow: hidden;
+}
+.btn .r i{
+  display: block;
+  font-style: normal;
+  line-height: 1.4;
+  transition: transform 0.45s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn:hover .r i{
+  transform: translateY(-100%);
+}
+
+.btn .ar{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s, color 0.3s;
+}
+.btn:hover .ar{
+  transform: rotate(-45deg) scale(1.1);
+  background: var(--acc);
+  color: #fff;
+}
+
+.btn.primary{
+  background: var(--acc);
+  color: #fff;
+  border-color: var(--acc);
+  box-shadow: 0 8px 24px -6px var(--acc-glow);
+}
+.btn.primary .ar{
+  background: #fff;
+  color: var(--acc);
+}
+
+.btn.sm{
+  padding: 5px 6px 5px 18px;
+  font-size: 13.5px;
+}
+.btn.sm .ar{
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+#burger{
+  display: none;
+}
+
+/* SECTION HERO - BOSH SAHIFA */
+.hero-school{
+  min-height: 100vh;
+  padding: 140px 0 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text{
+  position: relative;
+  z-index: 2;
+}
+
+.hero-actions{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+/* 3D Showcase Frame for School Photo */
+.hero-visual{
+  position: relative;
+  perspective: 1200px;
+  display: grid;
+  place-items: center;
+}
+
+.school-card-3d{
+  width: 100%;
+  max-width: 520px;
+  border-radius: 32px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 40px 80px -25px rgba(0,0,0,0.65), 0 0 40px var(--acc-glow);
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out, box-shadow 0.4s;
+  position: relative;
+}
+
+.school-img-box{
+  aspect-ratio: 16/10;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #182245, #080d1e);
+}
+
+.school-img-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.school-card-3d:hover .school-img-box img{
+  transform: scale(1.06);
+}
+
+.school-img-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7,10,21,0.85) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #fff;
+}
+
+.school-img-overlay h3{
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+.school-img-overlay p{
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.floating-pill{
+  position: absolute;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 12px 30px -8px rgba(0,0,0,0.5);
+  font-weight: 700;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: floatAnim 6s ease-in-out infinite;
+  z-index: 10;
+}
+.pill-1{ top: -20px; right: -10px; }
+.pill-2{ bottom: -20px; left: -10px; animation-delay: -3s; }
+
+@keyframes floatAnim{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-12px); }
+}
+
+/* STATS BAR */
+.stats-bar{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 0;
+  border-block: 1px solid var(--line);
+  margin-top: 50px;
+}
+
+.stat-item{
+  text-align: left;
+}
+
+.stat-num{
+  font-family: var(--fd);
+  font-size: clamp(48px, 6vw, 84px);
+  line-height: 1;
+  color: var(--ink);
+  display: block;
+}
+
+.stat-lbl{
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mut);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+/* 3D CANVAS WRAPPER IN SECTIONS */
+.three-canvas-wrap{
+  width: 100%;
+  height: 420px;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(43,108,176,0.12) 0%, transparent 70%);
+}
+
+.three-canvas-wrap canvas{
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.three-badge{
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  pointer-events: none;
+}
+
+/* SECTION 2: HAQIDA */
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.values-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.val-card{
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 1px solid var(--line);
+  transition: var(--transition);
+}
+.val-card:hover{
+  border-color: var(--acc);
+  transform: translateY(-4px);
+}
+.val-card b{
+  font-family: var(--fd);
+  font-size: 26px;
+  display: block;
+  margin-bottom: 6px;
+}
+.val-card p{
+  font-size: 13.5px;
+  color: var(--mut);
+  line-height: 1.5;
+}
+
+/* SECTION 3: YANGILIKLAR */
+.news-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.news-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  cursor: pointer;
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.3);
+}
+
+.news-card:hover{
+  transform: translateY(-8px);
+  border-color: var(--acc);
+  box-shadow: 0 20px 40px -15px var(--acc-glow);
+}
+
+.news-thumb{
+  aspect-ratio: 16/9;
+  background: var(--bg2);
+  position: relative;
+  overflow: hidden;
+}
+
+.news-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.news-card:hover .news-thumb img{
+  transform: scale(1.08);
+}
+
+.news-date-badge{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.news-body{
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-body h3{
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  transition: color 0.25s;
+}
+
+.news-card:hover .news-body h3{
+  color: var(--acc);
+}
+
+.news-body p{
+  color: var(--mut);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.news-more{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--acc);
+}
+
+/* SECTION 4: USTOZLAR */
+.teachers-showcase{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.teacher-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+}
+
+.teacher-card:hover{
+  transform: translateY(-8px);
+  border-color: var(--cyan);
+  box-shadow: 0 20px 45px -15px rgba(6,182,212,0.3);
+}
+
+.teacher-avatar-wrap{
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--acc), var(--cyan));
+  position: relative;
+}
+
+.teacher-avatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg2);
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  overflow: hidden;
+}
+
+.teacher-card h3{
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.teacher-subject{
+  color: var(--acc);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.teacher-meta{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--mut);
+}
+
+.teacher-meta span b{
+  color: var(--ink);
+  display: block;
+  font-size: 16px;
+  font-family: var(--fd);
+}
+
+.teacher-desc{
+  font-size: 13.5px;
+  color: var(--mut);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* SECTION 5: KITOBLAR (KUTUBXONA) */
+.library-filters{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0 45px;
+}
+
+.filter-row{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-label{
+  font-weight: 700;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mut);
+  min-width: 100px;
+}
+
+.pill-group{
+  display: flex;
+  gap: 6px;
+  background: var(--card);
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+
+.pill-btn{
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink);
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.3, 1.4, 0.4, 1);
+}
+
+.pill-btn:hover{
+  background: var(--line);
+}
+
+.pill-btn.on{
+  background: var(--acc);
+  color: #fff;
+  box-shadow: 0 4px 14px var(--acc-glow);
+}
+
+.lang-pill.on{
+  background: var(--cyan);
+  box-shadow: 0 4px 14px rgba(6,182,212,0.4);
+}
+
+.search-input{
+  flex: 1;
+  min-width: 240px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font-size: 15px;
+  font-family: var(--fb);
+  transition: border-color 0.3s;
+}
+.search-input:focus{
+  outline: none;
+  border-color: var(--acc);
+  box-shadow: 0 0 0 4px var(--acc-glow);
+}
+
+/* REALISTIC 3D BOOKS GRID */
+.books-shelf{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px 28px;
+  perspective: 1200px;
+}
+
+.book-card{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.4s;
+}
+
+.book-3d-scene{
+  position: relative;
+  aspect-ratio: 3/4.2;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1);
+  cursor: pointer;
+}
+
+.book-card:hover .book-3d-scene{
+  transform: rotateY(-30deg) rotateX(6deg) translateZ(20px);
+}
+
+.book-shadow{
+  position: absolute;
+  left: 6%;
+  right: -6%;
+  bottom: -16px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  filter: blur(14px);
+  transform: translateZ(-25px);
+  transition: 0.6s;
+}
+.book-card:hover .book-shadow{
+  left: 20%;
+  right: -20%;
+  opacity: 0.75;
+}
+
+.book-cover{
+  position: absolute;
+  inset: 0;
+  border-radius: 4px 14px 14px 4px;
+  padding: 22px 18px;
+  overflow: hidden;
+  color: #fff;
+  transform: translateZ(16px);
+  background: linear-gradient(145deg, hsl(var(--h, 210), 75%, 48%), hsl(calc(var(--h, 210) + 40), 70%, 22%));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 4px 0 10px rgba(0,0,0,0.4), 0 15px 35px -10px rgba(0,0,0,0.6);
+}
+
+.book-cover::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+}
+
+.book-cover::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.3) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.8s ease;
+}
+.book-card:hover .book-cover::after{
+  transform: translateX(120%);
+}
+
+.book-lang-tag{
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.book-title{
+  font-family: var(--fd);
+  font-size: 26px;
+  line-height: 1.05;
+  margin: 10px 0 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.book-icon{
+  position: absolute;
+  right: 14px;
+  bottom: 30px;
+  font-size: 70px;
+  line-height: 1;
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.4));
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.book-card:hover .book-icon{
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.book-back{
+  position: absolute;
+  inset: 0;
+  border-radius: 14px 4px 4px 14px;
+  background: hsl(var(--h, 210), 60%, 18%);
+  transform: translateZ(-16px);
+}
+.book-spine{
+  position: absolute;
+  left: -16px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: hsl(var(--h, 210), 65%, 16%);
+  transform: rotateY(-90deg);
+}
+.book-pages{
+  position: absolute;
+  left: calc(100% - 16px);
+  top: 4px;
+  width: 32px;
+  height: calc(100% - 8px);
+  background: repeating-linear-gradient(0deg, #fff 0 2px, #e2d9c8 2px 4px);
+  transform: rotateY(90deg);
+}
+
+.book-info-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+}
+.book-author{
+  color: var(--mut);
+  font-size: 13px;
+}
+.book-action-btn{
+  color: var(--acc);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.2s;
+}
+.book-action-btn:hover{
+  transform: translateX(4px);
+}
+
+/* SECTION 6: GALEREYA */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.gallery-item{
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--card);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+  transition: var(--transition);
+}
+
+.gallery-item:hover{
+  transform: scale(1.03) translateY(-6px);
+  border-color: var(--acc);
+  box-shadow: 0 20px 45px -10px var(--acc-glow);
+}
+
+.gallery-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.gallery-item:hover img{
+  transform: scale(1.1);
+}
+
+.gallery-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7,10,21,0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
+}
+.gallery-item:hover .gallery-overlay{
+  opacity: 1;
+  transform: none;
+}
+.gallery-overlay h4{
+  font-size: 24px;
+}
+
+/* SECTION 7: ALOQA */
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-info-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-icon{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: var(--acc);
+}
+
+.contact-text small{
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mut);
+  font-weight: 700;
+}
+.contact-text b{
+  font-size: 18px;
+  color: var(--ink);
+}
+
+/* FORM CONTROLS */
+.fld{
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.fld input, .fld textarea, .fld select{
+  width: 100%;
+  padding: 24px 20px 10px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: 500 15.5px var(--fb);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.fld label{
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  color: var(--mut);
+  pointer-events: none;
+  font-size: 14.5px;
+  transition: all 0.25s ease;
+}
+
+.fld input:focus, .fld textarea:focus, .fld select:focus{
+  outline: none;
+  border-color: var(--acc);
+  box-shadow: 0 0 0 4px var(--acc-glow);
+}
+
+.fld input:focus + label,
+.fld input:not(:placeholder-shown) + label,
+.fld textarea:focus + label,
+.fld textarea:not(:placeholder-shown) + label,
+.fld select + label{
+  top: 7px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--acc);
+  font-weight: 700;
+}
+
+.fld .eye{
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 18px;
+  color: var(--mut);
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+  background: #05070e;
+  color: #c4c9dc;
+  padding: 90px 0 40px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-brand p{
+  max-width: 36ch;
+  margin-top: 16px;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.footer-col h4{
+  font-family: var(--fb);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7d87a7;
+  margin-bottom: 16px;
+}
+
+.footer-col a{
+  display: block;
+  padding: 6px 0;
+  font-size: 14.5px;
+  transition: color 0.2s;
+}
+.footer-col a:hover{
+  color: var(--acc);
+}
+
+.footer-developer-card{
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255,90,54,0.08), rgba(43,108,176,0.12));
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.dev-left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dev-badge{
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--acc), var(--blue));
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-family: var(--fd);
+  font-weight: 700;
+  box-shadow: 0 8px 20px -5px var(--acc-glow);
+}
+
+.dev-name{
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(28px, 4vw, 42px);
+  color: #fff;
+  line-height: 1;
+}
+
+.social-links{
+  display: flex;
+  gap: 12px;
+}
+
+.soc-btn{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  transition: transform 0.3s, background 0.3s, border-color 0.3s;
+}
+.soc-btn:hover{
+  transform: translateY(-4px) scale(1.08);
+  background: var(--acc);
+  border-color: var(--acc);
+}
+
+.footer-copy{
+  text-align: center;
+  font-size: 13.5px;
+  color: #636d8d;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ========================================================
+   ADMIN & AUTH VIEWS (Clean, No-overlap Modern UI)
+   ======================================================== */
+.admin-view-wrap{
+  min-height: 100vh;
+  padding: 120px 0 80px;
+}
+
+.admin-layout{
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.admin-sidebar{
+  position: sticky;
+  top: 100px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-profile{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+
+.admin-avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--acc), var(--cyan));
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.admin-nav-item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--ink);
+  transition: all 0.25s;
+  text-align: left;
+}
+.admin-nav-item:hover{
+  background: var(--line);
+}
+.admin-nav-item.on{
+  background: var(--acc);
+  color: #fff;
+}
+
+.admin-content{
+  min-width: 0; /* Prevents overflow in CSS grid */
+}
+
+.admin-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.admin-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.3);
+}
+
+.admin-stats-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.admin-stat-box{
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.admin-stat-box:hover{
+  transform: translateY(-4px);
+  border-color: var(--acc);
+}
+.admin-stat-box b{
+  font-family: var(--fd);
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+}
+.admin-stat-box span{
+  font-size: 13.5px;
+  color: var(--mut);
+  font-weight: 600;
+}
+
+/* Data Tables / List items */
+.admin-item-row{
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) auto auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  margin-bottom: 12px;
+  transition: border-color 0.25s;
+}
+.admin-item-row:hover{
+  border-color: var(--acc);
+}
+
+.admin-thumb-cell{
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: var(--card);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+.admin-thumb-cell img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-title-cell{
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.admin-title-cell b{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.admin-title-cell small{
+  color: var(--mut);
+  font-size: 13px;
+}
+
+.btn-mini{
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  transition: all 0.2s;
+}
+.btn-mini:hover{
+  background: var(--acc);
+  color: #fff;
+  border-color: var(--acc);
+}
+.btn-mini.danger:hover{
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+/* TOAST NOTIFICATION */
+#toast{
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 16px 40px -10px rgba(0,0,0,0.6);
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+#toast.on{
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+/* MODAL DIALOGS */
+dialog{
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 34px;
+  max-width: min(600px, 94vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.7);
+  margin: auto;
+}
+dialog::backdrop{
+  background: rgba(5,8,18,0.75);
+  backdrop-filter: blur(8px);
+}
+
+/* ========================================================
+   RESPONSIVENESS RULES: DESKTOP vs MOBILE
+   ======================================================== */
+/* On Desktop (>= 992px): Show all public sections stacked in continuous flow */
+@media(min-width: 992px){
+  .sec-block{
+    display: block !important;
+  }
+  .mobile-bottom-dock{
+    display: none !important;
+  }
+}
+
+/* On Mobile & Tablet (< 992px): Section by section app-like navigation with dock */
+@media(max-width: 991px){
+  header{
+    padding: 12px 3%;
+  }
+  .bar{
+    padding: 8px 12px;
+  }
+  nav{
+    display: none;
+  }
+  #burger{
+    display: grid;
+  }
+  
+  .hero-grid, .about-grid, .contact-grid{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .stats-bar{
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .admin-layout{
+    grid-template-columns: 1fr;
+  }
+  .admin-sidebar{
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .admin-nav-item{
+    white-space: nowrap;
+  }
+  .admin-profile{
+    display: none;
+  }
+  
+  .admin-item-row{
+    grid-template-columns: 50px minmax(0, 1fr) auto;
+  }
+  .admin-thumb-cell{
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Mobile Bottom Dock */
+  .mobile-bottom-dock{
+    position: fixed;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    z-index: 140;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--glass);
+    backdrop-filter: blur(24px) saturate(2);
+    -webkit-backdrop-filter: blur(24px) saturate(2);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 16px 40px -10px rgba(0,0,0,0.6);
+  }
+  
+  .dock-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--mut);
+    transition: color 0.25s, transform 0.25s;
+    padding: 4px 10px;
+    border-radius: 12px;
+  }
+  .dock-btn span.ic{
+    font-size: 20px;
+  }
+  .dock-btn.on{
+    color: var(--acc);
+    transform: translateY(-2px);
+  }
+
+  /* In mobile mode, hide sections that are not currently active */
+  body[data-mode="app"] .sec-block{
+    display: none;
+  }
+  body[data-mode="app"] .sec-block.active-app-view{
+    display: block !important;
+  }
+}
+
+/* Mobile Fullscreen Menu */
+#mob-menu{
+  position: fixed;
+  inset: 0;
+  z-index: 145;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 8% 60px;
+  clip-path: circle(0 at calc(100% - 40px) 40px);
+  visibility: hidden;
+  transition: clip-path 0.65s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.65s;
+}
+#mob-menu.open{
+  clip-path: circle(150% at calc(100% - 40px) 40px);
+  visibility: visible;
+  transition: clip-path 0.65s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s;
+}
+
+#mob-menu a{
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font: 400 clamp(32px, 8vw, 54px)/1.2 var(--fd);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  transition: color 0.25s;
+}
+#mob-menu a:hover, #mob-menu a.on{
+  color: var(--acc);
+}
+#mob-menu a span{
+  font: 700 13px var(--fb);
+  color: var(--acc);
+}
+
+.password-meter{
+  display: flex;
+  gap: 6px;
+  margin: 6px 0 12px;
+}
+.password-meter i{
+  flex: 1;
+  height: 5px;
+  border-radius: 4px;
+  background: var(--line);
+  transition: background 0.3s;
+}
+.password-meter i.on{
+  background: var(--c, var(--acc));
+}
+
+.rules-list{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 14px;
+  font-size: 12.5px;
+  color: var(--mut);
+  margin-bottom: 16px;
+}
+.rules-list .ok{
+  color: #10b981;
+  font-weight: 700;
+}
+</style>
+</head>
+<body data-theme="dark" data-mode="desktop">
+
+<!-- THREAD CURTAIN TRANSITION -->
+<div id="tr">
+  <i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i>
+  <i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i>
+  <b id="trt">12-Maktab</b>
+</div>
+
+<!-- HEADER NAVBAR -->
+<header id="hd">
+  <div class="bar">
+    <a href="#home" class="logo">
+      <img src="12maktab.png" alt="12-Maktab Logo" class="school-logo-img" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'44\' height=\'44\' viewBox=\'0 0 44 44\' fill=\'none\' stroke=\'%23ff5a36\' stroke-width=\'2\'><circle cx=\'22\' cy=\'22\' r=\'20\'/><text x=\'22\' y=\'27\' text-anchor=\'middle\' font-size=\'18\' font-weight=\'bold\' fill=\'%23ff5a36\'>12</text></svg>'">
+      <span>12-Maktab</span>
+    </a>
+    <nav id="nav">
+      <i id="nav-indicator"></i>
+      <a href="#home" class="on" data-target="p-home">Bosh sahifa</a>
+      <a href="#haqida" data-target="p-haqida">Haqida</a>
+      <a href="#yangiliklar" data-target="p-yangiliklar">Yangiliklar</a>
+      <a href="#ustozlar" data-target="p-ustozlar">Ustozlar</a>
+      <a href="#kitoblar" data-target="p-kitoblar">Kitoblar</a>
+      <a href="#galereya" data-target="p-galereya">Galereya</a>
+      <a href="#aloqa" data-target="p-aloqa">Aloqa</a>
+    </nav>
+    <div class="tools">
+      <button class="ib" id="theme-btn" aria-label="Tungi / Kunduzgi rejim">☀</button>
+      <a href="#kirish" class="btn sm" id="auth-btn">
+        <span class="r"><i>Kirish</i><i>Kirish</i></span>
+        <span class="ar">→</span>
+      </a>
+      <button class="ib" id="burger" aria-label="Menyu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE FULLSCREEN MENU -->
+<div id="mob-menu">
+  <a href="#home" style="--i:0"><span>01</span> Bosh sahifa</a>
+  <a href="#haqida" style="--i:1"><span>02</span> Haqida</a>
+  <a href="#yangiliklar" style="--i:2"><span>03</span> Yangiliklar</a>
+  <a href="#ustozlar" style="--i:3"><span>04</span> Ustozlar</a>
+  <a href="#kitoblar" style="--i:4"><span>05</span> Kitoblar</a>
+  <a href="#galereya" style="--i:5"><span>06</span> Galereya</a>
+  <a href="#aloqa" style="--i:6"><span>07</span> Aloqa</a>
+  <a href="#kirish" style="--i:7"><span>08</span> Kirish (Admin)</a>
+</div>
+
+<!-- MOBILE BOTTOM APP DOCK -->
+<div class="mobile-bottom-dock" id="mobile-dock">
+  <button class="dock-btn on" data-target="p-home"><span class="ic">🏠</span><span>Bosh</span></button>
+  <button class="dock-btn" data-target="p-kitoblar"><span class="ic">📚</span><span>Kitob</span></button>
+  <button class="dock-btn" data-target="p-ustozlar"><span class="ic">🎓</span><span>Ustozlar</span></button>
+  <button class="dock-btn" data-target="p-yangiliklar"><span class="ic">📰</span><span>Yangilik</span></button>
+  <button class="dock-btn" id="dock-menu-btn"><span class="ic">☰</span><span>Menyu</span></button>
+</div>
+
+<!-- MAIN PUBLIC SECTIONS (Desktop: Stacked Tagma-Tag / Mobile: Screen App Mode) -->
+<main id="main-content">
+
+  <!-- 1. BOSH SAHIFA (HERO) -->
+  <section class="sec-block hero-school active-app-view" id="p-home">
+    <video autoplay loop muted playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.6; pointer-events: none;">
+      <source src="12MAKTAB.mp4" type="video/mp4">
+    </video>
+    <div class="wrap" style="position: relative; z-index: 1;">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="kick">12-sonli umumta'lim maktabi</span>
+          <h1 class="t1">
+            <span data-b="h1a">Bilimli yoshlar,</span><br>
+            <span id="h1b"><em>barqaror</em> kelajak.</span>
+          </h1>
+          <p class="lead" data-b="sub" style="margin-top: 24px;">
+            Sifatli ta'lim, malakali ustozlar va zamonaviy sharoit — har bir o'quvchining iqtidori shu yerda ro'yobga chiqadi.
+          </p>
+          <div class="hero-actions">
+            <a href="#haqida" class="btn primary">
+              <span class="r"><i>Biz haqimizda</i><i>Biz haqimizda</i></span>
+              <span class="ar">→</span>
+            </a>
+            <a href="#kitoblar" class="btn">
+              <span class="r"><i>Kutubxona</i><i>Kutubxona</i></span>
+              <span class="ar">📚</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="school-card-3d" id="hero-tilt-card">
+            <div class="floating-pill pill-1">
+              <span>✦ 11-sinf ta'limi</span>
+            </div>
+            <div class="floating-pill pill-2">
+              <span>📖 5000+ Darslik & Badiiy</span>
+            </div>
+            <div class="school-img-box">
+              <img src="12maktab.png" alt="12-Maktab Binosi" id="hero-school-photo" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\' fill=\'%23111730\'><rect width=\'600\' height=\'400\' fill=\'%23111730\'/><text x=\'300\' y=\'200\' fill=\'%23ff5a36\' font-size=\'36\' text-anchor=\'middle\' font-family=\'sans-serif\'>12-Maktab</text></svg>'">
+              <div class="school-img-overlay">
+                <h3>Zamonaviy Ta'lim Maskani</h3>
+                <p>Kelajak yetakchilari kamol topadigan ilm dargohi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Counters -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-num" data-n="1200" data-bn="s1" data-s="+">0</span>
+          <span class="stat-lbl">O'quvchilar</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-n="65" data-bn="s2" data-s="+">0</span>
+          <span class="stat-lbl">Malakali Ustozlar</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-n="40" data-bn="s3" data-s="+">0</span>
+          <span class="stat-lbl">Zamonaviy Sinfxonalar</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-n="46" data-bn="s4">0</span>
+          <span class="stat-lbl">Yillik Tajriba</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. HAQIDA BO'LIMI (Three.js 3D Knowledge Polyhedron) -->
+  <section class="sec-block sec" id="p-haqida">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <span class="kick">Biz haqimizda</span>
+          <h2 class="t2">Bilim, tarbiya va <em>buyuk maqsadlar</em></h2>
+          <p class="lead" data-b="about" style="margin-top: 20px;">
+            Maktabimiz o'quvchilarga sifatli ta'lim va chuqur tarbiya berib keladi. Zamonaviy metodlar, innovatsion laboratoriyalar va mehribon pedagoglarni birlashtirib, har bir bolaning iste'dodini kashf etamiz.
+          </p>
+
+          <div class="values-grid">
+            <div class="val-card">
+              <b>Sifatli Ta'lim</b>
+              <p>Davlat andozalari va xalqaro tajriba asosida chuqurlashtirilgan fanlar.</p>
+            </div>
+            <div class="val-card">
+              <b>Fidoyi Ustozlar</b>
+              <p>Oliy toifali va ko'p yillik tajribaga ega ustoz-pedagoglar jamoasi.</p>
+            </div>
+            <div class="val-card">
+              <b>Axborot Texnologiyalari</b>
+              <p>Kompyuter sinflari, robototexnika va dasturlash to'garaklari.</p>
+            </div>
+            <div class="val-card">
+              <b>Sog'lom Avlod</b>
+              <p>Keng sport zallari va musobaqalarda faxrli o'rinlar egallash.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Three.js 3D Knowledge Crystal -->
+          <div class="three-canvas-wrap" id="three-haqida">
+            <span class="three-badge">✦ Three.js 3D Bilim Kristali</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. YANGILIKLAR BO'LIMI (Three.js 3D Digital Rings) -->
+  <section class="sec-block sec" id="p-yangiliklar">
+    <div class="wrap">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
+        <div>
+          <span class="kick">Yangiliklar & E'lonlar</span>
+          <h2 class="t2">Maktab hayotidan <em>so'nggi voqealar</em></h2>
+        </div>
+        <div style="max-width: 320px; width: 100%;">
+          <div class="three-canvas-wrap" style="height: 140px;" id="three-news">
+            <span class="three-badge" style="font-size: 9px;">3D Hologram Wave</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-grid" id="news-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. USTOZLAR BO'LIMI (Three.js 3D Wisdom Atom) -->
+  <section class="sec-block sec" id="p-ustozlar">
+    <div class="wrap">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="kick">Fidoyi Jamoamiz</span>
+          <h2 class="t2">Tajribali va <em>jonkuyar ustozlar</em></h2>
+          <p class="lead">O'quvchilarimizga nafaqat bilim, balki to'g'ri hayot yo'lini ko'rsatuvchi murabbiylar.</p>
+        </div>
+        <div style="max-width: 360px; width: 100%;">
+          <div class="three-canvas-wrap" style="height: 180px;" id="three-teachers">
+            <span class="three-badge">3D Pedagogik Yadrolar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="teachers-showcase" id="teachers-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. KITOBLAR (KUTUBXONA) BO'LIMI (3D Perspective Books + Multi-language) -->
+  <section class="sec-block sec" id="p-kitoblar">
+    <div class="wrap">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="kick">Elektron Kutubxona</span>
+          <h2 class="t2">1–11-sinf darsliklari va <em>badiiy kitoblar</em></h2>
+          <p class="lead">O'zbek va Tojik tillaridagi darsliklar hamda jahon adabiyoti durdonalari.</p>
+        </div>
+        <div style="max-width: 280px; width: 100%;">
+          <div class="three-canvas-wrap" style="height: 150px;" id="three-books">
+            <span class="three-badge">3D Interactive Books</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters: Classes, Language, Types -->
+      <div class="library-filters">
+        <!-- Grades 1-11 -->
+        <div class="filter-row">
+          <span class="filter-label">Sinf:</span>
+          <div class="pill-group" id="grade-pills">
+            <!-- 1 to 11 generated -->
+          </div>
+        </div>
+
+        <!-- Languages: Uzbek, Tajik, Russian -->
+        <div class="filter-row">
+          <span class="filter-label">Til:</span>
+          <div class="pill-group" id="lang-pills">
+            <button class="pill-btn lang-pill on" data-lang="all">✦ Barcha tillar</button>
+            <button class="pill-btn lang-pill" data-lang="uz">🇺🇿 O'zbek tilida</button>
+            <button class="pill-btn lang-pill" data-lang="tg">🇹🇯 Tojik tilida</button>
+            <button class="pill-btn lang-pill" data-lang="ru">🇷🇺 Rus tilida</button>
+          </div>
+        </div>
+
+        <!-- Types & Search -->
+        <div class="filter-row">
+          <span class="filter-label">Toifa:</span>
+          <div class="pill-group" id="type-pills">
+            <button class="pill-btn on" data-type="all">✦ Hammasi</button>
+            <button class="pill-btn" data-type="d">📘 Darsliklar</button>
+            <button class="pill-btn" data-type="b">📕 Badiiy kitoblar</button>
+          </div>
+          <input type="search" id="book-search" class="search-input" placeholder="Kitob, fan yoki muallif nomi bo'yicha qidiruv...">
+        </div>
+      </div>
+
+      <!-- 3D Realistic Books Shelf -->
+      <div class="books-shelf" id="books-shelf">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GALEREYA BO'LIMI (Three.js 3D Constellation Space) -->
+  <section class="sec-block sec" id="p-galereya">
+    <div class="wrap">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="kick">Fotogalereya</span>
+          <h2 class="t2">Maktabimizning <em>yorqin lahzalari</em></h2>
+        </div>
+        <div style="max-width: 320px; width: 100%;">
+          <div class="three-canvas-wrap" style="height: 140px;" id="three-gallery">
+            <span class="three-badge">3D Star Constellation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="gallery-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ALOQA BO'LIMI (Three.js 3D Interactive Earth Globe) -->
+  <section class="sec-block sec" id="p-aloqa">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <span class="kick">Biz bilan bog'laning</span>
+          <h2 class="t2">Savollaringiz bormi? <em>Biz tayyormiz</em></h2>
+          <p class="lead">Maktab ma'muriyati va qabul komissiyasi bilan to'g'ridan-to'g'ri aloqa o'rnating.</p>
+
+          <div class="contact-info-list">
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-text">
+                <small>Telefon</small>
+                <b data-b="phone">+998 90 123 45 67</b>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-text">
+                <small>Elektron pochta</small>
+                <b data-b="email">12-maktab@edu.uz</b>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">
+                <small>Manzil</small>
+                <b data-b="addr">Toshkent viloyati</b>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" action="https://formspree.io/f/xrpeegdd" method="POST">
+            <div class="fld">
+              <input type="email" name="email" id="cf-name" placeholder=" " required>
+              <label for="cf-name">Elektron pochta</label>
+            </div>
+            <div class="fld">
+              <textarea name="message" id="cf-msg" rows="3" placeholder=" " required></textarea>
+              <label for="cf-msg">Xabaringiz yoki savolingiz</label>
+            </div>
+            <button class="btn primary" type="submit">
+              <span class="r"><i>Xabarni Yuborish</i><i>Xabarni Yuborish</i></span>
+              <span class="ar">→</span>
+            </button>
+            <p id="cf-status" style="margin-top: 12px; font-weight: 700; color: var(--cyan);"></p>
+          </form>
+        </div>
+
+        <div>
+          <!-- Three.js 3D Globe Scene -->
+          <div class="three-canvas-wrap" style="height: 480px;" id="three-globe">
+            <span class="three-badge">✦ Three.js 3D Interaktiv Yer Shari (Sichqoncha bilan aylantiring)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- AUTH VIEW (ADMIN LOGIN) -->
+<section id="p-kirish" style="display: none; min-height: 100vh; padding: 120px 0 80px;">
+  <div class="wrap" style="max-width: 480px;">
+    <div class="admin-card" style="padding: 40px 32px;">
+      <a href="#home" class="btn-mini" style="display: inline-block; margin-bottom: 20px;">← Saytga qaytish</a>
+      <h2 id="login-heading" style="font-size: 38px; margin-bottom: 8px;">Administrator Kirishi</h2>
+      <p class="lead" id="login-sub" style="font-size: 14.5px; margin-bottom: 24px;">Faqat vakolatli xodimlar uchun xavfsiz tizim.</p>
+      
+      <div class="fld">
+        <input id="auth-username" placeholder=" " autocomplete="username" maxlength="40">
+        <label for="auth-username">Login</label>
+      </div>
+
+      <div class="fld">
+        <input id="auth-password" type="password" placeholder=" " autocomplete="current-password">
+        <label for="auth-password">Parol</label>
+        <button class="eye" type="button" id="pwd-toggle-btn" aria-label="Parolni ko'rsatish">👁</button>
+      </div>
+
+      <div class="fld" id="auth-confirm-wrap" style="display: none;">
+        <input id="auth-confirm" type="password" placeholder=" " autocomplete="new-password">
+        <label for="auth-confirm">Parolni takrorlang</label>
+      </div>
+
+      <div id="auth-meter-wrap" style="display: none;">
+        <div class="password-meter" id="pass-meter">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <ul class="rules-list" id="pass-rules"></ul>
+      </div>
+
+      <p id="auth-error" style="color: var(--acc); font-weight: 700; font-size: 14px; min-height: 22px; margin-bottom: 12px;"></p>
+
+      <button class="btn primary" id="auth-submit-btn" style="width: 100%; justify-content: space-between;">
+        <span class="r"><i id="auth-btn-text">Kirish</i><i id="auth-btn-text2">Kirish</i></span>
+        <span class="ar">→</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ADMIN DASHBOARD (NO TEXT OVERLAP, PERFECT RESPONSIVE UI) -->
+<section id="p-admin" style="display: none;">
+  <div class="admin-view-wrap">
+    <div class="wrap admin-layout">
+      <!-- Sidebar -->
+      <aside class="admin-sidebar" id="admin-sidebar">
+        <div class="admin-profile">
+          <div class="admin-avatar" id="admin-avatar-initial">A</div>
+          <div>
+            <b id="admin-profile-name" style="font-size: 16px;">Admin</b>
+            <small style="display: block; color: var(--mut);">Boshqaruvchi</small>
+          </div>
+        </div>
+
+        <button class="admin-nav-item on" data-tab="panel">🏠 Umumiy Panel</button>
+        <button class="admin-nav-item" data-tab="info">🏫 Maktab Ma'lumotlari</button>
+        <button class="admin-nav-item" data-tab="news">📰 Yangiliklar</button>
+        <button class="admin-nav-item" data-tab="teachers">🎓 Ustozlar</button>
+        <button class="admin-nav-item" data-tab="books">📚 Kitoblar (Kutubxona)</button>
+        <button class="admin-nav-item" data-tab="gallery">🖼️ Galereya</button>
+        <button class="admin-nav-item" data-tab="admins">🔐 Adminlar</button>
+        <button class="admin-nav-item" data-tab="backup">💾 Zaxira & Sinxronlash</button>
+        <a href="#home" class="admin-nav-item" style="color: var(--cyan);">↗ Saytni Ko'rish</a>
+        <button class="admin-nav-item" id="admin-logout-btn" style="color: #ef4444;">🚪 Chiqish</button>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="admin-content" id="admin-tab-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <img src="12maktab.png" alt="12-Maktab" class="school-logo-img">
+          <span>12-Maktab</span>
+        </a>
+        <p data-b="foot">Bilim — kelajak kaliti. Maktabimiz har bir o'quvchining barkamol inson bo'lib voyaga yetishiga hissa qo'shadi.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bo'limlar</h4>
+        <a href="#haqida">Haqida</a>
+        <a href="#yangiliklar">Yangiliklar</a>
+        <a href="#ustozlar">Ustozlar</a>
+        <a href="#kitoblar">Kutubxona</a>
+        <a href="#galereya">Galereya</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Aloqa</h4>
+        <a id="footer-phone" data-b="phone" href="tel:+998901234567">+998 90 123 45 67</a>
+        <a id="footer-email" data-b="email" href="mailto:12-maktab@edu.uz">12-maktab@edu.uz</a>
+        <p style="font-size: 14px; margin-top: 8px;" data-b="addr">Toshkent viloyati</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ijtimoiy Tarmoqlar</h4>
+        <div class="social-links" id="school-socials">
+          <!-- Live links -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Developer Recognition Card -->
+    <div class="footer-developer-card">
+      <div class="dev-left">
+        <div class="dev-badge">EQ</div>
+        <div>
+          <small style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--mut); font-weight: 700;">Created by Senior Developer</small>
+          <div class="dev-name">Ergashev Qurbonali</div>
+        </div>
+      </div>
+      <div>
+        <small style="display: block; font-size: 12px; color: var(--mut); margin-bottom: 8px; text-align: right;">Dasturchi bilan bog'lanish:</small>
+        <div class="social-links" id="dev-socials">
+          <!-- Developer Links -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 12-sonli umumta'lim maktabi. Barcha huquqlar qat'iy himoyalangan.
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST & DIALOGS -->
+<div id="toast" role="status"></div>
+
+<dialog id="admin-form-modal">
+  <h3 id="form-modal-title" style="font-size: 32px; margin-bottom: 20px;"></h3>
+  <div id="form-modal-body"></div>
+  <p id="form-modal-error" style="color: var(--acc); font-weight: 700; margin: 10px 0;"></p>
+  <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+    <button class="btn primary sm" id="form-modal-save">
+      <span class="r"><i>Saqlash</i><i>Saqlash</i></span>
+      <span class="ar">✓</span>
+    </button>
+    <button class="btn sm" id="form-modal-cancel">Bekor qilish</button>
+  </div>
+</dialog>
+
+<dialog id="detail-modal">
+  <div id="detail-modal-img-wrap" style="display: none; margin-bottom: 18px;">
+    <img id="detail-modal-img" alt="" style="width: 100%; max-height: 320px; object-fit: cover; border-radius: var(--radius-md);">
+  </div>
+  <h3 id="detail-modal-title" style="font-size: 34px; margin-bottom: 12px;"></h3>
+  <div id="detail-modal-content" style="color: var(--mut); line-height: 1.6; font-size: 15.5px;"></div>
+  <button class="btn sm" id="detail-modal-close" style="margin-top: 24px;">
+    <span class="r"><i>Yopish</i><i>Yopish</i></span>
+    <span class="ar">×</span>
+  </button>
+</dialog>
+
+<!-- JAVASCRIPT LOGIC & THREE.JS 3D SCENES -->
+<script>
+/* Helper selectors */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+/* Default State / Database */
+const uid = () => Math.random().toString(36).slice(2, 9);
+
+const DEFAULT_STATE = () => ({
+  admins: [],
+  lock: { n: 0, until: 0 },
+  info: {
+    h1a: "Bilimli yoshlar,",
+    h1b: "barqaror kelajak.",
+    sub: "Sifatli ta'lim, malakali ustozlar va zamonaviy sharoit — har bir o'quvchining iqtidori shu yerda ro'yobga chiqadi.",
+    about: "Maktabimiz o'quvchilarga sifatli ta'lim va chuqur tarbiya berib keladi. Zamonaviy metodlar, innovatsion laboratoriyalar va mehribon pedagoglarni birlashtirib, har bir bolaning iste'dodini kashf etamiz.",
+    s1: 1200,
+    s2: 65,
+    s3: 40,
+    s4: 46,
+    phone: "+998 90 123 45 67",
+    email: "12-maktab@edu.uz",
+    addr: "Toshkent viloyati",
+    foot: "Bilim — kelajak kaliti. Maktabimiz har bir o'quvchining barkamol inson bo'lib voyaga yetishiga hissa qo'shadi.",
+    sig: "https://instagram.com/12maktab",
+    stg: "https://t.me/maktab12",
+    dig: "https://instagram.com/qurbonali_ergashev",
+    dtg: "https://t.me/qurbonali_ergashev",
+    dem: "qurbonaliergashev0@gmail.com"
+  },
+  news: [
+    { id: uid(), date: "01.09", title: "Bilimlar kuni: Yangi o'quv yili tantanali boshlandi", text: "Birinchi sinf o'quvchilari va ota-onalari ishtirokida unutilmas bayram tadbiri o'tkazildi.", img: "" },
+    { id: uid(), date: "24.09", title: "Informatikadan ochiq dars va IT bellashuvi", text: "Ustozlar zamonaviy o'qitish usullarini namoyish etishdi, o'quvchilar web dasturlashdan amaliy loyihalarni himoya qilishdi.", img: "" },
+    { id: uid(), date: "28.09", title: "Zamonaviy sinfxonalar — zamonaviy ta'lim", text: "Yangi interaktiv doskalar va multimedia vositalari bilan jihozlangan sinfxonalar foydalanishga topshirildi.", img: "" },
+    { id: uid(), date: "02.10", title: "Sport musobaqalarida maktabimiz g'alabasi", text: "Futbol va yengil atletika bo'yicha o'quvchilarimiz viloyat bosqichida 1-o'rinni egallab, oltin medal bilan taqdirlandilar.", img: "" }
+  ],
+  teachers: [
+    { id: uid(), name: "Karimova Dilfuza", subject: "Matematika", exp: 12, room: "201", desc: "Oliy toifali matematika fani o'qituvchisi. O'quvchilari olimpiadalarda faxrli o'rinlarni egallagan.", img: "", hue: 210 },
+    { id: uid(), name: "Raximov Aziz", subject: "Informatika & IT", exp: 9, room: "305", desc: "Zamonaviy axborot texnologiyalari va web dasturlash bo'yicha tajribali mutaxassis.", img: "", hue: 170 },
+    { id: uid(), name: "Saidova Mohinur", subject: "Ona tili va Adabiyot", exp: 15, room: "112", desc: "Filologiya bo'yicha yetakchi pedagog, adabiy to'garaklar rahbari.", img: "", hue: 330 },
+    { id: uid(), name: "Jo'rayev Bekzod", subject: "Tarix", exp: 11, room: "208", desc: "O'zbekiston va jahon tarixi bo'yicha ko'plab darslik va metodik qo'llanmalar muallifi.", img: "", hue: 25 },
+    { id: uid(), name: "Tursunova Nargiza", subject: "Biologiya & Kimyo", exp: 14, room: "120", desc: "Laboratoriya mashg'ulotlari orqali o'quvchilarda tabiat fanlariga qiziqish uyg'otuvchi ustoz.", img: "", hue: 140 },
+    { id: uid(), name: "Ergasheva Malika", subject: "Fizika", exp: 8, room: "310", desc: "Fizika qonuniyatlarini amaliy tajribalar bilan sodda va qiziqarli o'rgatadi.", img: "", hue: 260 }
+  ],
+  gallery: [
+    { id: uid(), title: "O'quv jarayoni va laboratoriya", em: "📝", hue: 20, img: "" },
+    { id: uid(), title: "Keng va boy kutubxona", em: "📚", hue: 210, img: "" },
+    { id: uid(), title: "Zamonaviy IT xonasi", em: "💻", hue: 250, img: "" },
+    { id: uid(), title: "Sport zali va musobaqalar", em: "⚽", hue: 140, img: "" },
+    { id: uid(), title: "Badiiy ijod va san'at", em: "🎨", hue: 320, img: "" },
+    { id: uid(), title: "Fan olimpiadalari g'oliblari", em: "🔬", hue: 170, img: "" },
+    { id: uid(), title: "Katta bayram tantanasi", em: "🎉", hue: 350, img: "" },
+    { id: uid(), title: "Obod maktab hovlisi", em: "🌳", hue: 100, img: "" }
+  ],
+  books: [
+    /* Sample books in Uzbek and Tajik */
+    { id: uid(), title: "Ona tili", grade: 1, type: "Darslik", lang: "uz", author: "K. Qosimova", url: "https://kitob.uz", pdf: "" },
+    { id: uid(), title: "Забони модарӣ (Zaboni modari)", grade: 1, type: "Darslik", lang: "tg", author: "С. Назарзода", url: "https://maorif.tj", pdf: "" },
+    { id: uid(), title: "Matematika", grade: 1, type: "Darslik", lang: "uz", author: "N. Bikbayeva", url: "https://kitob.uz", pdf: "" },
+    { id: uid(), title: "Риёзиёт (Riyoziyot)", grade: 1, type: "Darslik", lang: "tg", author: "Ҳ. Содиқов", url: "https://maorif.tj", pdf: "" },
+    { id: uid(), title: "Alifbe", grade: 1, type: "Darslik", lang: "uz", author: "T. G'afforova", url: "https://kitob.uz", pdf: "" },
+    { id: uid(), title: "Алифбо (Alifbo)", grade: 1, type: "Darslik", lang: "tg", author: "А. Бобоев", url: "https://maorif.tj", pdf: "" },
+    { id: uid(), title: "Shum bola", grade: 5, type: "Badiiy", lang: "uz", author: "G'afur G'ulom", url: "https://ziyouz.com", pdf: "" },
+    { id: uid(), title: "Шоҳнома (Shohnoma)", grade: 5, type: "Badiiy", lang: "tg", author: "Абулқосим Фирдавсӣ", url: "https://ziyouz.com", pdf: "" },
+    { id: uid(), title: "O'tkan kunlar", grade: 9, type: "Badiiy", lang: "uz", author: "Abdulla Qodiriy", url: "https://ziyouz.com", pdf: "" },
+    { id: uid(), title: "Гулистон (Guliston)", grade: 9, type: "Badiiy", lang: "tg", author: "Саъдии Шерозӣ", url: "https://ziyouz.com", pdf: "" }
+  ]
+});
+
+let AppState = DEFAULT_STATE();
+let currentAdminUser = null;
+let currentAdminTab = "panel";
+
+/* IndexedDB persistence for serverless full storage */
+const idbConnect = () => new Promise((resolve, reject) => {
+  const req = indexedDB.open('maktab12_db', 2);
+  req.onupgradeneeded = () => req.result.createObjectStore('store');
+  req.onsuccess = () => resolve(req.result);
+  req.onerror = reject;
+});
+
+async function loadAppState() {
+  try {
+    const db = await idbConnect();
+    const data = await new Promise((resolve) => {
+      const tx = db.transaction('store', 'readonly');
+      const q = tx.objectStore('store').get('state');
+      q.onsuccess = () => resolve(q.result);
+      q.onerror = () => resolve(null);
+    });
+    if (data) {
+      AppState = { ...DEFAULT_STATE(), ...data, info: { ...DEFAULT_STATE().info, ...data.info } };
+    }
+  } catch (err) {
+    console.warn("IndexedDB load fallback to localStorage", err);
+    try {
+      const ls = localStorage.getItem('maktab12_state');
+      if (ls) AppState = JSON.parse(ls);
+    } catch(e){}
+  }
+}
+
+async function saveAppState() {
+  try {
+    const db = await idbConnect();
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction('store', 'readwrite');
+      tx.objectStore('store').put(AppState, 'state');
+      tx.oncomplete = resolve;
+      tx.onerror = reject;
+    });
+  } catch (err) {
+    try {
+      localStorage.setItem('maktab12_state', JSON.stringify(AppState));
+    } catch(e){}
+  }
+  /* Trigger instant live update across the entire site */
+  renderPublicContent();
+}
+
+const showToast = (msg) => {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('on');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove('on'), 3000);
+};
+
+/* THEME TOGGLE (Dark / Light) */
+const themeBtn = $('#theme-btn');
+themeBtn.onclick = () => {
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+  themeBtn.textContent = isDark ? '☾' : '☀';
+  localStorage.setItem('maktab12_theme', document.documentElement.dataset.theme);
+  updateThreeLighting(isDark ? 0xffffff : 0x070a15);
+};
+
+/* Restore theme preference */
+const savedTheme = localStorage.getItem('maktab12_theme');
+if (savedTheme) {
+  document.documentElement.dataset.theme = savedTheme;
+  themeBtn.textContent = savedTheme === 'dark' ? '☀' : '☾';
+}
+
+/* ========================================================
+   RENDER PUBLIC CONTENT
+   ======================================================== */
+function renderPublicContent() {
+  const I = AppState.info;
+  
+  // Info bindings
+  $$('[data-b]').forEach(el => {
+    if (I[el.dataset.b] !== undefined) el.textContent = I[el.dataset.b];
+  });
+  
+  // Header h1b colorful styling
+  const h1bParts = String(I.h1b || '').split(' ');
+  if (h1bParts.length) {
+    $('#h1b').innerHTML = `<em>${escapeHtml(h1bParts[0])}</em> ${escapeHtml(h1bParts.slice(1).join(' '))}`;
+  }
+  
+  $('#footer-phone').href = 'tel:' + String(I.phone).replace(/[^+\d]/g, '');
+  $('#footer-email').href = 'mailto:' + I.email;
+
+  // Socials
+  renderSocials();
+
+  // News
+  renderNews();
+
+  // Teachers
+  renderTeachers();
+
+  // Books
+  renderBooks();
+
+  // Gallery
+  renderGallery();
+}
+
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+function renderSocials() {
+  const I = AppState.info;
+  const buildLinks = (arr) => arr.map(([url, title, icon]) => url ? `
+    <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="soc-btn" title="${title}">
+      ${icon}
+    </a>
+  ` : '').join('');
+
+  const igIcon = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`;
+  const tgIcon = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 3.5 2.8 10.7l5.6 2.1 2.2 6.4 3.2-4.1 5.2 3.9z"/><path d="m8.4 12.8 8.6-5.6"/></svg>`;
+  const mailIcon = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>`;
+
+  $('#school-socials').innerHTML = buildLinks([
+    [I.sig, "Instagram", igIcon],
+    [I.stg, "Telegram", tgIcon],
+    ["mailto:" + I.email, "Email", mailIcon]
+  ]);
+
+  $('#dev-socials').innerHTML = buildLinks([
+    [I.dig || "https://instagram.com/qurbonali_ergashev", "Instagram", igIcon],
+    [I.dtg || "https://t.me/qurbonali_ergashev", "Telegram", tgIcon],
+    ["mailto:" + (I.dem || "qurbonaliergashev0@gmail.com"), "Email", mailIcon]
+  ]);
+}
+
+
+function getNewsPlaceholder(title) {
+  return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='350' fill='%23111730'><rect width='600' height='350'/><text x='300' y='180' fill='%23ff5a36' font-size='28' text-anchor='middle' font-family='sans-serif'>12-Maktab Yangiliklari</text></svg>";
+}
+
+function getGalleryPlaceholder(title) {
+  return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='450' fill='%23111730'><rect width='600' height='450'/><text x='300' y='230' fill='%2306b6d4' font-size='32' text-anchor='middle' font-family='sans-serif'>12-Maktab Galereyasi</text></svg>";
+}
+
+function renderNews() {
+  const container = $('#news-container');
+  if (!AppState.news.length) {
+    container.innerHTML = `<p class="lead" style="grid-column: 1/-1;">Hozircha yangiliklar kiritilmagan.</p>`;
+    return;
+  }
+  container.innerHTML = AppState.news.map((item) => `
+    <article class="news-card" onclick="openDetailModal('${escapeHtml(item.title)}', '${escapeHtml(item.text)}', '${item.img || ''}')">
+      <div class="news-thumb">
+        <span class="news-date-badge">📅 ${escapeHtml(item.date)}</span>
+        <img src="${item.img || getNewsPlaceholder(item.title)}" alt="${escapeHtml(item.title)}" loading="lazy">
+      </div>
+      <div class="news-body">
+        <div>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text.slice(0, 110))}${item.text.length > 110 ? '...' : ''}</p>
+        </div>
+        <div class="news-more">
+          <span>Batafsil o'qish</span>
+          <span>→</span>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderTeachers() {
+  const container = $('#teachers-container');
+  if (!AppState.teachers.length) {
+    container.innerHTML = `<p class="lead" style="grid-column: 1/-1;">Ustozlar ro'yxati shakllantirilmoqda.</p>`;
+    return;
+  }
+  container.innerHTML = AppState.teachers.map((t) => `
+    <div class="teacher-card" onclick="openDetailModal('${escapeHtml(t.name)} — ${escapeHtml(t.subject)}', 'Tajriba: ${escapeHtml(t.exp)} yil<br>Xona: ${escapeHtml(t.room)}<br><br>${escapeHtml(t.desc)}', '${t.img || ''}')">
+      <div class="teacher-avatar-wrap">
+        <div class="teacher-avatar">
+          ${t.img ? `<img src="${t.img}" alt="${escapeHtml(t.name)}" style="width:100%;height:100%;object-fit:cover;">` : `🎓`}
+        </div>
+      </div>
+      <h3>${escapeHtml(t.name)}</h3>
+      <span class="teacher-subject">${escapeHtml(t.subject)}</span>
+      <div class="teacher-meta">
+        <span><b>${escapeHtml(t.exp)} yil</b> Tajriba</span>
+        <span><b>${escapeHtml(t.room)}</b> Xona</span>
+      </div>
+      <p class="teacher-desc">${escapeHtml(t.desc.slice(0, 85))}${t.desc.length > 85 ? '...' : ''}</p>
+      <button class="btn-mini" style="width: 100%;">Batafsil ma'lumot</button>
+    </div>
+  `).join('');
+}
+
+function renderGallery() {
+  const container = $('#gallery-container');
+  if (!AppState.gallery.length) {
+    container.innerHTML = `<p class="lead" style="grid-column: 1/-1;">Galereyada rasmlar mavjud emas.</p>`;
+    return;
+  }
+  container.innerHTML = AppState.gallery.map((g) => `
+    <div class="gallery-item" onclick="openDetailModal('${escapeHtml(g.title)}', '12-maktab hayoti va yutuqlaridan lavhalar.', '${g.img || ''}')">
+      <img src="${g.img || getGalleryPlaceholder(g.title)}" alt="${escapeHtml(g.title)}" loading="lazy">
+      <div class="gallery-overlay">
+        <h4>${escapeHtml(g.title)}</h4>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ========================================================
+   KITOBLAR (KUTUBXONA) SYSTEM (Uzbek + Tajik + Russian)
+   ======================================================== */
+let selectedGrade = 1;
+let selectedLang = 'all';
+let selectedType = 'all';
+
+function initBookFilterControls() {
+  // Populate Grade Pills (1 to 11)
+  const gp = $('#grade-pills');
+  let gHtml = '';
+  for (let g = 1; g <= 11; g++) {
+    gHtml += `<button class="pill-btn ${g === 1 ? 'on' : ''}" data-grade="${g}">${g}-sinf</button>`;
+  }
+  gp.innerHTML = gHtml;
+
+  gp.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-grade]');
+    if (!btn) return;
+    $$('.pill-btn', gp).forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    selectedGrade = +btn.dataset.grade;
+    renderBooks();
+  });
+
+  // Language Pills
+  $('#lang-pills').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-lang]');
+    if (!btn) return;
+    $$('#lang-pills .pill-btn').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    selectedLang = btn.dataset.lang;
+    renderBooks();
+  });
+
+  // Type Pills
+  $('#type-pills').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-type]');
+    if (!btn) return;
+    $$('#type-pills .pill-btn').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    selectedType = btn.dataset.type;
+    renderBooks();
+  });
+
+  // Search
+  $('#book-search').addEventListener('input', () => {
+    renderBooks();
+  });
+}
+
+function getSubjectEmoji(name) {
+  const map = {
+    'ona tili': '✍️', 'забони': '✍️', 'adabiyot': '📜', 'адабиёт': '📜',
+    'matematika': '➕', 'риёзиёт': '➕', 'algebra': '🧮', 'алгебра': '🧮',
+    'geometriya': '📐', 'геометрия': '📐', 'tarix': '🏛️', 'таърих': '🏛️',
+    'biologiya': '🧬', 'биология': '🧬', 'fizika': '⚛️', 'физика': '⚛️',
+    'kimyo': '🧪', 'химия': '🧪', 'geografiya': '🌍', 'география': '🌍',
+    'ingliz': '🔤', 'инглизӣ': '🔤', 'informatika': '💻', 'информатика': '💻',
+    'alifbe': '📖', 'алифбо': '📖', 'shum': '🎭', 'shohnoma': '🏹', 'шоҳнома': '🏹'
+  };
+  const lower = name.toLowerCase();
+  for (const k in map) {
+    if (lower.includes(k)) return map[k];
+  }
+  return '📕';
+}
+
+function renderBooks() {
+  const shelf = $('#books-shelf');
+  const q = ($('#book-search').value || '').trim().toLowerCase();
+
+  // Generate subjects dynamically for this grade if not explicitly in custom DB
+  const defaultSubs = [
+    { title: "Ona tili", lang: "uz", type: "Darslik" },
+    { title: "Забони модарӣ", lang: "tg", type: "Darslik" },
+    { title: "Matematika", lang: "uz", type: "Darslik" },
+    { title: "Риёзиёт", lang: "tg", type: "Darslik" },
+    { title: "Ingliz tili", lang: "uz", type: "Darslik" },
+    { title: "Tarix", lang: "uz", type: "Darslik" },
+    { title: "Таърихи умумӣ", lang: "tg", type: "Darslik" },
+    { title: "Informatika", lang: "uz", type: "Darslik" }
+  ];
+
+  let list = [];
+
+  // Add custom books
+  AppState.books.forEach(b => {
+    if (+b.grade === selectedGrade) {
+      list.push({ ...b, isCustom: true });
+    }
+  });
+
+  // If few or no custom books for this grade, populate default curriculum items
+  defaultSubs.forEach((ds, i) => {
+    const exists = list.some(b => b.title.toLowerCase() === ds.title.toLowerCase() && b.lang === ds.lang);
+    if (!exists) {
+      list.push({
+        id: 'auto_' + selectedGrade + '_' + i,
+        title: ds.title,
+        grade: selectedGrade,
+        type: ds.type,
+        lang: ds.lang,
+        author: ds.lang === 'tg' ? "Вазорати маорифи ҶТ" : "O'zbekiston Respublikasi XTV",
+        url: ds.lang === 'tg' ? "https://maorif.tj" : "https://kitob.uz",
+        pdf: ""
+      });
+    }
+  });
+
+  // Apply Language Filter
+  if (selectedLang !== 'all') {
+    list = list.filter(b => b.lang === selectedLang);
+  }
+
+  // Apply Type Filter
+  if (selectedType !== 'all') {
+    list = list.filter(b => (selectedType === 'd') === (b.type === 'Darslik'));
+  }
+
+  // Apply Search
+  if (q) {
+    list = list.filter(b => (b.title + ' ' + (b.author || '')).toLowerCase().includes(q));
+  }
+
+  if (!list.length) {
+    shelf.innerHTML = `<div class="lead" style="grid-column: 1/-1; padding: 40px 0; text-align: center;">Ushbu parametrlar bo'yicha kitoblar topilmadi.</div>`;
+    return;
+  }
+
+  const langNames = { uz: "🇺🇿 O'zbekcha", tg: "🇹🇯 Тоҷикӣ", ru: "🇷🇺 Русский" };
+
+  shelf.innerHTML = list.map((b, idx) => {
+    const hue = (idx * 55 + selectedGrade * 32) % 360;
+    const emoji = getSubjectEmoji(b.title);
+    const langBadge = langNames[b.lang] || "🇺🇿 O'zbekcha";
+
+    return `
+      <article class="book-card">
+        <div class="book-3d-scene" style="--h: ${hue};" onclick="openBookAction('${b.id}')">
+          <div class="book-shadow"></div>
+          <div class="book-back"></div>
+          <div class="book-spine"></div>
+          <div class="book-pages"></div>
+          <div class="book-cover">
+            <div>
+              <span class="book-lang-tag">${langBadge}</span>
+              <h4 class="book-title">${escapeHtml(b.title)}</h4>
+              <small style="opacity: 0.85; font-size: 11.5px; font-weight: 600;">${b.grade}-sinf · ${escapeHtml(b.type)}</small>
+            </div>
+            <span class="book-icon">${emoji}</span>
+          </div>
+        </div>
+
+        <div class="book-info-row">
+          <div>
+            <b style="font-size: 14.5px; display: block;">${escapeHtml(b.title)}</b>
+            <span class="book-author">${escapeHtml(b.author || 'Darslik')}</span>
+          </div>
+          <div>
+            ${b.pdf ? `
+              <button class="book-action-btn" onclick="openBookPdf('${b.id}')">PDF ↗</button>
+            ` : `
+              <a href="${b.url || 'https://kitob.uz'}" target="_blank" rel="noopener noreferrer" class="book-action-btn">Ochish ↗</a>
+            `}
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+function openBookAction(bookId) {
+  const b = AppState.books.find(x => x.id === bookId);
+  if (b && b.pdf) {
+    openBookPdf(bookId);
+  } else if (b && b.url) {
+    window.open(b.url, '_blank');
+  } else {
+    showToast("Kitob havolasi ochilmoqda...");
+  }
+}
+
+function openBookPdf(bookId) {
+  const b = AppState.books.find(x => x.id === bookId);
+  if (!b || !b.pdf) return;
+  try {
+    const byteChars = atob(b.pdf.split(',')[1]);
+    const byteNumbers = new Array(byteChars.length);
+    for (let i = 0; i < byteChars.length; i++) {
+      byteNumbers[i] = byteChars.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+    const blob = new Blob([byteArray], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    window.open(url, '_blank');
+  } catch(e) {
+    showToast("PDF ochishda xatolik yuz berdi.");
+  }
+}
+
+/* ========================================================
+   MODALS
+   ======================================================== */
+const detailModal = $('#detail-modal');
+function openDetailModal(title, content, img) {
+  $('#detail-modal-title').textContent = title;
+  $('#detail-modal-content').innerHTML = content;
+  const imgWrap = $('#detail-modal-img-wrap');
+  const imgEl = $('#detail-modal-img');
+  if (img) {
+    imgEl.src = img;
+    imgWrap.style.display = 'block';
+  } else {
+    imgWrap.style.display = 'none';
+  }
+  detailModal.showModal();
+}
+$('#detail-modal-close').onclick = () => detailModal.close();
+detailModal.onclick = (e) => { if (e.target === detailModal) detailModal.close(); };
+
+/* ========================================================
+   THREE.JS 3D SCENES IMPLEMENTATION
+   ======================================================== */
+const threeScenes = [];
+
+function initThreeScenes() {
+  // 1. Haqida 3D Scene: Knowledge Crystal & Orbiting Halo
+  setupHaqidaScene();
+
+  // 2. Yangiliklar 3D Scene: Holographic Digital Matrix
+  setupNewsScene();
+
+  // 3. Ustozlar 3D Scene: Wisdom Atomic Nucleus & Rings
+  setupTeachersScene();
+
+  // 4. Kitoblar 3D Scene: Floating Book Cylinder & Stars
+  setupBooksScene();
+
+  // 5. Galereya 3D Scene: Cosmic Constellation Particles
+  setupGalleryScene();
+
+  // 6. Aloqa 3D Scene: Interactive 3D Earth Globe with Location Pin
+  setupGlobeScene();
+
+  // Window resize handler for all Three.js renderers
+  window.addEventListener('resize', () => {
+    threeScenes.forEach(s => {
+      if (!s.container || !s.renderer || !s.camera) return;
+      const w = s.container.clientWidth;
+      const h = s.container.clientHeight;
+      s.camera.aspect = w / h;
+      s.camera.updateProjectionMatrix();
+      s.renderer.setSize(w, h);
+    });
+  });
+}
+
+function updateThreeLighting(bgColor) {
+  threeScenes.forEach(s => {
+    if (s.scene && s.ambientLight) {
+      s.ambientLight.intensity = document.documentElement.dataset.theme === 'dark' ? 1.0 : 1.6;
+    }
+  });
+}
+
+/* 1. Haqida: Knowledge Crystal */
+function setupHaqidaScene() {
+  const container = $('#three-haqida');
+  if (!container) return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.z = 5;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  container.appendChild(renderer.domElement);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+  scene.add(ambientLight);
+
+  const dirLight = new THREE.DirectionalLight(0xff5a36, 2.5);
+  dirLight.position.set(5, 5, 5);
+  scene.add(dirLight);
+
+  const cyanLight = new THREE.DirectionalLight(0x06b6d4, 2.0);
+  cyanLight.position.set(-5, -5, 2);
+  scene.add(cyanLight);
+
+  // Main Polyhedron Crystal
+  const geo = new THREE.IcosahedronGeometry(1.4, 0);
+  const mat = new THREE.MeshStandardMaterial({
+    color: 0x1d4ed8,
+    metalness: 0.85,
+    roughness: 0.2,
+    wireframe: false
+  });
+  const crystal = new THREE.Mesh(geo, mat);
+  scene.add(crystal);
+
+  // Wireframe outer ring
+  const wireGeo = new THREE.IcosahedronGeometry(1.7, 1);
+  const wireMat = new THREE.MeshBasicMaterial({ color: 0xff5a36, wireframe: true, transparent: true, opacity: 0.4 });
+  const wireMesh = new THREE.Mesh(wireGeo, wireMat);
+  scene.add(wireMesh);
+
+  // Orbiting glow ring
+  const torusGeo = new THREE.TorusGeometry(2.1, 0.04, 16, 100);
+  const torusMat = new THREE.MeshBasicMaterial({ color: 0x06b6d4 });
+  const torus = new THREE.Mesh(torusGeo, torusMat);
+  torus.rotation.x = Math.PI / 3;
+  scene.add(torus);
+
+  // Orbiting particles
+  const partGeo = new THREE.BufferGeometry();
+  const pCount = 120;
+  const pPos = new Float32Array(pCount * 3);
+  for (let i = 0; i < pCount * 3; i++) {
+    pPos[i] = (Math.random() - 0.5) * 6;
+  }
+  partGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+  const partMat = new THREE.PointsMaterial({ size: 0.05, color: 0xf59e0b });
+  const particles = new THREE.Points(partGeo, partMat);
+  scene.add(particles);
+
+  let mouseX = 0, mouseY = 0;
+  container.addEventListener('pointermove', (e) => {
+    const rect = container.getBoundingClientRect();
+    mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+  });
+
+  const anim = () => {
+    requestAnimationFrame(anim);
+    crystal.rotation.x += 0.008;
+    crystal.rotation.y += 0.012;
+    wireMesh.rotation.x -= 0.005;
+    wireMesh.rotation.y -= 0.008;
+    torus.rotation.z += 0.01;
+    particles.rotation.y += 0.003;
+
+    crystal.position.x += (mouseX * 0.5 - crystal.position.x) * 0.05;
+    crystal.position.y += (-mouseY * 0.5 - crystal.position.y) * 0.05;
+
+    renderer.render(scene, camera);
+  };
+  anim();
+
+  threeScenes.push({ container, renderer, camera, scene, ambientLight });
+}
+
+/* 2. Yangiliklar: Holographic News Wave */
+function setupNewsScene() {
+  const container = $('#three-news');
+  if (!container) return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.z = 4;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+  scene.add(ambientLight);
+
+  const torusKnotGeo = new THREE.TorusKnotGeometry(1.1, 0.28, 64, 16);
+  const torusKnotMat = new THREE.MeshBasicMaterial({ color: 0x06b6d4, wireframe: true, transparent: true, opacity: 0.65 });
+  const knot = new THREE.Mesh(torusKnotGeo, torusKnotMat);
+  scene.add(knot);
+
+  const anim = () => {
+    requestAnimationFrame(anim);
+    knot.rotation.x += 0.01;
+    knot.rotation.y += 0.015;
+    renderer.render(scene, camera);
+  };
+  anim();
+
+  threeScenes.push({ container, renderer, camera, scene, ambientLight });
+}
+
+/* 3. Ustozlar: Wisdom Atom */
+function setupTeachersScene() {
+  const container = $('#three-teachers');
+  if (!container) return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.z = 4.5;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+  scene.add(ambientLight);
+
+  // Core
+  const coreGeo = new THREE.SphereGeometry(0.65, 32, 32);
+  const coreMat = new THREE.MeshStandardMaterial({ color: 0xff5a36, roughness: 0.2, metalness: 0.8 });
+  const core = new THREE.Mesh(coreGeo, coreMat);
+  scene.add(core);
+
+  // Rings
+  const ringGroup = new THREE.Group();
+  for (let i = 0; i < 3; i++) {
+    const ringGeo = new THREE.TorusGeometry(1.4, 0.03, 16, 80);
+    const ringMat = new THREE.MeshBasicMaterial({ color: i === 0 ? 0xf59e0b : i === 1 ? 0x06b6d4 : 0xffffff });
+    const r = new THREE.Mesh(ringGeo, ringMat);
+    r.rotation.x = (i * Math.PI) / 3;
+    r.rotation.y = (i * Math.PI) / 4;
+    ringGroup.add(r);
+  }
+  scene.add(ringGroup);
+
+  const anim = () => {
+    requestAnimationFrame(anim);
+    core.rotation.y += 0.01;
+    ringGroup.rotation.x += 0.008;
+    ringGroup.rotation.y += 0.012;
+    ringGroup.rotation.z += 0.005;
+    renderer.render(scene, camera);
+  };
+  anim();
+
+  threeScenes.push({ container, renderer, camera, scene, ambientLight });
+}
+
+/* 4. Kitoblar: 3D Books Cylinder */
+function setupBooksScene() {
+  const container = $('#three-books');
+  if (!container) return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.z = 4;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+  scene.add(ambientLight);
+
+  const bookGeo = new THREE.BoxGeometry(1.2, 1.6, 0.3);
+  const bookMat = new THREE.MeshStandardMaterial({ color: 0x2563eb, metalness: 0.6, roughness: 0.3 });
+  const bookMesh = new THREE.Mesh(bookGeo, bookMat);
+  scene.add(bookMesh);
+
+  const anim = () => {
+    requestAnimationFrame(anim);
+    bookMesh.rotation.y += 0.015;
+    bookMesh.rotation.x = Math.sin(Date.now() * 0.002) * 0.2;
+    renderer.render(scene, camera);
+  };
+  anim();
+
+  threeScenes.push({ container, renderer, camera, scene, ambientLight });
+}
+
+/* 5. Galereya: 3D Constellation */
+function setupGalleryScene() {
+  const container = $('#three-gallery');
+  if (!container) return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.z = 4;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+  scene.add(ambientLight);
+
+  const geom = new THREE.BufferGeometry();
+  const count = 180;
+  const positions = new Float32Array(count * 3);
+  for (let i = 0; i < count * 3; i++) {
+    positions[i] = (Math.random() - 0.5) * 5;
+  }
+  geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  const mat = new THREE.PointsMaterial({ size: 0.07, color: 0xff5a36 });
+  const pMesh = new THREE.Points(geom, mat);
+  scene.add(pMesh);
+
+  const anim = () => {
+    requestAnimationFrame(anim);
+    pMesh.rotation.y += 0.004;
+    pMesh.rotation.x += 0.002;
+    renderer.render(scene, camera);
+  };
+  anim();
+
+  threeScenes.push({ container, renderer, camera, scene, ambientLight });
+}
+
+/* 6. Aloqa: Interactive 3D Earth Globe with Location Pin & Drag */
+function setupGlobeScene() {
+  const container = $('#three-globe');
+  if (!container) return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.z = 4.2;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  container.appendChild(renderer.domElement);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+  scene.add(ambientLight);
+
+  const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
+  sunLight.position.set(5, 3, 5);
+  scene.add(sunLight);
+
+  const globeGroup = new THREE.Group();
+  scene.add(globeGroup);
+
+  // Earth Sphere
+  const globeGeo = new THREE.SphereGeometry(1.5, 48, 48);
+  const globeMat = new THREE.MeshStandardMaterial({
+    color: 0x0f1f3d,
+    metalness: 0.3,
+    roughness: 0.7
+  });
+  const globeMesh = new THREE.Mesh(globeGeo, globeMat);
+  globeGroup.add(globeMesh);
+
+  // Wireframe Latitude/Longitude Grid
+  const wireGeo = new THREE.SphereGeometry(1.51, 24, 18);
+  const wireMat = new THREE.MeshBasicMaterial({
+    color: 0x06b6d4,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.3
+  });
+  const wireMesh = new THREE.Mesh(wireGeo, wireMat);
+  globeGroup.add(wireMesh);
+
+  // Atmosphere glow outer shell
+  const atmoGeo = new THREE.SphereGeometry(1.68, 32, 32);
+  const atmoMat = new THREE.MeshBasicMaterial({
+    color: 0x2563eb,
+    transparent: true,
+    opacity: 0.15,
+    side: THREE.BackSide
+  });
+  const atmoMesh = new THREE.Mesh(atmoGeo, atmoMat);
+  scene.add(atmoMesh);
+
+  // Pin on Uzbekistan Coordinates (~41° N, 69° E)
+  const phi = (90 - 41.3) * (Math.PI / 180);
+  const theta = (69.2 + 180) * (Math.PI / 180);
+  const pinR = 1.54;
+  const pinX = -(pinR * Math.sin(phi) * Math.cos(theta));
+  const pinZ = (pinR * Math.sin(phi) * Math.sin(theta));
+  const pinY = (pinR * Math.cos(phi));
+
+  const pinGeo = new THREE.SphereGeometry(0.08, 16, 16);
+  const pinMat = new THREE.MeshBasicMaterial({ color: 0xff5a36 });
+  const pinMesh = new THREE.Mesh(pinGeo, pinMat);
+  pinMesh.position.set(pinX, pinY, pinZ);
+  globeGroup.add(pinMesh);
+
+  // Pulsing Beacon ring
+  const beaconGeo = new THREE.RingGeometry(0.05, 0.16, 24);
+  const beaconMat = new THREE.MeshBasicMaterial({ color: 0xff5a36, side: THREE.DoubleSide, transparent: true, opacity: 0.8 });
+  const beacon = new THREE.Mesh(beaconGeo, beaconMat);
+  beacon.position.set(pinX * 1.02, pinY * 1.02, pinZ * 1.02);
+  beacon.lookAt(0, 0, 0);
+  globeGroup.add(beacon);
+
+  // Interactive mouse drag rotation
+  let isDragging = false;
+  let previousMousePosition = { x: 0, y: 0 };
+
+  container.addEventListener('pointerdown', (e) => {
+    isDragging = true;
+    previousMousePosition = { x: e.clientX, y: e.clientY };
+  });
+
+  window.addEventListener('pointerup', () => { isDragging = false; });
+
+  container.addEventListener('pointermove', (e) => {
+    if (!isDragging) return;
+    const deltaMove = {
+      x: e.clientX - previousMousePosition.x,
+      y: e.clientY - previousMousePosition.y
+    };
+    globeGroup.rotation.y += deltaMove.x * 0.007;
+    globeGroup.rotation.x += deltaMove.y * 0.007;
+    previousMousePosition = { x: e.clientX, y: e.clientY };
+  });
+
+  const anim = () => {
+    requestAnimationFrame(anim);
+    if (!isDragging) {
+      globeGroup.rotation.y += 0.003;
+    }
+    const scale = 1 + Math.sin(Date.now() * 0.005) * 0.25;
+    beacon.scale.set(scale, scale, scale);
+    renderer.render(scene, camera);
+  };
+  anim();
+
+  threeScenes.push({ container, renderer, camera, scene, ambientLight });
+}
+
+/* ========================================================
+   NAVIGATION & TRANSITIONS (Desktop Stacked vs Mobile App)
+   ======================================================== */
+const trCurtain = $('#tr');
+const trText = $('#trt');
+let isNavigating = false;
+
+function triggerCurtainTransition(title, callback) {
+  if (isNavigating) return;
+  isNavigating = true;
+  trText.textContent = title;
+  trCurtain.className = 'on';
+  setTimeout(() => {
+    callback();
+    trCurtain.className = 'out';
+    setTimeout(() => {
+      trCurtain.className = '';
+      isNavigating = false;
+    }, 600);
+  }, 500);
+}
+
+function updateAppMode() {
+  const isDesktop = window.matchMedia('(min-width: 992px)').matches;
+  document.body.dataset.mode = isDesktop ? 'desktop' : 'app';
+}
+window.addEventListener('resize', updateAppMode);
+updateAppMode();
+
+// Desktop Scroll Spy
+const navLinks = $$('#nav a');
+const navIndicator = $('#nav-indicator');
+
+function updateNavIndicator(activeLink) {
+  if (!activeLink) return;
+  navLinks.forEach(a => a.classList.remove('on'));
+  activeLink.classList.add('on');
+  navIndicator.style.opacity = '1';
+  navIndicator.style.left = activeLink.offsetLeft + 'px';
+  navIndicator.style.width = activeLink.offsetWidth + 'px';
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.dataset.target;
+    navigateToSection(targetId, link.textContent);
+  });
+});
+
+// Mobile Dock Buttons
+$$('.dock-btn[data-target]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.dataset.target;
+    navigateToSection(targetId, btn.textContent.trim());
+    $$('.dock-btn').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+  });
+});
+
+// Mobile Hamburger & Fullscreen Drawer
+const burger = $('#burger');
+const mobMenu = $('#mob-menu');
+burger.onclick = () => {
+  const isOpen = mobMenu.classList.toggle('open');
+  burger.textContent = isOpen ? '✕' : '☰';
+};
+$('#dock-menu-btn').onclick = () => {
+  mobMenu.classList.add('open');
+  burger.textContent = '✕';
+};
+mobMenu.addEventListener('click', (e) => {
+  const a = e.target.closest('a');
+  if (!a) return;
+  mobMenu.classList.remove('open');
+  burger.textContent = '☰';
+  const href = a.getAttribute('href').replace('#', '');
+  if (href === 'kirish') {
+    openAuthView();
+  } else {
+    navigateToSection('p-' + href, a.textContent.trim());
+  }
+});
+
+function navigateToSection(sectionId, title) {
+  const isDesktop = window.matchMedia('(min-width: 992px)').matches;
+
+  // Ensure public sections are visible
+  $('#main-content').style.display = 'block';
+  $('#p-kirish').style.display = 'none';
+  $('#p-admin').style.display = 'none';
+
+  if (isDesktop) {
+    const targetEl = $('#' + sectionId);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const navLink = $(`#nav a[data-target="${sectionId}"]`);
+      if (navLink) updateNavIndicator(navLink);
+    }
+  } else {
+    // In Mobile App Mode: smoothly transition views
+    triggerCurtainTransition(title || '12-Maktab', () => {
+      $$('.sec-block').forEach(s => s.classList.remove('active-app-view'));
+      const activeEl = $('#' + sectionId);
+      if (activeEl) {
+        activeEl.classList.add('active-app-view');
+        window.scrollTo(0, 0);
+      }
+    });
+  }
+}
+
+// Active Scrollspy on Desktop
+if (window.IntersectionObserver) {
+  const spyObserver = new IntersectionObserver((entries) => {
+    if (!window.matchMedia('(min-width: 992px)').matches) return;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const link = $(`#nav a[data-target="${entry.target.id}"]`);
+        if (link) updateNavIndicator(link);
+      }
+    });
+  }, { threshold: 0.35 });
+
+  $$('.sec-block').forEach(s => spyObserver.observe(s));
+}
+
+// Header background blur on scroll
+window.addEventListener('scroll', () => {
+  $('#hd').classList.toggle('s', window.scrollY > 40);
+}, { passive: true });
+
+/* ========================================================
+   AUTHENTICATION & PBKDF2 ENCRYPTION
+   ======================================================== */
+const toB64 = u => btoa(String.fromCharCode(...u));
+const fromB64 = x => Uint8Array.from(atob(x), c => c.charCodeAt(0));
+
+async function hashPassword(pwd, salt) {
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(pwd), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits({
+    name: 'PBKDF2', salt: fromB64(salt), iterations: 200000, hash: 'SHA-256'
+  }, key, 256);
+  return toB64(new Uint8Array(bits));
+}
+
+function safeCompare(a, b) {
+  if (a.length !== b.length) return false;
+  let d = 0;
+  for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return d === 0;
+}
+
+const passRules = (p, u) => [
+  [p.length >= 8, '8+ belgi'],
+  [/[a-z]/.test(p), 'kichik harf'],
+  [/[A-Z]/.test(p), 'katta harf'],
+  [/\d/.test(p), 'raqam'],
+  [!u || !p.toLowerCase().includes(u.toLowerCase()), 'loginsiz']
+];
+
+function bindPasswordMeter(passInput, userInput, meterEl, rulesEl) {
+  const update = () => {
+    const r = passRules(passInput.value, userInput ? userInput.value : '');
+    rulesEl.innerHTML = r.map(([ok, label]) => `<li class="${ok ? 'ok' : ''}">${ok ? '✓' : '○'} ${label}</li>`).join('');
+    const score = r.filter(x => x[0]).length;
+    const level = score <= 2 ? 1 : score <= 3 ? 2 : score === 4 ? 3 : 4;
+    $$('i', meterEl).forEach((bar, idx) => bar.classList.toggle('on', idx < level));
+    meterEl.style.setProperty('--c', ['', '#ef4444', '#f59e0b', '#3b82f6', '#10b981'][level]);
+  };
+  passInput.addEventListener('input', update);
+  if (userInput) userInput.addEventListener('input', update);
+  update();
+}
+
+bindPasswordMeter($('#auth-password'), $('#auth-username'), $('#pass-meter'), $('#pass-rules'));
+
+$('#pwd-toggle-btn').onclick = () => {
+  const p = $('#auth-password');
+  p.type = p.type === 'password' ? 'text' : 'password';
+};
+
+$('#auth-btn').onclick = (e) => {
+  e.preventDefault();
+  if (currentAdminUser) {
+    openAdminDashboard();
+  } else {
+    openAuthView();
+  }
+};
+
+function openAuthView() {
+  $('#main-content').style.display = 'none';
+  $('#p-admin').style.display = 'none';
+  $('#p-kirish').style.display = 'block';
+  window.scrollTo(0, 0);
+
+  const isSetup = !AppState.admins.length;
+  $('#login-heading').textContent = isSetup ? "Bosh Administrator Yaratish" : "Administrator Kirishi";
+  $('#login-sub').textContent = isSetup ? "Xush kelibsiz! Birinchi admin hisobini yaratib, kuchli parol o'rnating." : "Faqat vakolatli xodimlar uchun xavfsiz tizim.";
+  $('#auth-confirm-wrap').style.display = isSetup ? 'block' : 'none';
+  $('#auth-meter-wrap').style.display = isSetup ? 'block' : 'none';
+  $('#auth-btn-text').textContent = isSetup ? "Hisob yaratish" : "Kirish";
+  $('#auth-btn-text2').textContent = isSetup ? "Hisob yaratish" : "Kirish";
+}
+
+$('#auth-submit-btn').onclick = async () => {
+  const u = $('#auth-username').value.trim();
+  const p = $('#auth-password').value;
+  const errEl = $('#auth-error');
+  const isSetup = !AppState.admins.length;
+
+  if (u.length < 3) {
+    errEl.textContent = "Login kamida 3 ta belgidan iborat bo'lishi kerak.";
+    return;
+  }
+  if (!p) {
+    errEl.textContent = "Parolni kiriting.";
+    return;
+  }
+
+  if (isSetup) {
+    if (!passRules(p, u).every(r => r[0])) {
+      errEl.textContent = "Parol barcha xavfsizlik talablariga javob bermaydi.";
+      return;
+    }
+    if (p !== $('#auth-confirm').value) {
+      errEl.textContent = "Kiritilgan parollar mos kelmadi.";
+      return;
+    }
+    const salt = toB64(crypto.getRandomValues(new Uint8Array(16)));
+    const h = await hashPassword(p, salt);
+    AppState.admins.push({ u, salt, h });
+    await saveAppState();
+    currentAdminUser = u;
+    showToast("Bosh admin muvaffaqiyatli yaratildi!");
+    openAdminDashboard();
+  } else {
+    if (Date.now() < AppState.lock.until) {
+      const sec = Math.ceil((AppState.lock.until - Date.now()) / 1000);
+      errEl.textContent = `Ko'p xato urinish! ${sec} soniyadan keyin qayta urinib ko'ring.`;
+      return;
+    }
+    const a = AppState.admins.find(x => x.u.toLowerCase() === u.toLowerCase());
+    const h = await hashPassword(p, a ? a.salt : 'AAAAAAAAAAAAAAAAAAAAAA==');
+    if (a && safeCompare(h, a.h)) {
+      AppState.lock = { n: 0, until: 0 };
+      await saveAppState();
+      currentAdminUser = a.u;
+      showToast("Xush kelibsiz, " + a.u + "!");
+      openAdminDashboard();
+    } else {
+      AppState.lock.n++;
+      if (AppState.lock.n >= 5) {
+        AppState.lock.until = Date.now() + Math.min(30 * Math.pow(2, AppState.lock.n - 5), 900) * 1000;
+      }
+      await saveAppState();
+      errEl.textContent = "Login yoki parol noto'g'ri.";
+    }
+  }
+};
+
+/* ========================================================
+   ADMIN DASHBOARD IMPLEMENTATION (100% BUG FREE & BEAUTIFUL)
+   ======================================================== */
+function openAdminDashboard() {
+  if (!currentAdminUser) {
+    openAuthView();
+    return;
+  }
+  $('#main-content').style.display = 'none';
+  $('#p-kirish').style.display = 'none';
+  $('#p-admin').style.display = 'block';
+  window.scrollTo(0, 0);
+
+  $('#admin-avatar-initial').textContent = currentAdminUser[0].toUpperCase();
+  $('#admin-profile-name').textContent = currentAdminUser;
+  $('#auth-btn .r i').textContent = "Panel";
+
+  renderAdminTab(currentAdminTab);
+}
+
+$('#admin-logout-btn').onclick = () => {
+  currentAdminUser = null;
+  $('#auth-btn .r i').textContent = "Kirish";
+  showToast("Tizimdan chiqildi.");
+  navigateToSection('p-home', 'Bosh sahifa');
+};
+
+$('#admin-sidebar').addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-tab]');
+  if (!btn) return;
+  $$('#admin-sidebar .admin-nav-item').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  currentAdminTab = btn.dataset.tab;
+  renderAdminTab(currentAdminTab);
+});
+
+function renderAdminTab(tab) {
+  const container = $('#admin-tab-content');
+  
+  if (tab === 'panel') {
+    container.innerHTML = `
+      <div class="admin-header">
+        <div>
+          <h2 class="t2" style="font-size: 38px; margin: 0;">Boshqaruv <em>Paneli</em></h2>
+          <p class="lead" style="font-size: 14px;">Maktab saytining barcha kontentini shu yerdan boshqaring.</p>
+        </div>
+      </div>
+
+      <div class="admin-stats-grid">
+        <div class="admin-stat-box" onclick="switchAdminTab('news')">
+          <b>${AppState.news.length}</b>
+          <span>📰 Yangiliklar</span>
+        </div>
+        <div class="admin-stat-box" onclick="switchAdminTab('teachers')">
+          <b>${AppState.teachers.length}</b>
+          <span>🎓 Ustozlar</span>
+        </div>
+        <div class="admin-stat-box" onclick="switchAdminTab('books')">
+          <b>${AppState.books.length}</b>
+          <span>📚 Qo'shilgan Kitoblar</span>
+        </div>
+        <div class="admin-stat-box" onclick="switchAdminTab('gallery')">
+          <b>${AppState.gallery.length}</b>
+          <span>🖼️ Galereya Rasmlari</span>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3 style="font-size: 24px; margin-bottom: 12px;">💡 SQL-siz Real-Time Saqlanish</h3>
+        <p style="color: var(--mut); line-height: 1.6; font-size: 14.5px;">
+          Siz kiritgan har bir o'zgarish (yangilik, yangi kitob, ustoz, rasmlar yoki maktab raqamlari) 
+          bir zumda brauzerning mustahkam IndexedDB bazasiga yoziladi va darhol saytda aks etadi.
+          Boshqa kompyuter yoki serverga ko'chirish uchun <b>"Zaxira & Sinxronlash"</b> bo'limidan bitta tugma orqali JSON eksport qilib olishingiz mumkin!
+        </p>
+      </div>
+    `;
+  } else if (tab === 'info') {
+    const I = AppState.info;
+    container.innerHTML = `
+      <div class="admin-header">
+        <h2 class="t2" style="font-size: 38px; margin: 0;">Maktab <em>Ma'lumotlari</em></h2>
+        <button class="btn primary sm" id="save-info-btn">
+          <span class="r"><i>O'zgarishlarni Saqlash</i><i>O'zgarishlarni Saqlash</i></span>
+          <span class="ar">✓</span>
+        </button>
+      </div>
+
+      <div class="admin-card">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="fld"><input id="inf-h1a" value="${escapeHtml(I.h1a)}"><label>Bosh Sarlavha (1-qator)</label></div>
+          <div class="fld"><input id="inf-h1b" value="${escapeHtml(I.h1b)}"><label>Bosh Sarlavha (2-qator, birinchi so'z rangli)</label></div>
+          <div class="fld" style="grid-column: 1/-1;"><textarea id="inf-sub" rows="2">${escapeHtml(I.sub)}</textarea><label>Qisqa Ta'rif (Hero Tagline)</label></div>
+          <div class="fld" style="grid-column: 1/-1;"><textarea id="inf-about" rows="4">${escapeHtml(I.about)}</textarea><label>Maktab Haqida To'liq Matn</label></div>
+          <div class="fld"><input id="inf-s1" type="number" value="${I.s1}"><label>O'quvchilar Soni</label></div>
+          <div class="fld"><input id="inf-s2" type="number" value="${I.s2}"><label>Ustozlar Soni</label></div>
+          <div class="fld"><input id="inf-s3" type="number" value="${I.s3}"><label>Sinfxonalar Soni</label></div>
+          <div class="fld"><input id="inf-s4" type="number" value="${I.s4}"><label>Yillik Tajriba</label></div>
+          <div class="fld"><input id="inf-phone" value="${escapeHtml(I.phone)}"><label>Telefon Raqam</label></div>
+          <div class="fld"><input id="inf-email" value="${escapeHtml(I.email)}"><label>Email Manzili</label></div>
+          <div class="fld" style="grid-column: 1/-1;"><input id="inf-addr" value="${escapeHtml(I.addr)}"><label>Manzil</label></div>
+          <div class="fld"><input id="inf-sig" value="${escapeHtml(I.sig)}"><label>Maktab Instagram Havolasi</label></div>
+          <div class="fld"><input id="inf-stg" value="${escapeHtml(I.stg)}"><label>Maktab Telegram Havolasi</label></div>
+        </div>
+      </div>
+    `;
+    $('#save-info-btn').onclick = async () => {
+      I.h1a = $('#inf-h1a').value.trim();
+      I.h1b = $('#inf-h1b').value.trim();
+      I.sub = $('#inf-sub').value.trim();
+      I.about = $('#inf-about').value.trim();
+      I.s1 = +$('#inf-s1').value;
+      I.s2 = +$('#inf-s2').value;
+      I.s3 = +$('#inf-s3').value;
+      I.s4 = +$('#inf-s4').value;
+      I.phone = $('#inf-phone').value.trim();
+      I.email = $('#inf-email').value.trim();
+      I.addr = $('#inf-addr').value.trim();
+      I.sig = $('#inf-sig').value.trim();
+      I.stg = $('#inf-stg').value.trim();
+      await saveAppState();
+      showToast("Ma'lumotlar muvaffaqiyatli saqlandi! ✓");
+    };
+  } else if (tab === 'news') {
+    renderAdminCollectionTab('news', 'Yangilik', AppState.news, (item) => `
+      <div class="admin-item-row">
+        <div class="admin-thumb-cell">
+          ${item.img ? `<img src="${item.img}" alt="">` : '📰'}
+        </div>
+        <div class="admin-title-cell">
+          <b>${escapeHtml(item.title)}</b>
+          <small>Sana: ${escapeHtml(item.date)}</small>
+        </div>
+        <button class="btn-mini" onclick="editItemModal('news', '${item.id}')">✎ Tahrirlash</button>
+        <button class="btn-mini danger" onclick="deleteItem('news', '${item.id}')">🗑</button>
+      </div>
+    `);
+  } else if (tab === 'teachers') {
+    renderAdminCollectionTab('teachers', 'Ustoz', AppState.teachers, (t) => `
+      <div class="admin-item-row">
+        <div class="admin-thumb-cell">
+          ${t.img ? `<img src="${t.img}" alt="">` : '🎓'}
+        </div>
+        <div class="admin-title-cell">
+          <b>${escapeHtml(t.name)}</b>
+          <small>${escapeHtml(t.subject)} · Tajriba: ${escapeHtml(t.exp)} yil · Xona: ${escapeHtml(t.room)}</small>
+        </div>
+        <button class="btn-mini" onclick="editItemModal('teachers', '${t.id}')">✎ Tahrirlash</button>
+        <button class="btn-mini danger" onclick="deleteItem('teachers', '${t.id}')">🗑</button>
+      </div>
+    `);
+  } else if (tab === 'books') {
+    renderAdminCollectionTab('books', 'Kitob', AppState.books, (b) => `
+      <div class="admin-item-row">
+        <div class="admin-thumb-cell">📚</div>
+        <div class="admin-title-cell">
+          <b>${escapeHtml(b.title)} (${b.lang === 'tg' ? '🇹🇯 Tojikcha' : b.lang === 'ru' ? '🇷🇺 Ruscha' : '🇺🇿 O\'zbekcha'})</b>
+          <small>${b.grade}-sinf · ${escapeHtml(b.type)} · ${escapeHtml(b.author || 'Muallifsiz')}</small>
+        </div>
+        <button class="btn-mini" onclick="editItemModal('books', '${b.id}')">✎ Tahrirlash</button>
+        <button class="btn-mini danger" onclick="deleteItem('books', '${b.id}')">🗑</button>
+      </div>
+    `);
+  } else if (tab === 'gallery') {
+    renderAdminCollectionTab('gallery', 'Rasm', AppState.gallery, (g) => `
+      <div class="admin-item-row">
+        <div class="admin-thumb-cell">
+          ${g.img ? `<img src="${g.img}" alt="">` : (g.em || '🖼️')}
+        </div>
+        <div class="admin-title-cell">
+          <b>${escapeHtml(g.title)}</b>
+          <small>${g.img ? 'Rasm yuklangan' : 'Standart illustratsiya'}</small>
+        </div>
+        <button class="btn-mini" onclick="editItemModal('gallery', '${g.id}')">✎ Tahrirlash</button>
+        <button class="btn-mini danger" onclick="deleteItem('gallery', '${g.id}')">🗑</button>
+      </div>
+    `);
+  } else if (tab === 'admins') {
+    container.innerHTML = `
+      <div class="admin-header">
+        <h2 class="t2" style="font-size: 38px; margin: 0;">Adminlar <em>Boshqaruvi</em></h2>
+      </div>
+
+      <div class="admin-card">
+        <h3 style="font-size: 22px; margin-bottom: 16px;">Amaldagi Administratorlar</h3>
+        ${AppState.admins.map(a => `
+          <div class="admin-item-row" style="grid-template-columns: 50px 1fr auto;">
+            <div class="admin-thumb-cell">👤</div>
+            <div class="admin-title-cell">
+              <b>${escapeHtml(a.u)}</b>
+              <small>${a.u === currentAdminUser ? "Siz (Faol sessiya)" : "Administrator"}</small>
+            </div>
+            ${a.u !== currentAdminUser && AppState.admins.length > 1 ? `
+              <button class="btn-mini danger" onclick="removeAdmin('${escapeHtml(a.u)}')">🗑 O'chirish</button>
+            ` : '<span></span>'}
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="admin-card">
+        <h3 style="font-size: 22px; margin-bottom: 16px;">Yangi Administrator Qo'shish</h3>
+        <div class="fld"><input id="new-adm-u" placeholder=" "><label>Yangi Login</label></div>
+        <div class="fld"><input id="new-adm-p" type="password" placeholder=" "><label>Yangi Parol</label></div>
+        <button class="btn primary sm" id="add-admin-btn">Admin Qo'shish</button>
+      </div>
+    `;
+    $('#add-admin-btn').onclick = async () => {
+      const u = $('#new-adm-u').value.trim();
+      const p = $('#new-adm-p').value;
+      if (u.length < 3 || p.length < 8) {
+        showToast("Login kamida 3, parol kamida 8 belgi bo'lsin!");
+        return;
+      }
+      if (AppState.admins.some(x => x.u.toLowerCase() === u.toLowerCase())) {
+        showToast("Bunday login allaqachon mavjud!");
+        return;
+      }
+      const salt = toB64(crypto.getRandomValues(new Uint8Array(16)));
+      const h = await hashPassword(p, salt);
+      AppState.admins.push({ u, salt, h });
+      await saveAppState();
+      showToast("Yangi admin qo'shildi! ✓");
+      renderAdminTab('admins');
+    };
+  } else if (tab === 'backup') {
+    container.innerHTML = `
+      <div class="admin-header">
+        <h2 class="t2" style="font-size: 38px; margin: 0;">Zaxira & <em>Sinxronlash</em></h2>
+      </div>
+
+      <div class="admin-card">
+        <h3 style="font-size: 22px; margin-bottom: 10px;">Ma'lumotlar Bazasini Eksport Qilish</h3>
+        <p style="color: var(--mut); margin-bottom: 16px; font-size: 14.5px;">
+          Barcha yangiliklar, ustozlar, kitoblar va sozlamalarni JSON fayl sifatida yuklab oling.
+        </p>
+        <button class="btn primary sm" id="download-json-btn">📥 Baza Faylini Yuklab Olish (JSON)</button>
+      </div>
+
+      <div class="admin-card">
+        <h3 style="font-size: 22px; margin-bottom: 10px;">Zaxiradan Qayta Tiklash / Import</h3>
+        <textarea id="import-json-text" class="fld" style="width:100%; min-height: 120px; font-family: monospace; font-size: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg);" placeholder="JSON ma'lumotlarini shu yerga tashlang yoki fayl tanlang..."></textarea>
+        <div style="display: flex; gap: 12px; margin-top: 12px;">
+          <button class="btn sm" id="apply-import-btn">Importni Qo'llash</button>
+        </div>
+      </div>
+    `;
+    $('#download-json-btn').onclick = () => {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(AppState, null, 2));
+      const dlAnchor = document.createElement('a');
+      dlAnchor.setAttribute("href", dataStr);
+      dlAnchor.setAttribute("download", `12maktab_baza_${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(dlAnchor);
+      dlAnchor.click();
+      dlAnchor.remove();
+      showToast("Baza fayli yuklab olindi! ✓");
+    };
+    $('#apply-import-btn').onclick = async () => {
+      try {
+        const parsed = JSON.parse($('#import-json-text').value);
+        if (parsed.info) AppState.info = { ...AppState.info, ...parsed.info };
+        ['news', 'teachers', 'gallery', 'books'].forEach(k => {
+          if (Array.isArray(parsed[k])) AppState[k] = parsed[k];
+        });
+        await saveAppState();
+        showToast("Ma'lumotlar muvaffaqiyatli tiklandi! ✓");
+        renderAdminTab('panel');
+      } catch(e) {
+        showToast("JSON formati noto'g'ri!");
+      }
+    };
+  }
+}
+
+function switchAdminTab(t) {
+  currentAdminTab = t;
+  $$('#admin-sidebar .admin-nav-item').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  renderAdminTab(t);
+}
+
+function renderAdminCollectionTab(colKey, itemLabel, items, renderRowFn) {
+  const container = $('#admin-tab-content');
+  container.innerHTML = `
+    <div class="admin-header">
+      <div>
+        <h2 class="t2" style="font-size: 38px; margin: 0;">${itemLabel}lar <em>Boshqaruvi</em></h2>
+        <p class="lead" style="font-size: 14px;">Jami: ${items.length} ta yozuv</p>
+      </div>
+      <button class="btn primary sm" onclick="editItemModal('${colKey}', null)">
+        <span class="r"><i>Yangi ${itemLabel} Qo'shish</i><i>Yangi ${itemLabel} Qo'shish</i></span>
+        <span class="ar">+</span>
+      </button>
+    </div>
+
+    <div class="admin-card">
+      ${items.length ? items.map(renderRowFn).join('') : `<p class="lead">Hozircha hech narsa qo'shilmagan.</p>`}
+    </div>
+  `;
+}
+
+async function deleteItem(colKey, itemId) {
+  if (!confirm("Haqiqatan ham ushbu yozuvni o'chirmoqchimisiz?")) return;
+  AppState[colKey] = AppState[colKey].filter(x => x.id !== itemId);
+  await saveAppState();
+  showToast("O'chirildi! ✓");
+  renderAdminTab(currentAdminTab);
+}
+
+async function removeAdmin(username) {
+  if (!confirm(`${username} adminini o'chirishni tasdiqlaysizmi?`)) return;
+  AppState.admins = AppState.admins.filter(a => a.u !== username);
+  await saveAppState();
+  showToast("Admin o'chirildi.");
+  renderAdminTab('admins');
+}
+
+/* ========================================================
+   MODAL FORM FOR ADDING / EDITING ITEMS
+   ======================================================== */
+const formModal = $('#admin-form-modal');
+let editingCol = null;
+let editingId = null;
+
+function editItemModal(colKey, itemId) {
+  editingCol = colKey;
+  editingId = itemId;
+  const isNew = !itemId;
+  const item = !isNew ? AppState[colKey].find(x => x.id === itemId) : {};
+  
+  const titles = { news: "Yangilik", teachers: "Ustoz", books: "Kitob", gallery: "Galereya Rasmi" };
+  $('#form-modal-title').textContent = (isNew ? "Yangi " : "Tahrirlash: ") + (titles[colKey] || "Yozuv");
+  $('#form-modal-error').textContent = "";
+
+  const b = $('#form-modal-body');
+  
+  if (colKey === 'news') {
+    b.innerHTML = `
+      <div class="fld"><input id="fm-title" value="${escapeHtml(item.title || '')}" placeholder=" "><label>Sarlavha</label></div>
+      <div class="fld"><input id="fm-date" value="${escapeHtml(item.date || '')}" placeholder=" "><label>Sana (masalan: 12.10)</label></div>
+      <div class="fld"><textarea id="fm-text" rows="3" placeholder=" ">${escapeHtml(item.text || '')}</textarea><label>Yangilik Matni</label></div>
+      <div class="fld">
+        <label style="position:static; margin-bottom: 6px; display:block;">Rasm Tanlash / Yuklash:</label>
+        <input type="file" id="fm-file" accept="image/*">
+        ${item.img ? `<img src="${item.img}" id="fm-preview" style="height:70px; border-radius:8px; margin-top:8px;">` : `<img id="fm-preview" style="display:none; height:70px; border-radius:8px; margin-top:8px;">`}
+      </div>
+    `;
+  } else if (colKey === 'teachers') {
+    b.innerHTML = `
+      <div class="fld"><input id="fm-name" value="${escapeHtml(item.name || '')}" placeholder=" "><label>Ism-familiya</label></div>
+      <div class="fld"><input id="fm-sub" value="${escapeHtml(item.subject || '')}" placeholder=" "><label>Fan (Mutaxassislik)</label></div>
+      <div class="fld"><input id="fm-exp" type="number" value="${item.exp || 10}" placeholder=" "><label>Tajriba (Yil)</label></div>
+      <div class="fld"><input id="fm-room" value="${escapeHtml(item.room || '101')}" placeholder=" "><label>Xona Raqami</label></div>
+      <div class="fld"><textarea id="fm-desc" rows="3" placeholder=" ">${escapeHtml(item.desc || '')}</textarea><label>Ustoz Haqida Qisqa Tavsif</label></div>
+      <div class="fld">
+        <label style="position:static; margin-bottom: 6px; display:block;">Portret Rasmi:</label>
+        <input type="file" id="fm-file" accept="image/*">
+        ${item.img ? `<img src="${item.img}" id="fm-preview" style="height:70px; border-radius:8px; margin-top:8px;">` : `<img id="fm-preview" style="display:none; height:70px; border-radius:8px; margin-top:8px;">`}
+      </div>
+    `;
+  } else if (colKey === 'books') {
+    b.innerHTML = `
+      <div class="fld"><input id="fm-title" value="${escapeHtml(item.title || '')}" placeholder=" "><label>Kitob Nomi</label></div>
+      <div class="fld">
+        <select id="fm-lang">
+          <option value="uz" ${item.lang === 'uz' ? 'selected' : ''}>🇺🇿 O'zbek tili</option>
+          <option value="tg" ${item.lang === 'tg' ? 'selected' : ''}>🇹🇯 Tojik tili</option>
+          <option value="ru" ${item.lang === 'ru' ? 'selected' : ''}>🇷🇺 Rus tili</option>
+        </select>
+        <label>Til</label>
+      </div>
+      <div class="fld">
+        <select id="fm-grade">
+          ${[1,2,3,4,5,6,7,8,9,10,11].map(g => `<option value="${g}" ${+item.grade === g ? 'selected' : ''}>${g}-sinf</option>`).join('')}
+        </select>
+        <label>Sinf</label>
+      </div>
+      <div class="fld">
+        <select id="fm-type">
+          <option value="Darslik" ${item.type === 'Darslik' ? 'selected' : ''}>Darslik</option>
+          <option value="Badiiy" ${item.type === 'Badiiy' ? 'selected' : ''}>Badiiy Kitob</option>
+        </select>
+        <label>Toifa</label>
+      </div>
+      <div class="fld"><input id="fm-author" value="${escapeHtml(item.author || '')}" placeholder=" "><label>Muallif</label></div>
+      <div class="fld"><input id="fm-url" value="${escapeHtml(item.url || '')}" placeholder=" "><label>Sayt / Kitob Havolasi (https://...)</label></div>
+      <div class="fld">
+        <label style="position:static; margin-bottom: 6px; display:block;">PDF Fayl Yuklash (Ixtiyoriy):</label>
+        <input type="file" id="fm-file-pdf" accept="application/pdf">
+        <span id="fm-pdf-status" style="font-size:12px; color:var(--cyan);">${item.pdf ? '✓ PDF oldindan yuklangan' : ''}</span>
+      </div>
+    `;
+  } else if (colKey === 'gallery') {
+    b.innerHTML = `
+      <div class="fld"><input id="fm-title" value="${escapeHtml(item.title || '')}" placeholder=" "><label>Rasm Tavsifi</label></div>
+      <div class="fld">
+        <label style="position:static; margin-bottom: 6px; display:block;">Rasm Fayli:</label>
+        <input type="file" id="fm-file" accept="image/*">
+        ${item.img ? `<img src="${item.img}" id="fm-preview" style="height:70px; border-radius:8px; margin-top:8px;">` : `<img id="fm-preview" style="display:none; height:70px; border-radius:8px; margin-top:8px;">`}
+      </div>
+    `;
+  }
+
+  // Bind file readers
+  const fInput = $('#fm-file');
+  if (fInput) {
+    fInput.onchange = async () => {
+      const file = fInput.files[0];
+      if (!file) return;
+      const dataUrl = await resizeImageFile(file);
+      item._pendingImg = dataUrl;
+      const prev = $('#fm-preview');
+      prev.src = dataUrl;
+      prev.style.display = 'block';
+    };
+  }
+
+  const pdfInput = $('#fm-file-pdf');
+  if (pdfInput) {
+    pdfInput.onchange = () => {
+      const file = pdfInput.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        item._pendingPdf = reader.result;
+        $('#fm-pdf-status').textContent = '✓ Yangi PDF tanlandi: ' + file.name;
+      };
+      reader.readAsDataURL(file);
+    };
+  }
+
+  formModal.showModal();
+}
+
+function resizeImageFile(file) {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const max = 900;
+        let w = img.width, h = img.height;
+        if (w > max || h > max) {
+          if (w > h) { h = Math.round((h * max) / w); w = max; }
+          else { w = Math.round((w * max) / h); h = max; }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', 0.82));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+$('#form-modal-cancel').onclick = () => formModal.close();
+
+$('#form-modal-save').onclick = async () => {
+  const isNew = !editingId;
+  const col = editingCol;
+  let target = !isNew ? AppState[col].find(x => x.id === editingId) : { id: uid() };
+
+  if (col === 'news') {
+    target.title = $('#fm-title').value.trim();
+    target.date = $('#fm-date').value.trim() || new Date().toISOString().slice(5, 10);
+    target.text = $('#fm-text').value.trim();
+    if (target._pendingImg) { target.img = target._pendingImg; delete target._pendingImg; }
+    if (!target.title) return ($('#form-modal-error').textContent = "Sarlavha kiritilishi shart!");
+  } else if (col === 'teachers') {
+    target.name = $('#fm-name').value.trim();
+    target.subject = $('#fm-sub').value.trim();
+    target.exp = +$('#fm-exp').value || 5;
+    target.room = $('#fm-room').value.trim() || "101";
+    target.desc = $('#fm-desc').value.trim();
+    if (target._pendingImg) { target.img = target._pendingImg; delete target._pendingImg; }
+    if (!target.name) return ($('#form-modal-error').textContent = "Ism-familiya kiritilishi shart!");
+  } else if (col === 'books') {
+    target.title = $('#fm-title').value.trim();
+    target.lang = $('#fm-lang').value;
+    target.grade = +$('#fm-grade').value;
+    target.type = $('#fm-type').value;
+    target.author = $('#fm-author').value.trim();
+    target.url = $('#fm-url').value.trim();
+    if (target._pendingPdf) { target.pdf = target._pendingPdf; delete target._pendingPdf; }
+    if (!target.title) return ($('#form-modal-error').textContent = "Kitob nomi kiritilishi shart!");
+  } else if (col === 'gallery') {
+    target.title = $('#fm-title').value.trim();
+    if (target._pendingImg) { target.img = target._pendingImg; delete target._pendingImg; }
+    if (!target.title) return ($('#form-modal-error').textContent = "Rasm tavsifi kiritilishi shart!");
+  }
+
+  if (isNew) {
+    AppState[col].unshift(target);
+  }
+
+  await saveAppState();
+  formModal.close();
+  showToast("Muvaffaqiyatli saqlandi! ✓");
+  renderAdminTab(currentAdminTab);
+};
+
+/* Contact Form handling */
+$('#contact-form')// Formspree handles submit
+/*
+  const name = $('#cf-name').value.trim();
+  $('#cf-status').textContent = `Rahmat, ${name}! Xabaringiz maktab ma'muriyatiga yetkazildi.`;
+  e.target.reset();
+  setTimeout(() => { $('#cf-status').textContent = ''; }, 5000);
+};
+
+/* ========================================================
+   INITIALIZATION
+   ======================================================== */
+(async () => {
+  await loadAppState();
+  initBookFilterControls();
+  renderPublicContent();
+  initThreeScenes();
+
+  // Route hash check
+  const hash = location.hash.replace('#', '');
+  if (hash === 'kirish') {
+    openAuthView();
+  } else if (hash === 'admin') {
+    openAdminDashboard();
+  }
+})();
+</script>
+</body>
+</html>

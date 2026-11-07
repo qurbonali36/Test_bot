@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "sinf": 5,
+    "savol": "Tarix fanida 'Eramizdan avvalgi' (miloddan avvalgi) davr qaysi voqeadan boshlab hisoblanadi?",
+    "variantlar": {
+      "A": "Rim shahrining qurilishidan",
+      "B": "Iso Masihning tug'ilishidan oldingi davrdan",
+      "C": "Islom dini vujudga kelishidan",
+      "D": "Yozuv ixtiro qilinishidan"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 2,
+    "sinf": 5,
+    "savol": "O'zbekiston hududidagi eng qadimgi odam manzilgohlaridan biri bo'lgan 'Selungur' g'ori qaysi viloyatda joylashgan?",
+    "variantlar": {
+      "A": "Surxondaryo",
+      "B": "Toshkent",
+      "C": "Farg'ona",
+      "D": "Navoiy"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 3,
+    "sinf": 5,
+    "savol": "O'zbekiston Respublikasining Davlat bayrog'i qachon qabul qilingan?",
+    "variantlar": {
+      "A": "1991-yil 31-avgust",
+      "B": "1991-yil 18-noyabr",
+      "C": "1992-yil 8-dekabr",
+      "D": "1992-yil 2-iyul"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 4,
+    "sinf": 5,
+    "savol": "Dunyoga mashhur 'Teshiktosh' g'oridan topilgan neandertal bola suyagi qaysi davrga oid?",
+    "variantlar": {
+      "A": "Ilk paleolit",
+      "B": "O'rta paleolit",
+      "C": "Mezolit",
+      "D": "Neolit"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 5,
+    "sinf": 5,
+    "savol": "O'rta Osiyo xalqlarining eng qadimgi muqaddas kitobi qaysi?",
+    "variantlar": {
+      "A": "Qur'on",
+      "B": "Injil",
+      "C": "Avesto",
+      "D": "Tavrot"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 6,
+    "sinf": 5,
+    "savol": "Amir Temurning onasining ismi nima edi?",
+    "variantlar": {
+      "A": "Bibixonim",
+      "B": "Tegina begim",
+      "C": "Gavharshodbegim",
+      "D": "Zubayda xonim"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 7,
+    "sinf": 5,
+    "savol": "O'zbekistonda arxeologiya faniga asos solgan olim kim?",
+    "variantlar": {
+      "A": "Yahyo G'ulomov",
+      "B": "V.V. Bartold",
+      "C": "E.V. Rtveladze",
+      "D": "A. Asqarov"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 8,
+    "sinf": 5,
+    "savol": "Qadimgi Yunoniston tarixchisi Gerodot o'z asarlarida massagetlarni kimlarga o'xshatgan?",
+    "variantlar": {
+      "A": "Forslarga",
+      "B": "Skiflarga",
+      "C": "Rimliklarga",
+      "D": "Misrliklarga"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 9,
+    "sinf": 5,
+    "savol": "Buyuk ipak yo'li qaysi asrda shakllangan?",
+    "variantlar": {
+      "A": "Mil. avv. VI asr",
+      "B": "Mil. avv. II asr",
+      "C": "Milodiy I asr",
+      "D": "Milodiy IV asr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 10,
+    "sinf": 5,
+    "savol": "Mirzo Ulug'bek tomonidan barpo etilgan rasadxona qaysi shaharda joylashgan?",
+    "variantlar": {
+      "A": "Buxoro",
+      "B": "Xiva",
+      "C": "Samarqand",
+      "D": "Shahrisabz"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 11,
+    "sinf": 5,
+    "savol": "Al-Xorazmiy qaysi fan rivojiga ulkan hissa qo'shgan?",
+    "variantlar": {
+      "A": "Tarix",
+      "B": "Matematika",
+      "C": "Kimyo",
+      "D": "Adabiyot"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 12,
+    "sinf": 5,
+    "savol": "O'zbekistonning poytaxti Toshkent shahri necha yoshda?",
+    "variantlar": {
+      "A": "2000 yil",
+      "B": "2200 yil",
+      "C": "2500 yil",
+      "D": "2700 yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 13,
+    "sinf": 5,
+    "savol": "YUNESKOning qarori bilan 'Alpomish' dostonining 1000 yilligi qachon nishonlandi?",
+    "variantlar": {
+      "A": "1997-yil",
+      "B": "1999-yil",
+      "C": "2001-yil",
+      "D": "2005-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 14,
+    "sinf": 5,
+    "savol": "Tarixda 'Tib qonunlari' asari bilan mashhur bo'lgan olim kim?",
+    "variantlar": {
+      "A": "Abu Rayhon Beruniy",
+      "B": "Abu Ali ibn Sino",
+      "C": "Imom al-Buxoriy",
+      "D": "Al-Farg'oniy"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 15,
+    "sinf": 6,
+    "savol": "Qadimgi Misrda 'Firon' so'zi qanday ma'noni anglatgan?",
+    "variantlar": {
+      "A": "Xudoning o'g'li",
+      "B": "Ulug' uy",
+      "C": "Oliy hukmdor",
+      "D": "Muqaddas shaxs"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 16,
+    "sinf": 6,
+    "savol": "Qadimgi Bobilda ilk yozma qonunlar to'plami kim tomonidan tuzilgan?",
+    "variantlar": {
+      "A": "Navuxodonosor",
+      "B": "Hammurapi",
+      "C": "Kir II",
+      "D": "Doro I"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 17,
+    "sinf": 6,
+    "savol": "Hindistondagi 'Kasta' tizimida eng yuqori tabaqa vakillari kimlar bo'lgan?",
+    "variantlar": {
+      "A": "Kshatriylar",
+      "B": "Vayshiyalar",
+      "C": "Brahmanlar",
+      "D": "Shudralar"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 18,
+    "sinf": 6,
+    "savol": "Qadimgi Gretsiyada 'Demokratiya' so'zi nimani anglatadi?",
+    "variantlar": {
+      "A": "Boylar hokimiyati",
+      "B": "Xalq hokimiyati",
+      "C": "Harbiylar boshqaruvi",
+      "D": "Podshohlik tizimi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 19,
+    "sinf": 6,
+    "savol": "Ilk Olimpiya o'yinlari qachon o'tkazilgan?",
+    "variantlar": {
+      "A": "Mil. avv. 884-yil",
+      "B": "Mil. avv. 776-yil",
+      "C": "Mil. avv. 490-yil",
+      "D": "Mil. avv. 334-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 20,
+    "sinf": 6,
+    "savol": "Rim shahriga afsonaga ko'ra kim asos solgan?",
+    "variantlar": {
+      "A": "Sezar",
+      "B": "Romul",
+      "C": "Rem",
+      "D": "Avgust"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 21,
+    "sinf": 6,
+    "savol": "Qadimgi Xitoyda Buyuk devor qurilishi qaysi sulola davrida boshlangan?",
+    "variantlar": {
+      "A": "Xan",
+      "B": "Szin",
+      "C": "Sin",
+      "D": "Tan"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 22,
+    "sinf": 6,
+    "savol": "Aleksandr Makedonskiyga qarshi O'rta Osiyoda kim rahbarlik qilgan?",
+    "variantlar": {
+      "A": "Tumaris",
+      "B": "Shiroq",
+      "C": "Spitamen",
+      "D": "Frada"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 23,
+    "sinf": 6,
+    "savol": "Kushon davlatining eng mashhur hukmdori kim bo'lgan?",
+    "variantlar": {
+      "A": "Kudula Kadfiz",
+      "B": "Vima Kadfiz",
+      "C": "Kanishka I",
+      "D": "Vasudeva"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 24,
+    "sinf": 6,
+    "savol": "Qadimgi Baqtriya poytaxti qaysi shahar edi?",
+    "variantlar": {
+      "A": "Marakanda",
+      "B": "Baqtra",
+      "C": "Kish",
+      "D": "Niso"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 25,
+    "sinf": 6,
+    "savol": "G'arbiy Rim imperiyasi qachon qulagan?",
+    "variantlar": {
+      "A": "395-yil",
+      "B": "476-yil",
+      "C": "527-yil",
+      "D": "962-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 26,
+    "sinf": 6,
+    "savol": "Buddaviylik dini qayerda vujudga kelgan?",
+    "variantlar": {
+      "A": "Xitoy",
+      "B": "Hindiston",
+      "C": "Yaponiya",
+      "D": "Misr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 27,
+    "sinf": 6,
+    "savol": "Qadimgi Misrda iyerogliflar yozuvini kim birinchi bo'lib o'qishga muvaffaq bo'lgan?",
+    "variantlar": {
+      "A": "G. Ravlinson",
+      "B": "J.F. Shampolyon",
+      "C": "A. Evans",
+      "D": "G. Shliman"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 28,
+    "sinf": 6,
+    "savol": "Afina davlatida demokratik islohotlar o'tkazgan shaxs kim?",
+    "variantlar": {
+      "A": "Solon",
+      "B": "Drakont",
+      "C": "Perikl",
+      "D": "Demosfen"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 29,
+    "sinf": 7,
+    "savol": "Somoniylar davlatida moliya ishlarini qaysi devon boshqargan?",
+    "variantlar": {
+      "A": "Devoni vazir",
+      "B": "Devoni mustavfiy",
+      "C": "Devoni sohib-ush-shurat",
+      "D": "Devoni muhtasib"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 30,
+    "sinf": 7,
+    "savol": "Franklar davlatining birinchi qiroli kim edi?",
+    "variantlar": {
+      "A": "Buyuk Karl",
+      "B": "Xlodvig",
+      "C": "Pepin",
+      "D": "Karl Martell"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 31,
+    "sinf": 7,
+    "savol": "G'aznaviylar davlatiga kim asos solgan?",
+    "variantlar": {
+      "A": "Sabuktegin",
+      "B": "Alptegin",
+      "C": "Sulton Mahmud",
+      "D": "Mas'ud"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 32,
+    "sinf": 7,
+    "savol": "Islom olamida 'Shayx-ur-rais' unvoni bilan mashhur olim kim?",
+    "variantlar": {
+      "A": "Beruniy",
+      "B": "Ibn Sino",
+      "C": "Forobiy",
+      "D": "Al-Xorazmiy"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 33,
+    "sinf": 7,
+    "savol": "Vizantiya imperiyasining poytaxti qaysi shahar bo'lgan?",
+    "variantlar": {
+      "A": "Rim",
+      "B": "Konstantinopol",
+      "C": "Afina",
+      "D": "Aleksandriya"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 34,
+    "sinf": 7,
+    "savol": "Arab xalifaligi qaysi jangdan so'ng Movarounnahrda o'z hukmronligini mustahkamlab oldi?",
+    "variantlar": {
+      "A": "Talas jangi",
+      "B": "Qatvon jangi",
+      "C": "Yarmuk jangi",
+      "D": "Nihovand jangi"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 35,
+    "sinf": 7,
+    "savol": "Xorazmshohlar davlatida 'G'uranj' qanday ma'noni anglatgan?",
+    "variantlar": {
+      "A": "Poytaxt",
+      "B": "Hukmdor unvoni",
+      "C": "Oltin tanga",
+      "D": "Harbiy qo'shin"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 36,
+    "sinf": 7,
+    "savol": "Buyuk Britaniyada 'Ozodlikning buyuk xartiyasi' qachon qabul qilingan?",
+    "variantlar": {
+      "A": "1066-yil",
+      "B": "1215-yil",
+      "C": "1265-yil",
+      "D": "1381-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 37,
+    "sinf": 7,
+    "savol": "O'rta asrlarda Yevropada ritsarlik tabaqasining asosiy burchi nima bo'lgan?",
+    "variantlar": {
+      "A": "Dehqonchilik qilish",
+      "B": "Harbiy xizmat",
+      "C": "Savdo-sotiq",
+      "D": "Cherkovni boshqarish"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 38,
+    "sinf": 7,
+    "savol": "Qoraxoniylar davlatining asoschisi kim?",
+    "variantlar": {
+      "A": "Satuq Bug'roxon",
+      "B": "Bilga Kul Qodirxon",
+      "C": "Ibrohim Tamg'achxon",
+      "D": "Nasr ibn Ali"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 39,
+    "sinf": 7,
+    "savol": "O'rta asrlarda Hindistonda 'Dehli sultonligi' qachon tashkil topdi?",
+    "variantlar": {
+      "A": "1192-yil",
+      "B": "1206-yil",
+      "C": "1320-yil",
+      "D": "1526-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 40,
+    "sinf": 7,
+    "savol": "Buyuk ipak yo'lining 'shimoliy tarmog'i' qaysi shahardan o'tgan?",
+    "variantlar": {
+      "A": "Buxoro",
+      "B": "Urganch",
+      "C": "Termiz",
+      "D": "Andijon"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 41,
+    "sinf": 7,
+    "savol": "Movarounnahrda 'Sarbadorlar qo'zg'oloni' qaysi shaharda boshlangan?",
+    "variantlar": {
+      "A": "Buxoro",
+      "B": "Samarqand",
+      "C": "Termiz",
+      "D": "Qarshi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 42,
+    "sinf": 7,
+    "savol": "Yevropada 100 yillik urush qaysi davlatlar o'rtasida bo'lgan?",
+    "variantlar": {
+      "A": "Angliya va Germaniya",
+      "B": "Fransiya va Angliya",
+      "C": "Ispaniya va Portugaliya",
+      "D": "Italiya va Fransiya"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 43,
+    "sinf": 8,
+    "savol": "Amir Temur nechanchi yili Movarounnahrning mutloq hukmdori deb e'lon qilindi?",
+    "variantlar": {
+      "A": "1360-yil",
+      "B": "1370-yil",
+      "C": "1336-yil",
+      "D": "1405-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 44,
+    "sinf": 8,
+    "savol": "Amir Temur va Boyazid Yildirim o'rtasidagi mashhur Anqara jangi qachon bo'lgan?",
+    "variantlar": {
+      "A": "1395-yil",
+      "B": "1402-yil",
+      "C": "1399-yil",
+      "D": "1405-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 45,
+    "sinf": 8,
+    "savol": "Mirzo Ulug'bek tomonidan 'Ziji jadidi Ko'ragoniy' asari necha yillik kuzatuvlar natijasida yaratilgan?",
+    "variantlar": {
+      "A": "10 yil",
+      "B": "30 yil",
+      "C": "20 yil",
+      "D": "40 yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 46,
+    "sinf": 8,
+    "savol": "Zahiriddin Muhammad Bobur Hindistonda qaysi davlatga asos soldi?",
+    "variantlar": {
+      "A": "Boburiylar imperiyasi",
+      "B": "Dehli sultonligi",
+      "C": "Suriylar davlati",
+      "D": "G'aznaviylar davlati"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 47,
+    "sinf": 8,
+    "savol": "Buxoro xonligida Shayboniylar sulolasining so'nggi hukmdori kim?",
+    "variantlar": {
+      "A": "Abdullaxon II",
+      "B": "Pirmuhammadxon",
+      "C": "Abdulmo'minxon",
+      "D": "Ubaydullaxon"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 48,
+    "sinf": 8,
+    "savol": "Xiva xonligiga nechanchi yilda asos solingan?",
+    "variantlar": {
+      "A": "1500-yil",
+      "B": "1511-yil",
+      "C": "1598-yil",
+      "D": "1709-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 49,
+    "sinf": 8,
+    "savol": "Qo'qon xonligiga asos solgan shaxs kim?",
+    "variantlar": {
+      "A": "Shohruxbiy",
+      "B": "Olimxon",
+      "C": "Madalixon",
+      "D": "Sheralixon"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 50,
+    "sinf": 8,
+    "savol": "Konstantinopol shahri Usmonli turklar tomonidan nechanchi yili zabt etildi?",
+    "variantlar": {
+      "A": "1450-yil",
+      "B": "1453-yil",
+      "C": "1492-yil",
+      "D": "1517-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 51,
+    "sinf": 8,
+    "savol": "Amerikani kashf etgan dengiz sayyohi kim?",
+    "variantlar": {
+      "A": "Vasko da Gama",
+      "B": "Xristofor Kolumb",
+      "C": "Magellan",
+      "D": "Amerigo Vespuchchi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 52,
+    "sinf": 8,
+    "savol": "Buxoro amirligida 'Amirul-umaro' lavozimi nimani anglatgan?",
+    "variantlar": {
+      "A": "Bosh vazir",
+      "B": "Qo'shin qo'mondoni",
+      "C": "Moliya vaziri",
+      "D": "Sudya"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 53,
+    "sinf": 8,
+    "savol": "Yevropada Uyg'onish davri (Renessans) qayerda boshlangan?",
+    "variantlar": {
+      "A": "Fransiya",
+      "B": "Italiya",
+      "C": "Germaniya",
+      "D": "Angliya"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 54,
+    "sinf": 8,
+    "savol": "Napoleon Bonapart qaysi orolda vafot etgan?",
+    "variantlar": {
+      "A": "Elba",
+      "B": "Muqaddas Yelena",
+      "C": "Korsika",
+      "D": "Sitsiliya"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 55,
+    "sinf": 8,
+    "savol": "Xiva xonligida 'Inoq' unvoni qaysi sulola vakillariga berilgan?",
+    "variantlar": {
+      "A": "Shayboniylar",
+      "B": "Qo'ng'irotlar",
+      "C": "Ashtarxoniylar",
+      "D": "Mang'itlar"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 56,
+    "sinf": 8,
+    "savol": "Yetti yillik urush (1756-1763) qaysi davlatlar o'rtasida ustunlik uchun bo'lgan?",
+    "variantlar": {
+      "A": "Ispaniya va Portugaliya",
+      "B": "Angliya va Fransiya",
+      "C": "Rossiya va Turkiy",
+      "D": "Avstriya va Prussiya"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 57,
+    "sinf": 9,
+    "savol": "Rossiya imperiyasi qo'shinlari Toshkentni nechanchi yili egalladi?",
+    "variantlar": {
+      "A": "1860-yil",
+      "B": "1865-yil",
+      "C": "1868-yil",
+      "D": "1873-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 58,
+    "sinf": 9,
+    "savol": "Turkiston general-gubernatorligi qachon tashkil etildi?",
+    "variantlar": {
+      "A": "1865-yil",
+      "B": "1867-yil",
+      "C": "1881-yil",
+      "D": "1898-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 59,
+    "sinf": 9,
+    "savol": "O'rta Osiyoda birinchi jadid maktabi qaysi shaharda ochilgan?",
+    "variantlar": {
+      "A": "Toshkent",
+      "B": "Andijon",
+      "C": "Samarqand",
+      "D": "Buxoro"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 60,
+    "sinf": 9,
+    "savol": "Jadidchilik harakatining asoschisi va rahbari kim edi?",
+    "variantlar": {
+      "A": "Munavvar Qori Abdurashidxonov",
+      "B": "Mahmudxo'ja Behbudiy",
+      "C": "Abdurauf Fitrat",
+      "D": "Abdulla Avloniy"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 61,
+    "sinf": 9,
+    "savol": "Rossiyada serflik (krepostnoylik) huquqi qachon bekor qilindi?",
+    "variantlar": {
+      "A": "1855-yil",
+      "B": "1861-yil",
+      "C": "1881-yil",
+      "D": "1905-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 62,
+    "sinf": 9,
+    "savol": "AQShda fuqarolar urushi qachon bo'lib o'tgan?",
+    "variantlar": {
+      "A": "1775-1783 yy.",
+      "B": "1861-1865 yy.",
+      "C": "1812-1814 yy.",
+      "D": "1898-1900 yy."
+    },
+    "javob": "B"
+  },
+  {
+    "id": 63,
+    "sinf": 9,
+    "savol": "Germaniya imperiyasi qachon e'lon qilingan?",
+    "variantlar": {
+      "A": "1848-yil",
+      "B": "1871-yil",
+      "C": "1890-yil",
+      "D": "1914-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 64,
+    "sinf": 9,
+    "savol": "Turkistonda 1916-yilgi xalq qo'zg'oloniga nima sabab bo'ldi?",
+    "variantlar": {
+      "A": "Soliqlarning oshishi",
+      "B": "Mardanikorlikka olish to'g'risidagi farmon",
+      "C": "Yerlarning tortib olinishi",
+      "D": "Diniy cheklovlar"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 65,
+    "sinf": 9,
+    "savol": "Yaponiyada 'Meydzi islohotlari' qaysi davrda o'tkazildi?",
+    "variantlar": {
+      "A": "1850-yillar",
+      "B": "1868-yildan boshlab",
+      "C": "1905-yildan keyin",
+      "D": "XIX asr oxiri"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 66,
+    "sinf": 9,
+    "savol": "Turkiston general-gubernatorligining birinchi rahbari kim?",
+    "variantlar": {
+      "A": "M. Chernyayev",
+      "B": "K.P. fon Kaufman",
+      "C": "N. Rozenbax",
+      "D": "A. Kuropatkin"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 67,
+    "sinf": 9,
+    "savol": "XIX asr oxirida Turkistonda 'Dukchi eshon' qo'zg'oloni qayerda bo'ldi?",
+    "variantlar": {
+      "A": "Jizzax",
+      "B": "Andijon",
+      "C": "Namangan",
+      "D": "Toshkent"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 68,
+    "sinf": 9,
+    "savol": "Birinchi jahon urushi qachon boshlandi?",
+    "variantlar": {
+      "A": "1912-yil",
+      "B": "1914-yil",
+      "C": "1917-yil",
+      "D": "1918-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 69,
+    "sinf": 9,
+    "savol": "Turkistonda birinchi gazeta 'Turkiston viloyatining gazeti' qachondan chiqa boshladi?",
+    "variantlar": {
+      "A": "1867-yil",
+      "B": "1870-yil",
+      "C": "1883-yil",
+      "D": "1905-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 70,
+    "sinf": 9,
+    "savol": "Mahmudxo'ja Behbudiydan qolgan mashhur asar qaysi?",
+    "variantlar": {
+      "A": "Turkiy guliston yoxud axloq",
+      "B": "Padarkush dramasi",
+      "C": "Kecha va kunduz",
+      "D": "O'tkan kunlar"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 71,
+    "sinf": 10,
+    "savol": "Turkiston Muxtoriyati qancha vaqt yashadi?",
+    "variantlar": {
+      "A": "3 oy",
+      "B": "72 kun",
+      "C": "1 yil",
+      "D": "6 oy"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 72,
+    "sinf": 10,
+    "savol": "O'zbekiston SSR qachon tashkil topdi?",
+    "variantlar": {
+      "A": "1917-yil",
+      "B": "1924-yil",
+      "C": "1920-yil",
+      "D": "1936-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 73,
+    "sinf": 10,
+    "savol": "Ikkinchi jahon urushi qachon tugagan?",
+    "variantlar": {
+      "A": "1945-yil 9-may",
+      "B": "1945-yil 2-sentyabr",
+      "C": "1944-yil 7-noyabr",
+      "D": "1945-yil 1-avgust"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 74,
+    "sinf": 10,
+    "savol": "Sho'ro davridagi eng dahshatli 'Qatag'on yillari' qaysi davrni o'z ichiga oladi?",
+    "variantlar": {
+      "A": "1920-1925 yy.",
+      "B": "1937-1938 yy.",
+      "C": "1941-1945 yy.",
+      "D": "1953-1956 yy."
+    },
+    "javob": "B"
+  },
+  {
+    "id": 75,
+    "sinf": 10,
+    "savol": "Fashistik Germaniya SSSRga qachon bostirib kirdi?",
+    "variantlar": {
+      "A": "1939-yil 1-sentyabr",
+      "B": "1941-yil 22-iyun",
+      "C": "1940-yil 10-may",
+      "D": "1941-yil 1-iyul"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 76,
+    "sinf": 10,
+    "savol": "Birinchi jahon urushidan keyin tuzilgan xalqaro tashkilot qaysi?",
+    "variantlar": {
+      "A": "BMT",
+      "B": "Millatlar Ligasi",
+      "C": "YUNESKO",
+      "D": "NATO"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 77,
+    "sinf": 10,
+    "savol": "O'zbekistonda mustaqillik deklaratsiyasi qachon qabul qilindi?",
+    "variantlar": {
+      "A": "1991-yil 31-avgust",
+      "B": "1990-yil 20-iyun",
+      "C": "1991-yil 1-sentyabr",
+      "D": "1992-yil 8-dekabr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 78,
+    "sinf": 10,
+    "savol": "Toshkentda 1966-yilgi zilzila qaysi sanada yuz bergan?",
+    "variantlar": {
+      "A": "26-aprel",
+      "B": "1-may",
+      "C": "10-iyun",
+      "D": "31-avgust"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 79,
+    "sinf": 10,
+    "savol": "SSSRda 'Qayta qurish' (Perestroyka) siyosati kim tomonidan boshlangan?",
+    "variantlar": {
+      "A": "L. Brejnev",
+      "B": "M. Gorbachyov",
+      "C": "N. Xrushchyov",
+      "D": "B. Yeltsin"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 80,
+    "sinf": 10,
+    "savol": "Sovuq urush davrida sotsialistik davlatlar tomonidan tuzilgan tashkilot?",
+    "variantlar": {
+      "A": "NATO",
+      "B": "Varshava shartnomasi",
+      "C": "Yevropa Ittifoqi",
+      "D": "Kengash"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 81,
+    "sinf": 10,
+    "savol": "Ikkinchi jahon urushida O'zbekistondan qancha odam ishtirok etgan (taxminan)?",
+    "variantlar": {
+      "A": "500 ming",
+      "B": "1,5 milliondan ortiq",
+      "C": "100 ming",
+      "D": "3 million"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 82,
+    "sinf": 10,
+    "savol": "SSSRda 'Shaxsga sig'inish' qoralangan KPSSning XX syezdi qachon bo'lgan?",
+    "variantlar": {
+      "A": "1953-yil",
+      "B": "1956-yil",
+      "C": "1964-yil",
+      "D": "1985-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 83,
+    "sinf": 10,
+    "savol": "Afg'onistondan sovet qo'shinlari qachon butunlay olib chiqildi?",
+    "variantlar": {
+      "A": "1985-yil",
+      "B": "1989-yil",
+      "C": "1991-yil",
+      "D": "1979-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 84,
+    "sinf": 10,
+    "savol": "O'zbekiston SSRda 'Paxta ishi' yoki 'O'zbeklar ishi' deb nomlangan qatag'on qachon avj oldi?",
+    "variantlar": {
+      "A": "1970-yillar",
+      "B": "1983-1989 yy.",
+      "C": "1990-1991 yy.",
+      "D": "1950-yillar"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 85,
+    "sinf": 10,
+    "savol": "Toshkent metropoliteni birinchi liniyasi qachon ishga tushgan?",
+    "variantlar": {
+      "A": "1970-yil",
+      "B": "1977-yil",
+      "C": "1980-yil",
+      "D": "1966-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 86,
+    "sinf": 11,
+    "savol": "O'zbekiston Respublikasining davlat mustaqilligi qachon e'lon qilingan?",
+    "variantlar": {
+      "A": "1991-yil 20-iyun",
+      "B": "1991-yil 31-avgust",
+      "C": "1990-yil 31-avgust",
+      "D": "1991-yil 1-sentyabr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 87,
+    "sinf": 11,
+    "savol": "O'zbekiston Respublikasining Konstitutsiyasi qachon qabul qilingan?",
+    "variantlar": {
+      "A": "1992-yil 2-iyul",
+      "B": "1992-yil 8-dekabr",
+      "C": "1991-yil 8-dekabr",
+      "D": "1993-yil 1-yanvar"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 88,
+    "sinf": 11,
+    "savol": "O'zbekiston Birlashgan Millatlar Tashkilotiga qachon a'zo bo'ldi?",
+    "variantlar": {
+      "A": "1991-yil 1-sentyabr",
+      "B": "1992-yil 2-mart",
+      "C": "1992-yil 8-dekabr",
+      "D": "1993-yil 10-may"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 89,
+    "sinf": 11,
+    "savol": "O'zbekiston milliy valyutasi 'So'm' qachon muomalaga kiritildi?",
+    "variantlar": {
+      "A": "1993-yil 15-noyabr",
+      "B": "1994-yil 1-iyul",
+      "C": "1992-yil 1-yanvar",
+      "D": "1995-yil 1-iyul"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 90,
+    "sinf": 11,
+    "savol": "O'zbekiston Respublikasining birinchi Prezidenti kim?",
+    "variantlar": {
+      "A": "Shavkat Mirziyoyev",
+      "B": "Islom Karimov",
+      "C": "Yo'ldosh Oxunboboyev",
+      "D": "Sharof Rashidov"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 91,
+    "sinf": 11,
+    "savol": "YUNESKO qarori bilan Buxoro va Xiva shaharlarining 2500 yilligi qachon nishonlandi?",
+    "variantlar": {
+      "A": "1991-yil",
+      "B": "1997-yil",
+      "C": "1999-yil",
+      "D": "2001-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 92,
+    "sinf": 11,
+    "savol": "Shanxay hamkorlik tashkiloti (SHHT) qachon tashkil etilgan?",
+    "variantlar": {
+      "A": "1996-yil",
+      "B": "2001-yil",
+      "C": "2005-yil",
+      "D": "2010-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 93,
+    "sinf": 11,
+    "savol": "O'zbekistonda 'Kadrlar tayyorlash milliy dasturi' qachon qabul qilingan?",
+    "variantlar": {
+      "A": "1992-yil",
+      "B": "1997-yil",
+      "C": "2000-yil",
+      "D": "2005-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 94,
+    "sinf": 11,
+    "savol": "O'zbekiston Respublikasi Prezidenti Shavkat Mirziyoyev o'z lavozimiga birinchi marta qachon saylangan?",
+    "variantlar": {
+      "A": "2015-yil",
+      "B": "2016-yil",
+      "C": "2017-yil",
+      "D": "2021-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 95,
+    "sinf": 11,
+    "savol": "Yangi O'zbekistonning 2022-2026 yillarga mo'ljallangan taraqqiyot strategiyasi necha yo'nalishdan iborat?",
+    "variantlar": {
+      "A": "5 ta",
+      "B": "7 ta",
+      "C": "10 ta",
+      "D": "12 ta"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 96,
+    "sinf": 11,
+    "savol": "O'zbekiston Respublikasi Konstitutsiyasiga kiritilgan so'nggi yirik o'zgarishlar (referendum) qachon bo'ldi?",
+    "variantlar": {
+      "A": "2021-yil",
+      "B": "2023-yil",
+      "C": "2022-yil",
+      "D": "2020-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 97,
+    "sinf": 11,
+    "savol": "Toshkent shahri nechanchi yili 'Islom madaniyati poytaxti' deb e'lon qilingan?",
+    "variantlar": {
+      "A": "2005-yil",
+      "B": "2007-yil",
+      "C": "2010-yil",
+      "D": "2015-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 98,
+    "sinf": 11,
+    "savol": "O'zbekistonning jahon savdo tashkilotiga (JST) a'zo bo'lish jarayoni qachon qayta faollashdi?",
+    "variantlar": {
+      "A": "2010-yil",
+      "B": "2017-yil",
+      "C": "2020-yil",
+      "D": "2016-yil"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 99,
+    "sinf": 11,
+    "savol": "Mustaqil O'zbekistonning birinchi ordeni qaysi?",
+    "variantlar": {
+      "A": "Amir Temur",
+      "B": "Mustaqillik",
+      "C": "Do'stlik",
+      "D": "Sog'lom avlod uchun"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 100,
+    "sinf": 11,
+    "savol": "YUNESKOning insoniyat nomoddiy madaniy merosi ro'yxatiga kiritilgan o'zbek milliy taomi qaysi?",
+    "variantlar": {
+      "A": "Somsa",
+      "B": "Palov",
+      "C": "Sho'rva",
+      "D": "Manti"
+    },
+    "javob": "B"
+  }
+]

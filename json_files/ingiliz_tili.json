@@ -1,0 +1,1202 @@
+[
+{
+"id": 1,
+"sinf": 5,
+"savol": "Bo'sh joyni to'ldiring: '... am a student.'",
+"variantlar": {
+"A": "He",
+"B": "I",
+"C": "We",
+"D": "They"
+},
+"javob": "B"
+},
+{
+"id": 2,
+"sinf": 5,
+"savol": "To'g'ri predlogni tanlang: 'The book is ... the table.' (Kitob stolning ustida)",
+"variantlar": {
+"A": "on",
+"B": "in",
+"C": "under",
+"D": "at"
+},
+"javob": "A"
+},
+{
+"id": 3,
+"sinf": 5,
+"savol": "'Child' (bola) so'zining ko'plik shakli qanday yoziladi?",
+"variantlar": {
+"A": "Childs",
+"B": "Childrens",
+"C": "Children",
+"D": "Childes"
+},
+"javob": "C"
+},
+{
+"id": 4,
+"sinf": 5,
+"savol": "'Mening ismim' iborasi ingliz tilida qanday aytiladi?",
+"variantlar": {
+"A": "I name is",
+"B": "Mine name is",
+"C": "Me name is",
+"D": "My name is"
+},
+"javob": "D"
+},
+{
+"id": 5,
+"sinf": 5,
+"savol": "'Oila' so'zining inglizcha tarjimasi qaysi?",
+"variantlar": {
+"A": "Friend",
+"B": "Family",
+"C": "School",
+"D": "House"
+},
+"javob": "B"
+},
+{
+"id": 6,
+"sinf": 5,
+"savol": "To'g'ri fe'lni tanlang: 'She ... a teacher.'",
+"variantlar": {
+"A": "is",
+"B": "am",
+"C": "are",
+"D": "be"
+},
+"javob": "A"
+},
+{
+"id": 7,
+"sinf": 5,
+"savol": "'Qizil' rang ingliz tilida nima deyiladi?",
+"variantlar": {
+"A": "Blue",
+"B": "Yellow",
+"C": "Red",
+"D": "Green"
+},
+"javob": "C"
+},
+{
+"id": 8,
+"sinf": 5,
+"savol": "'Big' (katta) so'zining antonimi (qarama-qarshi ma'nosi) qaysi?",
+"variantlar": {
+"A": "Tall",
+"B": "Small",
+"C": "Long",
+"D": "Short"
+},
+"javob": "B"
+},
+{
+"id": 9,
+"sinf": 5,
+"savol": "'Water' (suv) so'zi otlarning qaysi turiga kiradi?",
+"variantlar": {
+"A": "Sanaladigan ot (Countable)",
+"B": "Sanalmaydigan ot (Uncountable)",
+"C": "Ikkalasiga ham kiradi",
+"D": "Sifat (Adjective)"
+},
+"javob": "B"
+},
+{
+"id": 10,
+"sinf": 5,
+"savol": "Bo'sh joyni to'ldiring: 'I ... a pen.' (Menda qalam bor)",
+"variantlar": {
+"A": "has got",
+"B": "am got",
+"C": "have got",
+"D": "is got"
+},
+"javob": "C"
+},
+{
+"id": 11,
+"sinf": 5,
+"savol": "To'g'ri artiklni tanlang: 'This is ... apple.'",
+"variantlar": {
+"A": "a",
+"B": "an",
+"C": "the",
+"D": "no article"
+},
+"javob": "B"
+},
+{
+"id": 12,
+"sinf": 5,
+"savol": "12 soni ingliz tilida qanday aytiladi?",
+"variantlar": {
+"A": "Twelve",
+"B": "Twenty",
+"C": "Two",
+"D": "Tenth"
+},
+"javob": "A"
+},
+{
+"id": 13,
+"sinf": 5,
+"savol": "Haftaning 'Dushanba' kuni ingliz tilida qanday deyiladi?",
+"variantlar": {
+"A": "Tuesday",
+"B": "Monday",
+"C": "Sunday",
+"D": "Friday"
+},
+"javob": "B"
+},
+{
+"id": 14,
+"sinf": 5,
+"savol": "Bo'sh joyni to'ldiring: 'I ... up at 7 o'clock every day.'",
+"variantlar": {
+"A": "gets",
+"B": "getting",
+"C": "get",
+"D": "to get"
+},
+"javob": "C"
+},
+{
+"id": 15,
+"sinf": 6,
+"savol": "'Go' (bormoq) fe'lining o'tgan zamon shakli qaysi?",
+"variantlar": {
+"A": "goed",
+"B": "gone",
+"C": "went",
+"D": "going"
+},
+"javob": "C"
+},
+{
+"id": 16,
+"sinf": 6,
+"savol": "Bo'sh joyni to'ldiring: 'We ... watching TV now.'",
+"variantlar": {
+"A": "am",
+"B": "is",
+"C": "are",
+"D": "do"
+},
+"javob": "C"
+},
+{
+"id": 17,
+"sinf": 6,
+"savol": "To'g'ri so'roq so'zni tanlang: 'How ... apples do you have?'",
+"variantlar": {
+"A": "much",
+"B": "many",
+"C": "long",
+"D": "often"
+},
+"javob": "B"
+},
+{
+"id": 18,
+"sinf": 6,
+"savol": "Bo'sh joyni to'ldiring: 'There ... some milk in the fridge.'",
+"variantlar": {
+"A": "is",
+"B": "are",
+"C": "am",
+"D": "be"
+},
+"javob": "A"
+},
+{
+"id": 19,
+"sinf": 6,
+"savol": "To'g'ri predlogni qo'ying: 'What did you do ... Sunday?'",
+"variantlar": {
+"A": "in",
+"B": "at",
+"C": "on",
+"D": "to"
+},
+"javob": "C"
+},
+{
+"id": 20,
+"sinf": 6,
+"savol": "'Bad' (yomon) sifatining qiyosiy darajasi qaysi?",
+"variantlar": {
+"A": "worse",
+"B": "worst",
+"C": "badder",
+"D": "more bad"
+},
+"javob": "A"
+},
+{
+"id": 21,
+"sinf": 6,
+"savol": "To'g'ri predlogni tanlang: 'My birthday is ... May.'",
+"variantlar": {
+"A": "on",
+"B": "in",
+"C": "at",
+"D": "of"
+},
+"javob": "B"
+},
+{
+"id": 22,
+"sinf": 6,
+"savol": "Bo'sh joyni to'ldiring: 'She usually ... to school by bus.'",
+"variantlar": {
+"A": "go",
+"B": "went",
+"C": "goes",
+"D": "going"
+},
+"javob": "C"
+},
+{
+"id": 23,
+"sinf": 6,
+"savol": "'Men kitob o'qiyapman' gapi ingliz tilida to'g'ri qanday yoziladi?",
+"variantlar": {
+"A": "I read a book.",
+"B": "I am reading a book.",
+"C": "I reading a book.",
+"D": "I was reading a book."
+},
+"javob": "B"
+},
+{
+"id": 24,
+"sinf": 6,
+"savol": "Bo'sh joyni to'ldiring: 'Look! The baby ...'",
+"variantlar": {
+"A": "sleeps",
+"B": "slept",
+"C": "is sleeping",
+"D": "sleep"
+},
+"javob": "C"
+},
+{
+"id": 25,
+"sinf": 6,
+"savol": "'Buy' (sotib olmoq) fe'lining o'tgan zamon shakli qanday?",
+"variantlar": {
+"A": "buyed",
+"B": "bought",
+"C": "booght",
+"D": "buying"
+},
+"javob": "B"
+},
+{
+"id": 26,
+"sinf": 6,
+"savol": "'Beautiful' (chiroyli) so'zining antonimi qaysi?",
+"variantlar": {
+"A": "Ugly",
+"B": "Pretty",
+"C": "Nice",
+"D": "Good"
+},
+"javob": "A"
+},
+{
+"id": 27,
+"sinf": 6,
+"savol": "To'g'ri modal fe'lni tanlang: '... you help me with my homework?'",
+"variantlar": {
+"A": "Can",
+"B": "Are",
+"C": "Am",
+"D": "Is"
+},
+"javob": "A"
+},
+{
+"id": 28,
+"sinf": 6,
+"savol": "Quyidagi so'zlardan qaysi biri sanalmaydigan ot (uncountable noun) hisoblanadi?",
+"variantlar": {
+"A": "Apple",
+"B": "Car",
+"C": "Bread",
+"D": "Book"
+},
+"javob": "C"
+},
+{
+"id": 29,
+"sinf": 7,
+"savol": "Bo'sh joyni to'ldiring: 'I ... seen this film before.'",
+"variantlar": {
+"A": "has",
+"B": "have",
+"C": "am",
+"D": "was"
+},
+"javob": "B"
+},
+{
+"id": 30,
+"sinf": 7,
+"savol": "To'g'ri sifat darajasini tanlang: 'Tashkent is the ... city in Uzbekistan.'",
+"variantlar": {
+"A": "large",
+"B": "larger",
+"C": "largest",
+"D": "most large"
+},
+"javob": "C"
+},
+{
+"id": 31,
+"sinf": 7,
+"savol": "Majburiyatni ifodalash uchun to'g'ri modal fe'lni tanlang: 'You ... wear a uniform at school.'",
+"variantlar": {
+"A": "must",
+"B": "may",
+"C": "can",
+"D": "would"
+},
+"javob": "A"
+},
+{
+"id": 32,
+"sinf": 7,
+"savol": "Kelasi zamonni ifodalash uchun to'g'ri shaklni tanlang: 'I ... travel to London next year.'",
+"variantlar": {
+"A": "will to",
+"B": "am going to",
+"C": "going to",
+"D": "am go"
+},
+"javob": "B"
+},
+{
+"id": 33,
+"sinf": 7,
+"savol": "Bo'sh joyni to'ldiring: 'He ... his leg while he was playing football.'",
+"variantlar": {
+"A": "breaks",
+"B": "breaked",
+"C": "breaking",
+"D": "broke"
+},
+"javob": "D"
+},
+{
+"id": 34,
+"sinf": 7,
+"savol": "To'g'ri so'roq dumi (question tag)ni tanlang: 'You are a student, ...?'",
+"variantlar": {
+"A": "are you",
+"B": "do you",
+"C": "aren't you",
+"D": "don't you"
+},
+"javob": "C"
+},
+{
+"id": 35,
+"sinf": 7,
+"savol": "'Yet' (hali) so'zi ingliz tilida asosan qaysi zamonda ishlatiladi?",
+"variantlar": {
+"A": "Present Simple",
+"B": "Past Simple",
+"C": "Present Perfect",
+"D": "Future Simple"
+},
+"javob": "C"
+},
+{
+"id": 36,
+"sinf": 7,
+"savol": "Qiyosiy darajadagi to'g'ri so'zni tanlang: 'A cheetah is ... than a lion.'",
+"variantlar": {
+"A": "fast",
+"B": "faster",
+"C": "fastest",
+"D": "more fast"
+},
+"javob": "B"
+},
+{
+"id": 37,
+"sinf": 7,
+"savol": "Bo'sh joyni to'ldiring: 'They have lived here ... 2010.'",
+"variantlar": {
+"A": "for",
+"B": "since",
+"C": "in",
+"D": "from"
+},
+"javob": "B"
+},
+{
+"id": 38,
+"sinf": 7,
+"savol": "Bo'sh joyni to'ldiring: 'He has been a teacher ... five years.'",
+"variantlar": {
+"A": "for",
+"B": "since",
+"C": "at",
+"D": "from"
+},
+"javob": "A"
+},
+{
+"id": 39,
+"sinf": 7,
+"savol": "First Conditional qoidasiga ko'ra to'g'ri shaklni tanlang: 'If it rains, we ... stay at home.'",
+"variantlar": {
+"A": "would",
+"B": "are",
+"C": "will",
+"D": "do"
+},
+"javob": "C"
+},
+{
+"id": 40,
+"sinf": 7,
+"savol": "Va'da berganda qaysi kelasi zamon shakli ishlatiladi: 'I promise I ... help you.'",
+"variantlar": {
+"A": "am going to",
+"B": "will",
+"C": "do",
+"D": "shall to"
+},
+"javob": "B"
+},
+{
+"id": 41,
+"sinf": 7,
+"savol": "Kitob yozadigan shaxs kim deb ataladi?",
+"variantlar": {
+"A": "Actor",
+"B": "Author",
+"C": "Engineer",
+"D": "Artist"
+},
+"javob": "B"
+},
+{
+"id": 42,
+"sinf": 7,
+"savol": "Inkor gap uchun to'g'ri olmoshni tanlang: 'I don't have ... money.'",
+"variantlar": {
+"A": "some",
+"B": "no",
+"C": "any",
+"D": "many"
+},
+"javob": "C"
+},
+{
+"id": 43,
+"sinf": 8,
+"savol": "Passive voice (Majhul nisbat): 'Kitoblar Alisher Navoiy tomonidan yozilgan.' - Books ... by Alisher Navoi.",
+"variantlar": {
+"A": "wrote",
+"B": "are written",
+"C": "were written",
+"D": "write"
+},
+"javob": "C"
+},
+{
+"id": 44,
+"sinf": 8,
+"savol": "Bo'sh joyni to'ldiring: 'While I was walking, I ... my friend.'",
+"variantlar": {
+"A": "see",
+"B": "was seeing",
+"C": "seen",
+"D": "saw"
+},
+"javob": "D"
+},
+{
+"id": 45,
+"sinf": 8,
+"savol": "'Enjoy' fe'lidan keyin qaysi shakl keladi: 'I enjoy ... music.'",
+"variantlar": {
+"A": "to listen",
+"B": "listening",
+"C": "listen",
+"D": "listened"
+},
+"javob": "B"
+},
+{
+"id": 46,
+"sinf": 8,
+"savol": "Second Conditional qoidasiga ko'ra to'g'ri fe'lni tanlang: 'If I ... you, I would study harder.'",
+"variantlar": {
+"A": "am",
+"B": "was",
+"C": "were",
+"D": "be"
+},
+"javob": "C"
+},
+{
+"id": 47,
+"sinf": 8,
+"savol": "Passive voice: 'Cotton ... in Uzbekistan.' (O'zbekistonda paxta yetishtiriladi)",
+"variantlar": {
+"A": "is grown",
+"B": "grows",
+"C": "grew",
+"D": "has grown"
+},
+"javob": "A"
+},
+{
+"id": 48,
+"sinf": 8,
+"savol": "Bo'sh joyni to'ldiring: 'We decided ... a new car.'",
+"variantlar": {
+"A": "buy",
+"B": "to buy",
+"C": "buying",
+"D": "bought"
+},
+"javob": "B"
+},
+{
+"id": 49,
+"sinf": 8,
+"savol": "So'roq so'zni toping: '... is the capital of Great Britain?'",
+"variantlar": {
+"A": "What",
+"B": "Where",
+"C": "Who",
+"D": "When"
+},
+"javob": "A"
+},
+{
+"id": 50,
+"sinf": 8,
+"savol": "To'g'ri predlogni tanlang: 'I am interested ... learning languages.'",
+"variantlar": {
+"A": "in",
+"B": "at",
+"C": "on",
+"D": "with"
+},
+"javob": "A"
+},
+{
+"id": 51,
+"sinf": 8,
+"savol": "'Let' fe'lidan so'ng qaysi shakl keladi: 'Let me ... you a story.'",
+"variantlar": {
+"A": "to tell",
+"B": "telling",
+"C": "told",
+"D": "tell"
+},
+"javob": "D"
+},
+{
+"id": 52,
+"sinf": 8,
+"savol": "Bo'sh joyni to'ldiring: 'My sister is good ... math.'",
+"variantlar": {
+"A": "in",
+"B": "at",
+"C": "on",
+"D": "for"
+},
+"javob": "B"
+},
+{
+"id": 53,
+"sinf": 8,
+"savol": "Zero Conditional: 'If you heat ice, it ...'",
+"variantlar": {
+"A": "melt",
+"B": "will melt",
+"C": "melts",
+"D": "melted"
+},
+"javob": "C"
+},
+{
+"id": 54,
+"sinf": 8,
+"savol": "'Mustaqillik' so'zining inglizcha tarjimasi qaysi?",
+"variantlar": {
+"A": "Independence",
+"B": "Tradition",
+"C": "Culture",
+"D": "Holiday"
+},
+"javob": "A"
+},
+{
+"id": 55,
+"sinf": 8,
+"savol": "'Look forward to' iborasidan so'ng to'g'ri shakl qaysi: 'I look forward to ... you.'",
+"variantlar": {
+"A": "see",
+"B": "saw",
+"C": "seeing",
+"D": "seen"
+},
+"javob": "C"
+},
+{
+"id": 56,
+"sinf": 8,
+"savol": "Reported speech (O'zlashtirma gap): 'He said that he ... a doctor.'",
+"variantlar": {
+"A": "is",
+"B": "was",
+"C": "be",
+"D": "am"
+},
+"javob": "B"
+},
+{
+"id": 57,
+"sinf": 9,
+"savol": "'I had finished my homework before my father came.' Ushbu gapdagi birinchi qism qaysi zamonda?",
+"variantlar": {
+"A": "Past Simple",
+"B": "Past Perfect",
+"C": "Present Perfect",
+"D": "Past Continuous"
+},
+"javob": "B"
+},
+{
+"id": 58,
+"sinf": 9,
+"savol": "To'g'ri nisbiy olmoshni (relative pronoun) tanlang: 'The man ... lives next door is a doctor.'",
+"variantlar": {
+"A": "which",
+"B": "whose",
+"C": "who",
+"D": "whom"
+},
+"javob": "C"
+},
+{
+"id": 59,
+"sinf": 9,
+"savol": "Bo'sh joyni to'ldiring: 'The book ... I read yesterday was very interesting.'",
+"variantlar": {
+"A": "who",
+"B": "which",
+"C": "whose",
+"D": "where"
+},
+"javob": "B"
+},
+{
+"id": 60,
+"sinf": 9,
+"savol": "'Want' fe'lidan so'ng qanday shakl keladi: 'I want ... English.'",
+"variantlar": {
+"A": "learn",
+"B": "learning",
+"C": "to learn",
+"D": "learned"
+},
+"javob": "C"
+},
+{
+"id": 61,
+"sinf": 9,
+"savol": "Majhul nisbat (Passive voice)ga o'tkazing: 'Someone has stolen my bike.' -> 'My bike ...'",
+"variantlar": {
+"A": "is stolen",
+"B": "was stolen",
+"C": "has been stolen",
+"D": "had been stolen"
+},
+"javob": "C"
+},
+{
+"id": 62,
+"sinf": 9,
+"savol": "Zamonga moslashuv qoidasiga ko'ra to'g'ri variantni tanlang: 'She told me she ... her keys.'",
+"variantlar": {
+"A": "loses",
+"B": "lost",
+"C": "had lost",
+"D": "has lost"
+},
+"javob": "C"
+},
+{
+"id": 63,
+"sinf": 9,
+"savol": "'He asked me what my name was.' - Bu qaysi grammatik qoidaga misol?",
+"variantlar": {
+"A": "Direct speech",
+"B": "Reported speech",
+"C": "Passive voice",
+"D": "Relative clause"
+},
+"javob": "B"
+},
+{
+"id": 64,
+"sinf": 9,
+"savol": "To'g'ri bog'lovchini tanlang: 'Neither my brother ... my sister likes playing tennis.'",
+"variantlar": {
+"A": "or",
+"B": "and",
+"C": "nor",
+"D": "both"
+},
+"javob": "C"
+},
+{
+"id": 65,
+"sinf": 9,
+"savol": "Third Conditional: 'If I had known about the party, I ... gone.'",
+"variantlar": {
+"A": "will have",
+"B": "would have",
+"C": "had",
+"D": "have"
+},
+"javob": "B"
+},
+{
+"id": 66,
+"sinf": 9,
+"savol": "Bo'sh joyni to'ldiring: 'Although it was raining, we ... for a walk.'",
+"variantlar": {
+"A": "go",
+"B": "gone",
+"C": "went",
+"D": "had gone"
+},
+"javob": "C"
+},
+{
+"id": 67,
+"sinf": 9,
+"savol": "Causative form (orttirma nisbat): 'We had our house ... last year.'",
+"variantlar": {
+"A": "paint",
+"B": "painted",
+"C": "painting",
+"D": "to paint"
+},
+"javob": "B"
+},
+{
+"id": 68,
+"sinf": 9,
+"savol": "Istalmagan hozirgi holatni ifodalash (Wish): 'I wish I ... speak French.'",
+"variantlar": {
+"A": "can",
+"B": "will",
+"C": "could",
+"D": "can to"
+},
+"javob": "C"
+},
+{
+"id": 69,
+"sinf": 9,
+"savol": "'Mualliflik huquqi' so'zining inglizcha tarjimasi nima?",
+"variantlar": {
+"A": "Copyright",
+"B": "Environment",
+"C": "Heritage",
+"D": "Charity"
+},
+"javob": "A"
+},
+{
+"id": 70,
+"sinf": 9,
+"savol": "Nisbiy olmoshni to'g'ri qo'llang: 'He is the boy ... father is a famous actor.'",
+"variantlar": {
+"A": "who",
+"B": "which",
+"C": "whose",
+"D": "whom"
+},
+"javob": "C"
+},
+{
+"id": 71,
+"sinf": 10,
+"savol": "Kuchli ishonchli xulosa yasashda qaysi modal fe'l ishlatiladi: 'You ... have seen him yesterday, he was in London!'",
+"variantlar": {
+"A": "mustn't",
+"B": "shouldn't",
+"C": "can't",
+"D": "wouldn't"
+},
+"javob": "C"
+},
+{
+"id": 72,
+"sinf": 10,
+"savol": "Inversiya qoidasi: 'Not only ... to London, but she also visited Paris.'",
+"variantlar": {
+"A": "she went",
+"B": "did she go",
+"C": "went she",
+"D": "she did go"
+},
+"javob": "B"
+},
+{
+"id": 73,
+"sinf": 10,
+"savol": "Gerund yoki Infinitive: 'Despite ... tired, he finished the project.'",
+"variantlar": {
+"A": "he was",
+"B": "being",
+"C": "to be",
+"D": "been"
+},
+"javob": "B"
+},
+{
+"id": 74,
+"sinf": 10,
+"savol": "Bo'sh joyni to'ldiring: 'It is high time you ... a job.'",
+"variantlar": {
+"A": "get",
+"B": "got",
+"C": "to get",
+"D": "getting"
+},
+"javob": "B"
+},
+{
+"id": 75,
+"sinf": 10,
+"savol": "Kompyuter dasturlarini yozadigan shaxs qanday ataladi?",
+"variantlar": {
+"A": "User",
+"B": "Hacker",
+"C": "Programmer",
+"D": "Server"
+},
+"javob": "C"
+},
+{
+"id": 76,
+"sinf": 10,
+"savol": "Kuchaytiruvchi so'zni tanlang: 'It is ... impossible to finish this in one day.'",
+"variantlar": {
+"A": "absolutely",
+"B": "very",
+"C": "absolutely not",
+"D": "too"
+},
+"javob": "A"
+},
+{
+"id": 77,
+"sinf": 10,
+"savol": "To'g'ri predlogni tanlang: 'She accused him ... stealing the money.'",
+"variantlar": {
+"A": "for",
+"B": "of",
+"C": "on",
+"D": "about"
+},
+"javob": "B"
+},
+{
+"id": 78,
+"sinf": 10,
+"savol": "'Would rather' qoidasi: 'I would rather you ... not smoke here.'",
+"variantlar": {
+"A": "do",
+"B": "did",
+"C": "will",
+"D": "have"
+},
+"javob": "B"
+},
+{
+"id": 79,
+"sinf": 10,
+"savol": "Future Perfect zamonini aniqlang: 'By this time next year, I ... graduated from school.'",
+"variantlar": {
+"A": "will have",
+"B": "would have",
+"C": "will",
+"D": "am"
+},
+"javob": "A"
+},
+{
+"id": 80,
+"sinf": 10,
+"savol": "'Suggest' fe'lidan keyin to'g'ri shakl qaysi: 'They suggested ... early.'",
+"variantlar": {
+"A": "to start",
+"B": "starting",
+"C": "start",
+"D": "started"
+},
+"javob": "B"
+},
+{
+"id": 81,
+"sinf": 10,
+"savol": "'Ayni vaqtda' iborasining inglizcha muqobili nima?",
+"variantlar": {
+"A": "In present",
+"B": "At present",
+"C": "On present",
+"D": "For present"
+},
+"javob": "B"
+},
+{
+"id": 82,
+"sinf": 10,
+"savol": "Odatni ifodalash: 'We are used to ... up early.'",
+"variantlar": {
+"A": "wake",
+"B": "woke",
+"C": "waking",
+"D": "woken"
+},
+"javob": "C"
+},
+{
+"id": 83,
+"sinf": 10,
+"savol": "'Tadbirkor' so'zining inglizcha tarjimasi qanday?",
+"variantlar": {
+"A": "Entrepreneur",
+"B": "Scientist",
+"C": "Volunteer",
+"D": "Employee"
+},
+"javob": "A"
+},
+{
+"id": 84,
+"sinf": 10,
+"savol": "Bo'sh joyni to'ldiring: 'He succeeded ... passing the exam.'",
+"variantlar": {
+"A": "in",
+"B": "at",
+"C": "on",
+"D": "to"
+},
+"javob": "A"
+},
+{
+"id": 85,
+"sinf": 10,
+"savol": "Biror narsadan qutulmoq ma'nosini beruvchi ibora: 'To get rid ... something.'",
+"variantlar": {
+"A": "from",
+"B": "of",
+"C": "with",
+"D": "off"
+},
+"javob": "B"
+},
+{
+"id": 86,
+"sinf": 11,
+"savol": "Inversiya shart ergash gap: 'Had I known you were waiting, I ... hurried.'",
+"variantlar": {
+"A": "will have",
+"B": "would have",
+"C": "had",
+"D": "would"
+},
+"javob": "B"
+},
+{
+"id": 87,
+"sinf": 11,
+"savol": "'Sustainable' so'ziga ma'nodosh so'zni toping.",
+"variantlar": {
+"A": "temporary",
+"B": "harmful",
+"C": "maintainable",
+"D": "weak"
+},
+"javob": "C"
+},
+{
+"id": 88,
+"sinf": 11,
+"savol": "To'g'ri inversiya tartibini toping: 'Never before ... such a beautiful sunset.'",
+"variantlar": {
+"A": "I have seen",
+"B": "have I seen",
+"C": "I saw",
+"D": "saw I"
+},
+"javob": "B"
+},
+{
+"id": 89,
+"sinf": 11,
+"savol": "Third Conditional qoidasiga amal qiling: 'If it hadn't rained, we ... a picnic.'",
+"variantlar": {
+"A": "would have had",
+"B": "will have",
+"C": "had",
+"D": "would have"
+},
+"javob": "A"
+},
+{
+"id": 90,
+"sinf": 11,
+"savol": "To'g'ri predlogni tanlang: 'She insisted ... paying for the meal.'",
+"variantlar": {
+"A": "on",
+"B": "to",
+"C": "for",
+"D": "in"
+},
+"javob": "A"
+},
+{
+"id": 91,
+"sinf": 11,
+"savol": "'Global warming is a serious issue.' Gapdagi 'issue' so'zining ma'nosi nima?",
+"variantlar": {
+"A": "Natija",
+"B": "Muammo",
+"C": "Yechim",
+"D": "Qoida"
+},
+"javob": "B"
+},
+{
+"id": 92,
+"sinf": 11,
+"savol": "Future Perfect qachon kelishini ko'rsatuvchi misolni toping: 'By the end of this century, the sea level ... significantly.'",
+"variantlar": {
+"A": "will rise",
+"B": "is rising",
+"C": "will have risen",
+"D": "rises"
+},
+"javob": "C"
+},
+{
+"id": 93,
+"sinf": 11,
+"savol": "To'g'ri predlogni tanlang: 'I am totally opposed ... changing the rules.'",
+"variantlar": {
+"A": "to",
+"B": "for",
+"C": "against",
+"D": "with"
+},
+"javob": "A"
+},
+{
+"id": 94,
+"sinf": 11,
+"savol": "Phrasal verb: 'The meeting was put ... because of the weather.' (Qoldirildi)",
+"variantlar": {
+"A": "off",
+"B": "up",
+"C": "on",
+"D": "out"
+},
+"javob": "A"
+},
+{
+"id": 95,
+"sinf": 11,
+"savol": "So/Such farqi: 'It was ... a boring movie that I fell asleep.'",
+"variantlar": {
+"A": "so",
+"B": "such",
+"C": "very",
+"D": "too"
+},
+"javob": "B"
+},
+{
+"id": 96,
+"sinf": 11,
+"savol": "Grammatik tuzilmani to'ldiring: 'Scarcely had she entered the room ... the phone rang.'",
+"variantlar": {
+"A": "than",
+"B": "when",
+"C": "that",
+"D": "then"
+},
+"javob": "B"
+},
+{
+"id": 97,
+"sinf": 11,
+"savol": "Future Continuous zamoni: 'This time tomorrow, we ... over the Atlantic.'",
+"variantlar": {
+"A": "will fly",
+"B": "will be flying",
+"C": "fly",
+"D": "are flying"
+},
+"javob": "B"
+},
+{
+"id": 98,
+"sinf": 11,
+"savol": "Idiomaning ma'nosini toping: 'To take something for granted' nima degani?",
+"variantlar": {
+"A": "Qadrlamaslik / Oddiy holdek qabul qilish",
+"B": "Xursand bo'lish",
+"C": "Ruxsat so'rash",
+"D": "Hadya olish"
+},
+"javob": "A"
+},
+{
+"id": 99,
+"sinf": 11,
+"savol": "To'g'ri predlogni tanlang: 'The manager is responsible ... the whole department.'",
+"variantlar": {
+"A": "for",
+"B": "to",
+"C": "with",
+"D": "of"
+},
+"javob": "A"
+},
+{
+"id": 100,
+"sinf": 11,
+"savol": "To'g'ri yozilgan (spelling) so'zni toping.",
+"variantlar": {
+"A": "Accommodation",
+"B": "Accomodation",
+"C": "Acommodation",
+"D": "Acomodation"
+},
+"javob": "A"
+}
+]

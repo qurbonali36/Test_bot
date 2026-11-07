@@ -1,0 +1,13 @@
+[
+    {
+        "question": "IT-so'zini to'liq ko'rinishi qanday?",
+        "options": [
+            "A) Info technics",
+            "B) Information techno",
+            "C)Information of Technologies",
+            "D)Tog'ri javob yo'q"
+        ],
+        "correct_option_id": 2,
+        "type": "quiz"
+    }
+]

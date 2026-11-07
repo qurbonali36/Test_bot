@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "sinf": 5,
+    "savol": "Tabiatni va undagi hodisalarni o'rganuvchi umumiy fan qaysi?",
+    "variantlar": {
+      "A": "Adabiyot",
+      "B": "Tarix",
+      "C": "Tabiatshunoslik (Fizika asosi)",
+      "D": "Informatika"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 2,
+    "sinf": 5,
+    "savol": "Xalqaro birliklar sistemasida uzunlik o'lchov birligi nima?",
+    "variantlar": {
+      "A": "Kilometr",
+      "B": "Metr",
+      "C": "Santimetr",
+      "D": "Millimetr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 3,
+    "sinf": 5,
+    "savol": "Vaqtni o'lchaydigan asbob qanday ataladi?",
+    "variantlar": {
+      "A": "Tarozi",
+      "B": "Chizg'ich",
+      "C": "Soat",
+      "D": "Termometr"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 4,
+    "sinf": 5,
+    "savol": "Jism massasini o'lchash uchun qaysi asbob ishlatiladi?",
+    "variantlar": {
+      "A": "Dinamometr",
+      "B": "Barometr",
+      "C": "Tarozi",
+      "D": "Menurka"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 5,
+    "sinf": 5,
+    "savol": "Haroratni o'lchovchi asbob nima?",
+    "variantlar": {
+      "A": "Tarozi",
+      "B": "Soat",
+      "C": "Termometr",
+      "D": "Kompas"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 6,
+    "sinf": 5,
+    "savol": "Normal atmosfera bosimida suv qanday haroratda qaynaydi?",
+    "variantlar": {
+      "A": "50 °C",
+      "B": "90 °C",
+      "C": "100 °C",
+      "D": "120 °C"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 7,
+    "sinf": 5,
+    "savol": "Suv qanday haroratda muzlaydi?",
+    "variantlar": {
+      "A": "-10 °C",
+      "B": "0 °C",
+      "C": "4 °C",
+      "D": "10 °C"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 8,
+    "sinf": 5,
+    "savol": "Tabiatda moddalar necha xil asosiy agregat holatda bo'ladi (plazmani hisobga olmaganda)?",
+    "variantlar": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 9,
+    "sinf": 5,
+    "savol": "Yer sayyorasi qaysi yulduz atrofida aylanadi?",
+    "variantlar": {
+      "A": "Oy",
+      "B": "Quyosh",
+      "C": "Yupiter",
+      "D": "Venera"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 10,
+    "sinf": 5,
+    "savol": "Yerning jismlarni o'ziga tortish xususiyati nima deb ataladi?",
+    "variantlar": {
+      "A": "Inersiya",
+      "B": "Gravitatsiya (Tortishish)",
+      "C": "Bosim",
+      "D": "Zichlik"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 11,
+    "sinf": 5,
+    "savol": "Kompas mili doimo ufqning qaysi tomonini ko'rsatib turadi?",
+    "variantlar": {
+      "A": "Sharq",
+      "B": "G'arb",
+      "C": "Shimol",
+      "D": "Janub"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 12,
+    "sinf": 5,
+    "savol": "Magnitning nechta qutbi bor?",
+    "variantlar": {
+      "A": "1 ta",
+      "B": "2 ta",
+      "C": "3 ta",
+      "D": "4 ta"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 13,
+    "sinf": 5,
+    "savol": "Moddaning tarkibiy, kimyoviy jihatdan bo'linmas eng kichik zarrachasi nima deb ataladi?",
+    "variantlar": {
+      "A": "Hujayra",
+      "B": "Molekula",
+      "C": "Atom",
+      "D": "Bakteriya"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 14,
+    "sinf": 5,
+    "savol": "Ovoz qaysi muhitda mutlaqo tarqalmaydi?",
+    "variantlar": {
+      "A": "Suvda",
+      "B": "Havoda",
+      "C": "Vakuumda",
+      "D": "Qattiq jismlarda"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 15,
+    "sinf": 6,
+    "savol": "Tekis harakatda tezlikni topish formulasi qaysi?",
+    "variantlar": {
+      "A": "v = S * t",
+      "B": "v = S / t",
+      "C": "v = t / S",
+      "D": "v = S + t"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 16,
+    "sinf": 6,
+    "savol": "Zichlikni hisoblash formulasi qaysi javobda to'g'ri berilgan?",
+    "variantlar": {
+      "A": "ρ = m / V",
+      "B": "ρ = V / m",
+      "C": "ρ = m * V",
+      "D": "ρ = m + V"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 17,
+    "sinf": 6,
+    "savol": "Xalqaro birliklar sistemasida massa o'lchov birligi nima?",
+    "variantlar": {
+      "A": "Gramm",
+      "B": "Tonna",
+      "C": "Kilogramm (kg)",
+      "D": "Sentner"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 18,
+    "sinf": 6,
+    "savol": "Kuchni o'lchaydigan asbob nima deb ataladi?",
+    "variantlar": {
+      "A": "Ampermetr",
+      "B": "Voltmetr",
+      "C": "Dinamometr",
+      "D": "Manometr"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 19,
+    "sinf": 6,
+    "savol": "Xalqaro birliklar sistemasida kuch birligi qanday nomlanadi?",
+    "variantlar": {
+      "A": "Paskal (Pa)",
+      "B": "Nyuton (N)",
+      "C": "Joul (J)",
+      "D": "Vatt (Vt)"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 20,
+    "sinf": 6,
+    "savol": "Qattiq jismlar bosimini hisoblash formulasi qaysi?",
+    "variantlar": {
+      "A": "p = F / S",
+      "B": "p = F * S",
+      "C": "p = m / V",
+      "D": "p = S / F"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 21,
+    "sinf": 6,
+    "savol": "Bosim birligi sifatida qaysi o'lchov qabul qilingan?",
+    "variantlar": {
+      "A": "Nyuton",
+      "B": "Kilogramm",
+      "C": "Paskal (Pa)",
+      "D": "Joul"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 22,
+    "sinf": 6,
+    "savol": "Suyuqlik yoki gazga botirilgan jismga ta'sir qiluvchi yuqoriga itaruvchi kuch nima deyiladi?",
+    "variantlar": {
+      "A": "Arximed kuchi",
+      "B": "Ishqalanish kuchi",
+      "C": "Elastiklik kuchi",
+      "D": "Og'irlik kuchi"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 23,
+    "sinf": 6,
+    "savol": "Yerning o'z sirtidagi jismlarni tortish kuchi qanday kuch deb ataladi?",
+    "variantlar": {
+      "A": "Ishqalanish kuchi",
+      "B": "Arximed kuchi",
+      "C": "Og'irlik kuchi",
+      "D": "Elastiklik kuchi"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 24,
+    "sinf": 6,
+    "savol": "Harakatdagi jismning tezligini kamaytiruvchi, sirtlar orasida yuzaga keladigan kuch qaysi?",
+    "variantlar": {
+      "A": "Tortishish kuchi",
+      "B": "Ishqalanish kuchi",
+      "C": "Og'irlik kuchi",
+      "D": "Arximed kuchi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 25,
+    "sinf": 6,
+    "savol": "Atmosfera bosimini o'lchaydigan asbob nima?",
+    "variantlar": {
+      "A": "Termometr",
+      "B": "Barometr",
+      "C": "Manometr",
+      "D": "Gidrometr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 26,
+    "sinf": 6,
+    "savol": "Traektoriya nima?",
+    "variantlar": {
+      "A": "Jismning massasi",
+      "B": "Harakat tezligi",
+      "C": "Harakatdagi jism chizib qoldirgan iz (chiziq)",
+      "D": "Vaqt o'lchovi"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 27,
+    "sinf": 6,
+    "savol": "Tekis harakatda bosib o'tilgan yo'lni topish formulasi qaysi?",
+    "variantlar": {
+      "A": "S = v / t",
+      "B": "S = v * t",
+      "C": "S = t / v",
+      "D": "S = v + t"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 28,
+    "sinf": 6,
+    "savol": "SI sistemasida zichlik birligi qanday ifodalanadi?",
+    "variantlar": {
+      "A": "kg/m³",
+      "B": "g/sm³",
+      "C": "kg/m²",
+      "D": "N/m³"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 29,
+    "sinf": 7,
+    "savol": "Mexanik ishni hisoblash formulasi qaysi?",
+    "variantlar": {
+      "A": "A = F / S",
+      "B": "A = F * S",
+      "C": "A = N * t",
+      "D": "A = m * g"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 30,
+    "sinf": 7,
+    "savol": "Xalqaro birliklar sistemasida ish va energiya birligi nima?",
+    "variantlar": {
+      "A": "Nyuton (N)",
+      "B": "Vatt (Vt)",
+      "C": "Joul (J)",
+      "D": "Paskal (Pa)"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 31,
+    "sinf": 7,
+    "savol": "Quvvat deb nimaga aytiladi va uning formulasi qanday?",
+    "variantlar": {
+      "A": "Bajarilgan ishning shu ishni bajarishga ketgan vaqtga ko'paytmasiga (N = A * t)",
+      "B": "Kuchning tezlikka nisbatiga (N = F / v)",
+      "C": "Bajarilgan ishning vaqtga nisbatiga (N = A / t)",
+      "D": "Kuchning yo'lga ko'paytmasiga (N = F * S)"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 32,
+    "sinf": 7,
+    "savol": "Quvvatning birligi qanday ataladi?",
+    "variantlar": {
+      "A": "Joul",
+      "B": "Vatt (Vt)",
+      "C": "Gers",
+      "D": "Nyuton"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 33,
+    "sinf": 7,
+    "savol": "Harakatlanayotgan jismning tezligi tufayli yuzaga keladigan energiya qanday ataladi?",
+    "variantlar": {
+      "A": "Ichki energiya",
+      "B": "Potensial energiya",
+      "C": "Kinetik energiya",
+      "D": "Yorug'lik energiyasi"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 34,
+    "sinf": 7,
+    "savol": "Kinetik energiyani hisoblash formulasi qaysi?",
+    "variantlar": {
+      "A": "E = mgh",
+      "B": "E = mv² / 2",
+      "C": "E = F * S",
+      "D": "E = p / V"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 35,
+    "sinf": 7,
+    "savol": "Yerdan h balandlikda ko'tarilgan jismning potensial energiyasi formulasi qaysi?",
+    "variantlar": {
+      "A": "E = mgh",
+      "B": "E = mv² / 2",
+      "C": "E = F * S",
+      "D": "E = kx² / 2"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 36,
+    "sinf": 7,
+    "savol": "Qaysi asbob oddiy mexanizm hisoblanadi?",
+    "variantlar": {
+      "A": "Dinamometr",
+      "B": "Richag",
+      "C": "Barometr",
+      "D": "Voltmetr"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 37,
+    "sinf": 7,
+    "savol": "Mexanizmning foydali ish koeffitsiyenti (FIK) qanday hisoblanadi?",
+    "variantlar": {
+      "A": "(To'liq ish / Foydali ish) * 100%",
+      "B": "(Foydali ish / To'liq ish) * 100%",
+      "C": "Foydali ish * To'liq ish",
+      "D": "Foydali ish - To'liq ish"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 38,
+    "sinf": 7,
+    "savol": "Tebranish davri qanday harf bilan belgilanadi va uning birligi nima?",
+    "variantlar": {
+      "A": "ν (nyu), Gers",
+      "B": "t, soat",
+      "C": "T, sekund",
+      "D": "λ (lambda), metr"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 39,
+    "sinf": 7,
+    "savol": "Birlik vaqt ichidagi tebranishlar soni nima deb ataladi?",
+    "variantlar": {
+      "A": "Tebranish davri",
+      "B": "Chastota",
+      "C": "Amplituda",
+      "D": "To'lqin uzunligi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 40,
+    "sinf": 7,
+    "savol": "Chastota birligi nima?",
+    "variantlar": {
+      "A": "Gers (Hz)",
+      "B": "Sekund (s)",
+      "C": "Metr (m)",
+      "D": "Rad/s"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 41,
+    "sinf": 7,
+    "savol": "Havoda tovush tezligi taxminan qanchaga teng?",
+    "variantlar": {
+      "A": "300 000 km/s",
+      "B": "1500 m/s",
+      "C": "340 m/s",
+      "D": "800 m/s"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 42,
+    "sinf": 7,
+    "savol": "Energiyaning saqlanish qonuni mohiyati nima?",
+    "variantlar": {
+      "A": "Energiya har doim yo'qoladi",
+      "B": "Energiya doim o'z-o'zidan paydo bo'ladi",
+      "C": "Energiya yo'qolmaydi va yo'qdan bor bo'lmaydi, faqat bir turdan boshqa turga o'tadi",
+      "D": "Kinetik energiya faqat ishqalanishga sarflanadi"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 43,
+    "sinf": 8,
+    "savol": "Jismning issiqlik holatini qaysi fizik kattalik xarakterlaydi?",
+    "variantlar": {
+      "A": "Massa",
+      "B": "Zichlik",
+      "C": "Harorat",
+      "D": "Bosim"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 44,
+    "sinf": 8,
+    "savol": "Issiqlik miqdorini hisoblash formulasi qaysi?",
+    "variantlar": {
+      "A": "Q = mgh",
+      "B": "Q = cm(t2 - t1)",
+      "C": "Q = I²Rt",
+      "D": "Q = λm"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 45,
+    "sinf": 8,
+    "savol": "Solishtirma issiqlik sig'imining birligi qanday?",
+    "variantlar": {
+      "A": "J/kg",
+      "B": "J/(kg·°C)",
+      "C": "J/°C",
+      "D": "Vatt/kg"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 46,
+    "sinf": 8,
+    "savol": "Elektr zaryadi qanday harf bilan belgilanadi va birligi nima?",
+    "variantlar": {
+      "A": "I, Amper",
+      "B": "U, Volt",
+      "C": "q, Kulon",
+      "D": "R, Om"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 47,
+    "sinf": 8,
+    "savol": "Tabiatda qanday turdagi elektr zaryadlari mavjud?",
+    "variantlar": {
+      "A": "Faqat musbat",
+      "B": "Faqat manfiy",
+      "C": "Musbat va manfiy",
+      "D": "Neytral va manfiy"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 48,
+    "sinf": 8,
+    "savol": "Elektr toki deb nimaga aytiladi?",
+    "variantlar": {
+      "A": "Atomlarning tartibsiz harakatiga",
+      "B": "Zaryadli zarralarning tartibli yo'nalgan harakatiga",
+      "C": "Molekulalarning to'qnashuviga",
+      "D": "Neytronlarning harakatiga"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 49,
+    "sinf": 8,
+    "savol": "Tok kuchini o'lchaydigan asbob qanday ataladi va u zanjirga qanday ulanadi?",
+    "variantlar": {
+      "A": "Voltmetr, parallel",
+      "B": "Ampermetr, ketma-ket",
+      "C": "Ampermetr, parallel",
+      "D": "Ommmetr, ketma-ket"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 50,
+    "sinf": 8,
+    "savol": "Tok kuchi qaysi harf bilan belgilanadi va uning o'lchov birligi nima?",
+    "variantlar": {
+      "A": "I, Amper (A)",
+      "B": "U, Volt (V)",
+      "C": "R, Om (Ω)",
+      "D": "q, Kulon (C)"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 51,
+    "sinf": 8,
+    "savol": "Elektr kuchlanishini o'lchaydigan asbob nima va u zanjirga qanday ulanadi?",
+    "variantlar": {
+      "A": "Ampermetr, ketma-ket",
+      "B": "Voltmetr, ketma-ket",
+      "C": "Voltmetr, parallel",
+      "D": "Elektrometr, aralash"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 52,
+    "sinf": 8,
+    "savol": "Zanjir qismi uchun Om qonuni qanday ifodalanadi?",
+    "variantlar": {
+      "A": "I = U / R",
+      "B": "I = U * R",
+      "C": "R = I / U",
+      "D": "U = I / R"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 53,
+    "sinf": 8,
+    "savol": "O'tkazgichning elektr qarshiligi nimalarga bog'liq?",
+    "variantlar": {
+      "A": "Tok kuchi va kuchlanishga",
+      "B": "Faqat uzunligiga",
+      "C": "O'tkazgichning uzunligi, ko'ndalang kesim yuzi va qanday materialdan qilinganiga",
+      "D": "Ulanish usuliga"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 54,
+    "sinf": 8,
+    "savol": "Ikkita o'tkazgich zanjirga ketma-ket ulanganda, barcha qismlarda qaysi kattalik bir xil bo'ladi?",
+    "variantlar": {
+      "A": "Kuchlanish (U)",
+      "B": "Qarshilik (R)",
+      "C": "Tok kuchi (I)",
+      "D": "Zaryad (q)"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 55,
+    "sinf": 8,
+    "savol": "O'tkazgichlar zanjirga parallel ulanganda qaysi fizik kattalik barcha tarmoqlarda teng bo'ladi?",
+    "variantlar": {
+      "A": "Tok kuchi (I)",
+      "B": "Kuchlanish (U)",
+      "C": "Qarshilik (R)",
+      "D": "Issiqlik miqdori (Q)"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 56,
+    "sinf": 8,
+    "savol": "Tokning bajargan ishi natijasida ajralib chiqadigan issiqlik miqdorini hisoblash formulasi (Joul-Lens qonuni) qaysi?",
+    "variantlar": {
+      "A": "Q = I * U / t",
+      "B": "Q = U² * R * t",
+      "C": "Q = I² * R * t",
+      "D": "Q = I * R / t"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 57,
+    "sinf": 9,
+    "savol": "Harakat tezlanishini hisoblash formulasi qaysi?",
+    "variantlar": {
+      "A": "a = v * t",
+      "B": "a = (v - v0) / t",
+      "C": "a = S / t²",
+      "D": "a = (v + v0) * t"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 58,
+    "sinf": 9,
+    "savol": "Tezlanishning birligi SI sistemasida qanday ifodalanadi?",
+    "variantlar": {
+      "A": "m/s",
+      "B": "m/s²",
+      "C": "km/soat",
+      "D": "m/s³"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 59,
+    "sinf": 9,
+    "savol": "Nyutonning ikkinchi qonunining matematik ifodasi qaysi?",
+    "variantlar": {
+      "A": "F = m / a",
+      "B": "F = ma",
+      "C": "F = -kx",
+      "D": "F = mg"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 60,
+    "sinf": 9,
+    "savol": "Jismning harakat miqdori (impuls) qanday hisoblanadi?",
+    "variantlar": {
+      "A": "p = m / v",
+      "B": "p = ma",
+      "C": "p = mv",
+      "D": "p = mgh"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 61,
+    "sinf": 9,
+    "savol": "Butun olam tortishish qonunini kim ochgan?",
+    "variantlar": {
+      "A": "G. Galiley",
+      "B": "A. Eynshteyn",
+      "C": "I. Nyuton",
+      "D": "Sh. Kulon"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 62,
+    "sinf": 9,
+    "savol": "Yer sirtida erkin tushish tezlanishi (g) o'rtacha nechaga teng?",
+    "variantlar": {
+      "A": "9,8 m/s²",
+      "B": "10 m/s",
+      "C": "9,8 sm/s²",
+      "D": "1,6 m/s²"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 63,
+    "sinf": 9,
+    "savol": "Magnit maydon induksiyasi birligi nima?",
+    "variantlar": {
+      "A": "Veber (Wb)",
+      "B": "Tesla (T)",
+      "C": "Genri (Gn)",
+      "D": "Gauss (G)"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 64,
+    "sinf": 9,
+    "savol": "Magnit maydonning tokli o'tkazgichga ta'sir kuchi qanday ataladi?",
+    "variantlar": {
+      "A": "Lorens kuchi",
+      "B": "Kulon kuchi",
+      "C": "Amper kuchi",
+      "D": "Arximed kuchi"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 65,
+    "sinf": 9,
+    "savol": "Magnit maydonda harakatlanayotgan zaryadli zarraga ta'sir qiluvchi kuch qaysi?",
+    "variantlar": {
+      "A": "Amper kuchi",
+      "B": "Lorens kuchi",
+      "C": "Elastiklik kuchi",
+      "D": "Og'irlik kuchi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 66,
+    "sinf": 9,
+    "savol": "Lorens kuchining yo'nalishi qaysi qoida yordamida aniqlanadi?",
+    "variantlar": {
+      "A": "O'ng qo'l qoidasi",
+      "B": "Chap qo'l qoidasi",
+      "C": "Parma qoidasi",
+      "D": "Lents qoidasi"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 67,
+    "sinf": 9,
+    "savol": "Yorug'likning qaytish qonuniga ko'ra yorug'likning tushish burchagi (α) va qaytish burchagi (γ) orasidagi munosabat qanday?",
+    "variantlar": {
+      "A": "α > γ",
+      "B": "α < γ",
+      "C": "α = γ",
+      "D": "α = 2γ"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 68,
+    "sinf": 9,
+    "savol": "Qavariq linza yana qanday ataladi?",
+    "variantlar": {
+      "A": "Sochuvchi linza",
+      "B": "Yig'uvchi linza",
+      "C": "Yassi ko'zgu",
+      "D": "Prizma"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 69,
+    "sinf": 9,
+    "savol": "Linzaning optik kuchi (D) qanday kattalikda (birlikda) o'lchanadi?",
+    "variantlar": {
+      "A": "Metr",
+      "B": "Radian",
+      "C": "Dioptriya",
+      "D": "Fokus masofa"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 70,
+    "sinf": 9,
+    "savol": "Vakuumda yorug'lik tezligi (c) taxminan qanchaga teng?",
+    "variantlar": {
+      "A": "300 km/s",
+      "B": "3·10⁵ m/s",
+      "C": "3·10⁸ m/s",
+      "D": "340 m/s"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 71,
+    "sinf": 10,
+    "savol": "Modda miqdorini ifodalovchi kattalik (ν) qanday birlikda o'lchanadi?",
+    "variantlar": {
+      "A": "Kilogramm",
+      "B": "Gramm",
+      "C": "Mol",
+      "D": "Litr"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 72,
+    "sinf": 10,
+    "savol": "Avogadro doimiysi taxminan qanday qiymatga ega?",
+    "variantlar": {
+      "A": "6,02·10²³ mol⁻¹",
+      "B": "1,38·10⁻²³ J/K",
+      "C": "8,31 J/(mol·K)",
+      "D": "9,1·10⁻³¹ kg"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 73,
+    "sinf": 10,
+    "savol": "Molekulyar-kinetik nazariyaning (MKT) asosiy tenglamasi qaysi?",
+    "variantlar": {
+      "A": "p = nkT",
+      "B": "p = (1/3) n m₀ v²",
+      "C": "pV = νRT",
+      "D": "E = (3/2) kT"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 74,
+    "sinf": 10,
+    "savol": "Ideal gaz holat tenglamasi (Mendeleyev-Klapeyron) qanday yoziladi?",
+    "variantlar": {
+      "A": "p₁V₁ = p₂V₂",
+      "B": "V / T = const",
+      "C": "pV = (m/M) RT",
+      "D": "p / T = const"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 75,
+    "sinf": 10,
+    "savol": "O'zgarmas haroratda o'tadigan termodinamik jarayon nima deyiladi?",
+    "variantlar": {
+      "A": "Izobar jarayon",
+      "B": "Izoxor jarayon",
+      "C": "Izotermik jarayon",
+      "D": "Adiabatik jarayon"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 76,
+    "sinf": 10,
+    "savol": "Izobar jarayonda makroskopik parametrlardan qaysi biri o'zgarmas saqlanadi?",
+    "variantlar": {
+      "A": "Bosim (p)",
+      "B": "Hajm (V)",
+      "C": "Harorat (T)",
+      "D": "Zichlik (ρ)"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 77,
+    "sinf": 10,
+    "savol": "Termodinamikaning birinchi qonuni qanday ifodalanadi?",
+    "variantlar": {
+      "A": "A = pΔV",
+      "B": "Q = ΔU + A",
+      "C": "ΔU = (3/2) νRΔT",
+      "D": "Q = cmΔT"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 78,
+    "sinf": 10,
+    "savol": "Tashqi muhit bilan issiqlik almashmaydigan jarayon qanday ataladi?",
+    "variantlar": {
+      "A": "Izotermik jarayon",
+      "B": "Izobar jarayon",
+      "C": "Adiabatik jarayon",
+      "D": "Izoxor jarayon"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 79,
+    "sinf": 10,
+    "savol": "Nuqtaviy elektr zaryadlarining o'zaro ta'sir kuchini qaysi olim aniqlagan?",
+    "variantlar": {
+      "A": "A. Amper",
+      "B": "M. Faradey",
+      "C": "Sh. Kulon",
+      "D": "G. Om"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 80,
+    "sinf": 10,
+    "savol": "Elektr maydon kuchlanganligi formulasi qaysi?",
+    "variantlar": {
+      "A": "E = F / q",
+      "B": "E = U * d",
+      "C": "E = q / U",
+      "D": "E = I * R"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 81,
+    "sinf": 10,
+    "savol": "Elektr zaryadi va energiyasini to'plash uchun xizmat qiladigan qurilma nima?",
+    "variantlar": {
+      "A": "Rezistor",
+      "B": "Tranzistor",
+      "C": "Kondensator",
+      "D": "Galtak"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 82,
+    "sinf": 10,
+    "savol": "Kondensator elektr sig'imining (C) birligi nima?",
+    "variantlar": {
+      "A": "Volt (V)",
+      "B": "Farad (F)",
+      "C": "Om (Ω)",
+      "D": "Genri (Gn)"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 83,
+    "sinf": 10,
+    "savol": "Elektr yurituvchi kuch (EYUK) qanday birlikda o'lchanadi?",
+    "variantlar": {
+      "A": "Amper",
+      "B": "Joul",
+      "C": "Volt",
+      "D": "Vatt"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 84,
+    "sinf": 10,
+    "savol": "To'liq zanjir uchun Om qonuni formulasi qaysi?",
+    "variantlar": {
+      "A": "I = U / R",
+      "B": "I = ε / (R + r)",
+      "C": "I = ε * (R + r)",
+      "D": "I = q / t"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 85,
+    "sinf": 10,
+    "savol": "Metallarda elektr tokini qanday zarralar tashiydi?",
+    "variantlar": {
+      "A": "Musbat va manfiy ionlar",
+      "B": "Kovaklar",
+      "C": "Erkin elektronlar",
+      "D": "Neytronlar"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 86,
+    "sinf": 11,
+    "savol": "Magnit oqimi qaysi harf bilan belgilanadi va uning SI dagi birligi nima?",
+    "variantlar": {
+      "A": "B, Tesla",
+      "B": "Φ, Veber",
+      "C": "L, Genri",
+      "D": "E, Volt"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 87,
+    "sinf": 11,
+    "savol": "Elektromagnit induksiya qonuni qanday formulada ifodalanadi?",
+    "variantlar": {
+      "A": "ε = - ΔΦ / Δt",
+      "B": "ε = B * l * v",
+      "C": "ε = I * R",
+      "D": "ε = q / C"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 88,
+    "sinf": 11,
+    "savol": "Xalqaro birliklar sistemasida induktivlik (L) birligi nima?",
+    "variantlar": {
+      "A": "Farad (F)",
+      "B": "Veber (Wb)",
+      "C": "Genri (Gn)",
+      "D": "Tesla (T)"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 89,
+    "sinf": 11,
+    "savol": "O'zgaruvchan tokning kuchlanishini orttirib yoki kamaytirib beradigan qurilma nima deyiladi?",
+    "variantlar": {
+      "A": "Kondensator",
+      "B": "Transformator",
+      "C": "Generator",
+      "D": "Akumulyator"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 90,
+    "sinf": 11,
+    "savol": "Erkin elektromagnit tebranishlar davrini aniqlovchi Tomson formulasi qaysi?",
+    "variantlar": {
+      "A": "T = 2π√(l/g)",
+      "B": "T = 2π√(m/k)",
+      "C": "T = 2π√(LC)",
+      "D": "T = 1 / ν"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 91,
+    "sinf": 11,
+    "savol": "Oq yorug'likning prizmadan o'tishida turli ranglarga (spektrga) ajralish hodisasi nima deyiladi?",
+    "variantlar": {
+      "A": "Interferensiya",
+      "B": "Diffraksiya",
+      "C": "Dispersiya",
+      "D": "Qutblanish"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 92,
+    "sinf": 11,
+    "savol": "Kogerent yorug'lik to'lqinlarining ustma-ust tushishi natijasida fazoda kuchayish va susayish manzarasini hosil qilishi qanday ataladi?",
+    "variantlar": {
+      "A": "Yorug'lik interferensiyasi",
+      "B": "Yorug'lik diffraksiyasi",
+      "C": "Yorug'lik dispersiyasi",
+      "D": "Yorug'likning sinishi"
+    },
+    "javob": "A"
+  },
+  {
+    "id": 93,
+    "sinf": 11,
+    "savol": "Fotonning energiyasi qaysi formula orqali aniqlanadi?",
+    "variantlar": {
+      "A": "E = mc²",
+      "B": "E = hν",
+      "C": "E = mv² / 2",
+      "D": "E = mgh"
+    },
+    "javob": "B"
+  },
+  {
+    "id": 94,
+    "sinf": 11,
+    "savol": "Yorug'lik ta'sirida moddadan elektronlarning ajralib chiqish hodisasi nima deyiladi?",
+    "variantlar": {
+      "A": "Radioaktivlik",
+      "B": "Termoelektron emissiya",
+      "C": "Fotoeffekt",
+      "D": "Elektroliz"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 95,
+    "sinf": 11,
+    "savol": "Plank doimiysining (h) birligi nima?",
+    "variantlar": {
+      "A": "Joul",
+      "B": "Joul / sekund",
+      "C": "Joul · sekund",
+      "D": "Vatt · sekund"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 96,
+    "sinf": 11,
+    "savol": "Atomning planetar (sayyoraviy) modelini kim yaratgan?",
+    "variantlar": {
+      "A": "N. Bor",
+      "B": "J. Tomson",
+      "C": "E. Rezerford",
+      "D": "M. Plank"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 97,
+    "sinf": 11,
+    "savol": "Atom yadrosi qanday zarralardan tashkil topgan?",
+    "variantlar": {
+      "A": "Protonlar va elektronlar",
+      "B": "Faqat protonlar",
+      "C": "Protonlar va neytronlar",
+      "D": "Neytronlar va elektronlar"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 98,
+    "sinf": 11,
+    "savol": "Yadrosida protonlar soni bir xil, ammo neytronlar soni turlicha bo'lgan atomlar nima deyiladi?",
+    "variantlar": {
+      "A": "Izobar",
+      "B": "Izoton",
+      "C": "Izotop",
+      "D": "Izoelektron"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 99,
+    "sinf": 11,
+    "savol": "Alfa (α) zarracha nima?",
+    "variantlar": {
+      "A": "Elektron",
+      "B": "Vodorod yadrosi",
+      "C": "Geliy atomi yadrosi",
+      "D": "Neytron"
+    },
+    "javob": "C"
+  },
+  {
+    "id": 100,
+    "sinf": 11,
+    "savol": "Massalar nuqsoni bilan bog'liq bo'lgan yadro bog'lanish energiyasi formulasi qaysi olimga tegishli (E = mc²)?",
+    "variantlar": {
+      "A": "M. Kyuri",
+      "B": "A. Eynshteyn",
+      "C": "E. Fermi",
+      "D": "N. Bor"
+    },
+    "javob": "B"
+  }
+]

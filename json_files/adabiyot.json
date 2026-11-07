@@ -1,0 +1,1203 @@
+[
+{
+"id": 1,
+"test_id": "test_adabiyot_001",
+"sinf": 5,
+"savol": "Topishmoq qanday janr?",
+"variantlar": {
+"A": "Tarixiy voqealarni bayon qiluvchi janr",
+"B": "Qahramonona xarakterga ega doston",
+"C": "Narsaning belgisini aytib, o'zini toptiruvchi xalq ijodi namunasi",
+"D": "Kulgili va satirik she'r"
+},
+"javob": "C"
+},
+{
+"id": 2,
+"sinf": 5,
+"savol": "Maqol deb nimaga aytiladi?",
+"variantlar": {
+"A": "Xalqning qisqa, chuqur ma'noli va hikmatli so'ziga",
+"B": "Hayvonlar haqidagi kichik ertakka",
+"C": "Katta epik asarga",
+"D": "Faqat she'riy uslubda yoziladigan manzuma"
+},
+"javob": "A"
+},
+{
+"id": 3,
+"sinf": 5,
+"savol": "'Ur, to'qmoq!' ertagi mazmunan qaysi turga mansub?",
+"variantlar": {
+"A": "Hayvonlar haqidagi ertak",
+"B": "Maishiy ertak",
+"C": "Sehrli fantastik ertak",
+"D": "Tarixiy ertak"
+},
+"javob": "C"
+},
+{
+"id": 4,
+"sinf": 5,
+"savol": "'Susambil' ertagida jonzotlar nima uchun Susambilga ketishga qaror qiladilar?",
+"variantlar": {
+"A": "Egasining zulmidan qutulib, erkin yashash uchun",
+"B": "Yangi shaharda savdo qilish uchun",
+"C": "Boshqa hayvonlar bilan urushish uchun",
+"D": "Faqat sayohat qilish maqsadida"
+},
+"javob": "A"
+},
+{
+"id": 5,
+"sinf": 5,
+"savol": "G'afur G'ulomning 'Shum bola' qissasining bosh qahramoni kim?",
+"variantlar": {
+"A": "Yo'lchi",
+"B": "Qoravoy",
+"C": "Anvar",
+"D": "Otabek"
+},
+"javob": "B"
+},
+{
+"id": 6,
+"sinf": 5,
+"savol": "'Oygul va Baxtiyor' dostonining muallifi kim?",
+"variantlar": {
+"A": "Hamid Olimjon",
+"B": "Zulfiya",
+"C": "G'afur G'ulom",
+"D": "Mirtemir"
+},
+"javob": "A"
+},
+{
+"id": 7,
+"sinf": 5,
+"savol": "Anton Chexovning 'Vanka' hikoyasida Vanka Jukov kimga maktub yozadi?",
+"variantlar": {
+"A": "Do'stiga",
+"B": "Bobosiga (Konstantin Makarichga)",
+"C": "Otasiga",
+"D": "Ustoziga"
+},
+"javob": "B"
+},
+{
+"id": 8,
+"sinf": 5,
+"savol": "Buyuk ertakchi Hans Kristian Andersen qaysi mamlakatda tug'ilgan?",
+"variantlar": {
+"A": "Daniya",
+"B": "Shvetsiya",
+"C": "Germaniya",
+"D": "Angliya"
+},
+"javob": "A"
+},
+{
+"id": 9,
+"sinf": 5,
+"savol": "Adabiyot darsligida Andersenning qaysi ertagi keltirilgan?",
+"variantlar": {
+"A": "Qor malikasi",
+"B": "Xunuk o'rdakcha",
+"C": "Bulbul",
+"D": "Suv parisi"
+},
+"javob": "C"
+},
+{
+"id": 10,
+"sinf": 5,
+"savol": "'Qish' nomli mashhur she'r muallifi qaysi shoir?",
+"variantlar": {
+"A": "Hamid Olimjon",
+"B": "Mirtemir",
+"C": "Zulfiya",
+"D": "Asqad Muxtor"
+},
+"javob": "B"
+},
+{
+"id": 11,
+"sinf": 5,
+"savol": "Alisher Navoiy yoshligi va go'zal xulqi haqida ma'lumot beruvchi 'Makorim ul-axloq' asari muallifi kim?",
+"variantlar": {
+"A": "Xondamir",
+"B": "Bobur",
+"C": "Lutfiy",
+"D": "Husayn Boyqaro"
+},
+"javob": "A"
+},
+{
+"id": 12,
+"sinf": 5,
+"savol": "Xudoyberdi To'xtaboyevning 'Sariq devni minib' asari qahramoni kim?",
+"variantlar": {
+"A": "Qoravoy",
+"B": "Hoshimjon",
+"C": "Murod",
+"D": "Siroj"
+},
+"javob": "B"
+},
+{
+"id": 13,
+"sinf": 5,
+"savol": "Abdulla Qahhorning 'Bemor' hikoyasida Sotiboldi kasal xotiniga tabibning tavsiyasi bilan nima ko'tarib keladi?",
+"variantlar": {
+"A": "Bir kosa sharbat",
+"B": "Shirin anor",
+"C": "Yetti zog'ora",
+"D": "Dori-darmon"
+},
+"javob": "C"
+},
+{
+"id": 14,
+"sinf": 5,
+"savol": "Yozuvchi Abdulla Qahhorning xalqning og'ir o'tmishi haqidagi mashhur hikoyasi qaysi?",
+"variantlar": {
+"A": "Bemor",
+"B": "Chinor",
+"C": "Muzqaymoq",
+"D": "Mening o'g'rigina bolam"
+},
+"javob": "A"
+},
+{
+"id": 15,
+"sinf": 6,
+"savol": "'Alpomish' dostonida Alpomishning asl ismi nima bo'lgan?",
+"variantlar": {
+"A": "Boysari",
+"B": "Hakimbek",
+"C": "Qultoy",
+"D": "Yodgor"
+},
+"javob": "B"
+},
+{
+"id": 16,
+"sinf": 6,
+"savol": "Dostonda Barchin unga sovchi bo'lib kelgan qalmoq polvonlariga nechta shart qo'yadi?",
+"variantlar": {
+"A": "2 ta",
+"B": "3 ta",
+"C": "4 ta",
+"D": "5 ta"
+},
+"javob": "C"
+},
+{
+"id": 17,
+"sinf": 6,
+"savol": "Pahlavon Mahmud adabiyotda asosan qaysi she'riy janrdagi asarlari bilan shuhrat qozongan?",
+"variantlar": {
+"A": "G'azal",
+"B": "Ruboiy",
+"C": "Doston",
+"D": "Qit'a"
+},
+"javob": "B"
+},
+{
+"id": 18,
+"sinf": 6,
+"savol": "O'tkir Hoshimovning o'z onasiga bag'ishlab yozgan lirik qissasi qaysi?",
+"variantlar": {
+"A": "Bahor qaytmaydi",
+"B": "Ikki eshik orasi",
+"C": "Dunyoning ishlari",
+"D": "Tushda kechgan umrlar"
+},
+"javob": "C"
+},
+{
+"id": 19,
+"sinf": 6,
+"savol": "'Dunyoning ishlari' qissasi qanday uslubiy tuzilishga ega?",
+"variantlar": {
+"A": "Katta bir yaxlit roman",
+"B": "Faqat dialoglardan iborat pyesa",
+"C": "Mustaqil voqealarni bayon etuvchi kichik novellalar to'plami",
+"D": "Tarixiy dalillar to'plami"
+},
+"javob": "C"
+},
+{
+"id": 20,
+"sinf": 6,
+"savol": "Kulgili va tasirli 'Mening o'g'rigina bolam' hikoyasi muallifi kim?",
+"variantlar": {
+"A": "G'afur G'ulom",
+"B": "Said Ahmad",
+"C": "Abdulla Qodiriy",
+"D": "Oybek"
+},
+"javob": "A"
+},
+{
+"id": 21,
+"sinf": 6,
+"savol": "Said Ahmadning 'Sobiq' hikoyasida voqealar qayerda yuz beradi?",
+"variantlar": {
+"A": "Poyezd vagonida",
+"B": "Bozor rastasida",
+"C": "Keng dalada",
+"D": "Maktabda"
+},
+"javob": "A"
+},
+{
+"id": 22,
+"sinf": 6,
+"savol": "'Sobiq' hikoyasining nomlanishiga sabab bo'lgan narsa nima?",
+"variantlar": {
+"A": "Insonning ismi",
+"B": "Choy qaynatiladigan idish (cho'g'mung/choydish)",
+"C": "Uy hayvoni",
+"D": "Qimmatbaho buyum"
+},
+"javob": "B"
+},
+{
+"id": 23,
+"sinf": 6,
+"savol": "O'zbek yozuvchisi Abdulla Qodiriyning milliy an'analar va chavandozlik haqidagi hikoyasi qaysi?",
+"variantlar": {
+"A": "O'g'ri",
+"B": "Bemor",
+"C": "Uloqda",
+"D": "Sobiq"
+},
+"javob": "C"
+},
+{
+"id": 24,
+"sinf": 6,
+"savol": "'Uloqda' hikoyasidagi bosh qahramonlardan (chavandozlardan) birining ismi nima?",
+"variantlar": {
+"A": "Turg'un",
+"B": "Yilqiboy",
+"C": "Otabek",
+"D": "Anvar"
+},
+"javob": "B"
+},
+{
+"id": 25,
+"sinf": 6,
+"savol": "Mirkarim Osim asari asosida yosh Alisher Navoiyning Samarqandga safari yoritilgan qissa qanday ataladi?",
+"variantlar": {
+"A": "Zulmat ichida nur",
+"B": "To'maris",
+"C": "Shiroq",
+"D": "Ibn Sino"
+},
+"javob": "A"
+},
+{
+"id": 26,
+"sinf": 6,
+"savol": "'Qorako'z majnun' hikoyasi muallifi kim?",
+"variantlar": {
+"A": "Murod Muhammad Do'st",
+"B": "Shukur Xolmirzayev",
+"C": "Tog'ay Murod",
+"D": "O'lmas Umarbekov"
+},
+"javob": "B"
+},
+{
+"id": 27,
+"sinf": 6,
+"savol": "G'afur G'ulomning 'Shum bola' asarida Shum bolaning do'sti va sirdoshining ismi nima?",
+"variantlar": {
+"A": "Omon",
+"B": "Murod",
+"C": "Hoshim",
+"D": "Qosim"
+},
+"javob": "A"
+},
+{
+"id": 28,
+"sinf": 6,
+"savol": "'Uloqda' hikoyasi qanday uslubda yozilgan?",
+"variantlar": {
+"A": "Ilmiy qoida uslubida",
+"B": "Birinchi shaxs (hikoyachi) tilidan",
+"C": "Faqat xat shaklida",
+"D": "Aruz vaznidagi she'rda"
+},
+"javob": "B"
+},
+{
+"id": 29,
+"sinf": 7,
+"savol": "Alisher Navoiyning 'Farhod va Shirin' dostonida Farhod qaysi yurt shahzodasi edi?",
+"variantlar": {
+"A": "Eron",
+"B": "Chin (Xitoy)",
+"C": "Rum",
+"D": "Hindiston"
+},
+"javob": "B"
+},
+{
+"id": 30,
+"sinf": 7,
+"savol": "Xuddi shu dostonda Xusrav qaysi mamlakat shohi edi?",
+"variantlar": {
+"A": "Eron",
+"B": "Chin",
+"C": "Misr",
+"D": "Xorazm"
+},
+"javob": "A"
+},
+{
+"id": 31,
+"sinf": 7,
+"savol": "Zahiriddin Muhammad Boburning memuar (esdalik) janridagi mashhur asari qaysi?",
+"variantlar": {
+"A": "Xamsa",
+"B": "Boburnoma",
+"C": "Mahbub ul-qulub",
+"D": "Mubayyin"
+},
+"javob": "B"
+},
+{
+"id": 32,
+"sinf": 7,
+"savol": "'Boburnoma' asarida Bobur dastlab qaysi hududlarning ta'rifini keltiradi?",
+"variantlar": {
+"A": "Buxoro va Xiva",
+"B": "Farg'ona, Samarqand, shuningdek Kobul, Agra",
+"C": "Toshkent, Jizzax",
+"D": "Arabiston yarim oroli"
+},
+"javob": "B"
+},
+{
+"id": 33,
+"sinf": 7,
+"savol": "Buyuk turkman shoiri Maxtumquli qanday taxallus bilan ijod qilgan?",
+"variantlar": {
+"A": "Firoqiy",
+"B": "G'ozibiy",
+"C": "Miskiniy",
+"D": "Xotam"
+},
+"javob": "A"
+},
+{
+"id": 34,
+"sinf": 7,
+"savol": "Muhammad Aminxo'ja Muqimiyning mashhur sayohatnoma asari qanday uslubda yozilgan?",
+"variantlar": {
+"A": "Nasriy yodnoma qilib",
+"B": "She'riy yo'l xotiralari ko'rinishida",
+"C": "Katta doston shaklida",
+"D": "Tarixiy roman uslubida"
+},
+"javob": "B"
+},
+{
+"id": 35,
+"sinf": 7,
+"savol": "Zokirjon Xolmuhammad o'g'li Furqat 'Ilm xosiyati' she'rida nimanini targ'ib qilgan?",
+"variantlar": {
+"A": "Ma'rifat, yangi zamonaviy ilm-fan va kasb o'rganishni",
+"B": "Chet ellarga sayohat qilishni",
+"C": "Faqat adabiyot bilan shug'ullanishni",
+"D": "Urush san'atini"
+},
+"javob": "A"
+},
+{
+"id": 36,
+"sinf": 7,
+"savol": "O'zbek modern poeziyasi asoschilaridan biri Cho'lponning haqiqiy ismi qanday?",
+"variantlar": {
+"A": "Abdurauf",
+"B": "Abdulhamid Sulaymon o'g'li",
+"C": "Mahmudxo'ja",
+"D": "Munavvarqori"
+},
+"javob": "B"
+},
+{
+"id": 37,
+"sinf": 7,
+"savol": "Cho'lponning 'Binafsha' she'ri markazida qanday g'oya turadi?",
+"variantlar": {
+"A": "Moddiy boylik",
+"B": "Go'zallik, erkinlik va bahor nafasi ramzi",
+"C": "Qishning qattiq sovug'i",
+"D": "Umidsizlik va qayg'u"
+},
+"javob": "B"
+},
+{
+"id": 38,
+"sinf": 7,
+"savol": "Abdulla Qodiriyning 'O'tkan kunlar' romani voqealari asosan qaysi shaharlarda bo'lib o'tadi?",
+"variantlar": {
+"A": "Buxoro, Xiva",
+"B": "Toshkent, Marg'ilon",
+"C": "Samarqand, Qo'qon",
+"D": "Andijon, Namangan"
+},
+"javob": "B"
+},
+{
+"id": 39,
+"sinf": 7,
+"savol": "Yozuvchi Oybekning asl ism-sharifi nima bo'lgan?",
+"variantlar": {
+"A": "Muso Toshmuhammad o'g'li",
+"B": "Abdulla Qahhor",
+"C": "Sharof Rashidov",
+"D": "Asqad Muxtor"
+},
+"javob": "A"
+},
+{
+"id": 40,
+"sinf": 7,
+"savol": "Tog'ay Murodning 'Yulduzlar mangu yonadi' qissasidagi bosh qahramonlardan birini toping.",
+"variantlar": {
+"A": "Bo'ri polvon",
+"B": "Otabek",
+"C": "Yilqiboy",
+"D": "Saidiy"
+},
+"javob": "A"
+},
+{
+"id": 41,
+"sinf": 7,
+"savol": "Abdulla Oripovning yurt madhi va tabiatini tarannum etuvchi eng mashhur, xrestomatiyaga aylangan she'ri qaysi?",
+"variantlar": {
+"A": "Nido",
+"B": "O'zbekiston",
+"C": "Ruhlar isyoni",
+"D": "Oltin vodiy"
+},
+"javob": "B"
+},
+{
+"id": 42,
+"sinf": 7,
+"savol": "Erkin Vohidovning ikkinchi jahon urushidan qaytmagan otasi xotirasiga bag'ishlagan dostoni qaysi?",
+"variantlar": {
+"A": "Nido",
+"B": "Sado",
+"C": "Fido",
+"D": "Vidolashuv"
+},
+"javob": "A"
+},
+{
+"id": 43,
+"sinf": 8,
+"savol": "Turkiy adabiyotning ilk yirik namunasi 'Qutadg'u bilig' asari muallifi kim?",
+"variantlar": {
+"A": "Mahmud Qoshg'ariy",
+"B": "Ahmad Yugnakiy",
+"C": "Yusuf Xos Hojib",
+"D": "Ahmad Yassaviy"
+},
+"javob": "C"
+},
+{
+"id": 44,
+"sinf": 8,
+"savol": "'Qutadg'u bilig' dostonidagi Kuntug'mish obrazi nimaning ramzi hisoblanadi?",
+"variantlar": {
+"A": "Davlat, baxt",
+"B": "Adolat va qonun",
+"C": "Aql, idrok",
+"D": "Qanoat, ofiyat"
+},
+"javob": "B"
+},
+{
+"id": 45,
+"sinf": 8,
+"savol": "Ahmad Yugnakiyning 'Hibat ul-haqoyiq' asari nomining ma'nosi nima?",
+"variantlar": {
+"A": "Saodatga yo'l",
+"B": "Haqiqatlar armug'oni",
+"C": "Baxtli bo'lish siri",
+"D": "Bilimlar to'plami"
+},
+"javob": "B"
+},
+{
+"id": 46,
+"sinf": 8,
+"savol": "Alisher Navoiyning 'Xamsa'si nechta dostonni o'z ichiga oladi?",
+"variantlar": {
+"A": "3 ta",
+"B": "4 ta",
+"C": "5 ta",
+"D": "6 ta"
+},
+"javob": "C"
+},
+{
+"id": 47,
+"sinf": 8,
+"savol": "Navoiy 'Xamsa'sining birinchi dostoni qanday nomlanadi?",
+"variantlar": {
+"A": "Farhod va Shirin",
+"B": "Hayrat ul-abror",
+"C": "Layli va Majnun",
+"D": "Sab'ai sayyor"
+},
+"javob": "B"
+},
+{
+"id": 48,
+"sinf": 8,
+"savol": "Alisher Navoiyning ustozi, 'malik ul-kalom' Lutfiyning mashhur dostoni qaysi?",
+"variantlar": {
+"A": "Xusrav va Shirin",
+"B": "Gul va Navro'z",
+"C": "Muhabbatnoma",
+"D": "Taassufnoma"
+},
+"javob": "B"
+},
+{
+"id": 49,
+"sinf": 8,
+"savol": "XIX asrda yaratilgan 'Zarbulmasal' asari qanday badiiy usulda yozilgan?",
+"variantlar": {
+"A": "Qushlar va hayvonlar timsolida (masal-ertak aralash usulida)",
+"B": "Faqat tarixiy dalillar asosida",
+"C": "Dramatik dialog shaklida",
+"D": "Lirik qasida ko'rinishida"
+},
+"javob": "A"
+},
+{
+"id": 50,
+"sinf": 8,
+"savol": "Satirik xarakterdagi 'Zarbulmasal' asari muallifi kim?",
+"variantlar": {
+"A": "Maxmur",
+"B": "Gulxaniy",
+"C": "Zavqiy",
+"D": "Furqat"
+},
+"javob": "B"
+},
+{
+"id": 51,
+"sinf": 8,
+"savol": "Abdurauf Fitratning Buxoro xonligidagi tanazzul va qonli voqealarni yorituvchi tarixiy tragediyasi qaysi?",
+"variantlar": {
+"A": "Hind ixtilolchilari",
+"B": "Abulfayzxon",
+"C": "Shaytonning tangriga isyoni",
+"D": "Temur sag'anasi"
+},
+"javob": "B"
+},
+{
+"id": 52,
+"sinf": 8,
+"savol": "Odil Yoqubovning 'Ulug'bek xazinasi' romanida Mirzo Ulug'bekning eng sadoqatli shogirdi sifatida kimning obrazi berilgan?",
+"variantlar": {
+"A": "Ali Qushchi",
+"B": "Ibn Sino",
+"C": "Al-Xorazmiy",
+"D": "Bobur"
+},
+"javob": "A"
+},
+{
+"id": 53,
+"sinf": 8,
+"savol": "Abdulla Qahhorning 'O'g'ri' hikoyasida Qobil bobo avvalo kimdan yordam so'rab boradi?",
+"variantlar": {
+"A": "Aminga",
+"B": "Qoziga",
+"C": "Hokimga",
+"D": "Poshshabga"
+},
+"javob": "A"
+},
+{
+"id": 54,
+"sinf": 8,
+"savol": "Hikoyada Qobil boboning amin va ellikboshiga uchrashuvi qanday oqibatga olib keladi?",
+"variantlar": {
+"A": "Unga moddiy yordam berishadi",
+"B": "Uning molini o'sha kuniyoq topib berishadi",
+"C": "Pora talab qilib, uni sarson qilib bor budidan shilib olishadi",
+"D": "Haqiqiy o'g'rini darhol jazolashadi"
+},
+"javob": "C"
+},
+{
+"id": 55,
+"sinf": 8,
+"savol": "Pirimqul Qodirovning 'Yulduzli tunlar' romani qaysi tarixiy shaxs hayoti haqida yozilgan?",
+"variantlar": {
+"A": "Amir Temur",
+"B": "Mirzo Ulug'bek",
+"C": "Alisher Navoiy",
+"D": "Zahiriddin Muhammad Bobur"
+},
+"javob": "D"
+},
+{
+"id": 56,
+"sinf": 8,
+"savol": "Mumtoz adabiyotimiz vakili Atoyi asosan qaysi she'riy janrning mohir ustasi sifatida tan olingan?",
+"variantlar": {
+"A": "Ruboiy",
+"B": "G'azal",
+"C": "Fard",
+"D": "Qasida"
+},
+"javob": "B"
+},
+{
+"id": 57,
+"sinf": 9,
+"savol": "Qadimgi xalqlarimizning diniy-falsafiy qarashlarini o'zida jamlagan zardushtiylikning muqaddas kitobi nima?",
+"variantlar": {
+"A": "Tavrot",
+"B": "Avesto",
+"C": "Qutadg'u bilig",
+"D": "Injil"
+},
+"javob": "B"
+},
+{
+"id": 58,
+"sinf": 9,
+"savol": "'Avesto' asarida qanday mavzular asosan qamrab olingan?",
+"variantlar": {
+"A": "Ajdodlarning ezgu fikr, ezgu so'z, ezgu amal haqidagi qarashlari",
+"B": "Islom dini vujudga kelishi",
+"C": "O'rta asr savdo-sotiq qoidalari",
+"D": "Podshohlarning solnomalari"
+},
+"javob": "A"
+},
+{
+"id": 59,
+"sinf": 9,
+"savol": "Qadimgi turk-run yozuvining eng nodir namunalari bo'lgan Orxon-Yenisey obidalari qaysi shaklda saqlanib qolgan?",
+"variantlar": {
+"A": "Qog'oz o'ramalarida",
+"B": "Tosh bitiklar (qabr toshlari) ko'rinishida",
+"C": "Teri qog'ozlarda",
+"D": "Sopol idishlar sirtida"
+},
+"javob": "B"
+},
+{
+"id": 60,
+"sinf": 9,
+"savol": "Ushbu tosh bitiklardan biri bo'lgan 'To'nyuquq bitiktoshi' kimning qahramonligiga bag'ishlangan?",
+"variantlar": {
+"A": "Xitoy imperatoriga",
+"B": "Turkiy elning dono maslahatchisi va sarkardasi To'nyuquqqa",
+"C": "Arab halifasiga",
+"D": "Eron shohiga"
+},
+"javob": "B"
+},
+{
+"id": 61,
+"sinf": 9,
+"savol": "XI asrda yaratilgan qomusiy asar 'Devonu lug'otit turk' kimning qalamiga mansub?",
+"variantlar": {
+"A": "Alisher Navoiy",
+"B": "Mahmud Qoshg'ariy",
+"C": "Yusuf Xos Hojib",
+"D": "Pahlavon Mahmud"
+},
+"javob": "B"
+},
+{
+"id": 62,
+"sinf": 9,
+"savol": "Ushbu asar ('Devonu lug'otit turk') asosan qanday vazifani bajargan?",
+"variantlar": {
+"A": "Sof tarixiy kitob bo'lgan",
+"B": "Turkiy so'zlarni va elatlarni arab tilida tushuntiruvchi ulkan lug'at",
+"C": "Qahramonlik dostoni vazifasini",
+"D": "Falsafiy pandnoma vazifasini"
+},
+"javob": "B"
+},
+{
+"id": 63,
+"sinf": 9,
+"savol": "Xorazmiyning 'Muhabbatnoma' asari qanday qismlarga (nomalarga) bo'lingan?",
+"variantlar": {
+"A": "5 ta noma",
+"B": "8 ta noma",
+"C": "11 ta noma",
+"D": "15 ta noma"
+},
+"javob": "C"
+},
+{
+"id": 64,
+"sinf": 9,
+"savol": "Alisher Navoiyning adiblar va shoirlar hayotiga bag'ishlangan mashhur tazkirasi (entsiklopediyasi) qaysi?",
+"variantlar": {
+"A": "Majolis un-nafois",
+"B": "Mahbub ul-qulub",
+"C": "Muhokamat ul-lug'atayn",
+"D": "Mezon ul-avzon"
+},
+"javob": "A"
+},
+{
+"id": 65,
+"sinf": 9,
+"savol": "Boborahim Mashrab poeziyasi o'z davrida qanday xususiyati bilan ajralib turgan?",
+"variantlar": {
+"A": "Faqat saroy madhiyalaridan iboratligi",
+"B": "Ochiq isyonkorligi, dard, ishq va tariqat g'oyalarining kuchliligi",
+"C": "Urush tasvirlari ko'pligi",
+"D": "Nasriy uslubda yozilganligi"
+},
+"javob": "B"
+},
+{
+"id": 66,
+"sinf": 9,
+"savol": "Jahon otin Uvaysiy mumtoz poeziyamizdagi qaysi san'at (janr) orqali yuksak mahoratini ko'rsatgan?",
+"variantlar": {
+"A": "Marsiya",
+"B": "Qasida",
+"C": "Chiston (topishmoq-she'r)",
+"D": "Masnavi"
+},
+"javob": "C"
+},
+{
+"id": 67,
+"sinf": 9,
+"savol": "Amir Umarxonning zavjasi (rafiqasi) bo'lgan Nodirabegim qaysi saroy muhitida yashab ijod qilgan?",
+"variantlar": {
+"A": "Buxoro amirligi",
+"B": "Xiva xonligi",
+"C": "Qo'qon xonligi",
+"D": "Samarqand hokimligi"
+},
+"javob": "C"
+},
+{
+"id": 68,
+"sinf": 9,
+"savol": "'Boburnoma' asari o'z janri va tavsifiga ko'ra nima deb ataladi?",
+"variantlar": {
+"A": "Tarixiy-memuar (esdalik) asar",
+"B": "Lirik doston",
+"C": "Romantik drama",
+"D": "Sof falsafiy traktat"
+},
+"javob": "A"
+},
+{
+"id": 69,
+"sinf": 9,
+"savol": "Chingiz Aytmatovning 'Oq kema' asaridagi bolaning eng yaqin qadrdoni va sirdoshi nima edi?",
+"variantlar": {
+"A": "Mo'min bobosi",
+"B": "Portfeli va durbini",
+"C": "Maktabdagi tengdoshlari",
+"D": "Ko'lda suzuvchi baliqlar"
+},
+"javob": "B"
+},
+{
+"id": 70,
+"sinf": 9,
+"savol": "Said Ahmadning 'Ufq' trilogiyasi (uchlik romani) qaysi davrdagi og'ir kechinmalarni o'z ichiga oladi?",
+"variantlar": {
+"A": "Faqat XIX asr oxiri voqealarini",
+"B": "Ikkinchi jahon urushi, front ortidagi mehnat va urushdan keyingi davrni",
+"C": "Turkiston muxtoriyati tugatilishi davrini",
+"D": "O'zbekiston mustaqillikka erishish yillarini"
+},
+"javob": "B"
+},
+{
+"id": 71,
+"sinf": 10,
+"savol": "'Qissasi Rabg'uziy' asarining asosini nima tashkil etadi?",
+"variantlar": {
+"A": "Podshohlar va xonlarning solnomasi",
+"B": "Payg'ambarlar hayoti bilan bog'liq qissalar va rivoyatlar",
+"C": "Kundalik maishiy turmush tarzi",
+"D": "Iqtisodiy islohotlar xronikasi"
+},
+"javob": "B"
+},
+{
+"id": 72,
+"sinf": 10,
+"savol": "Jadidchilik harakati yetakchisi Mahmudxo'ja Behbudiyning 'Padarkush' dramasi nima haqida yozilgan?",
+"variantlar": {
+"A": "Chet eldagi urushlar qurbonlari haqida",
+"B": "Ilmsizlik tufayli johil o'g'ilning otasini o'ldirishi fojiasi haqida",
+"C": "Boylarning adolatsiz qonunlari haqida",
+"D": "Diniy erkinliklar haqida"
+},
+"javob": "B"
+},
+{
+"id": 73,
+"sinf": 10,
+"savol": "O'zbek adabiyotidagi ilk roman - 'O'tkan kunlar' asarida Otabekka dushmanlik qiluvchi salbiy qahramon kim?",
+"variantlar": {
+"A": "Hasanali",
+"B": "Homid",
+"C": "Mirzakarimboy",
+"D": "O'zbek oyim"
+},
+"javob": "B"
+},
+{
+"id": 74,
+"sinf": 10,
+"savol": "Cho'lponning 'Kecha va kunduz' asaridagi go'zal va sodda Zebi kimning qizi edi?",
+"variantlar": {
+"A": "Akbarali mingboshining",
+"B": "Razzoq so'fining",
+"C": "Miryoqubning",
+"D": "Murodning"
+},
+"javob": "B"
+},
+{
+"id": 75,
+"sinf": 10,
+"savol": "Abdulla Qahhorning 'Sarob' romanidagi Saidiy obrazi orqali yozuvchi nimanini ko'rsatmoqchi bo'lgan?",
+"variantlar": {
+"A": "Haqiqiy vatanparvar ziyoli qanday bo'lishini",
+"B": "Hayot yo'lini topa olmagan, irodasiz, g'oyaviy adashgan insonning fojiasini",
+"C": "Sof dehqon hayotini",
+"D": "Sarkardaning qahramonliklarini"
+},
+"javob": "B"
+},
+{
+"id": 76,
+"sinf": 10,
+"savol": "Alisher Navoiyning umri oxirida yozgan, inson axloqiga oid nasriy asari 'Mahbub ul-qulub' qanday qismlarga bo'lingan?",
+"variantlar": {
+"A": "Dostonlarga",
+"B": "Qismlar, tanbehlar (boblar) va maqollarga",
+"C": "She'riy shevalarga",
+"D": "G'azal fasllariga"
+},
+"javob": "B"
+},
+{
+"id": 77,
+"sinf": 10,
+"savol": "Usmon Nosir o'zbek she'riyatiga qanday ohanglar olib kirdi?",
+"variantlar": {
+"A": "Qadimgi aruz vaznining qat'iy qoidalarini",
+"B": "Yangi davr romantizmi, inqilobiy va otashin lirikani",
+"C": "Tasavvufiy mistitsizmni",
+"D": "Faqat hajviy va satirik ohanglarni"
+},
+"javob": "B"
+},
+{
+"id": 78,
+"sinf": 10,
+"savol": "G'afur G'ulomning mashhur 'Sen yetim emassan' she'ri qanday voqealarga nisbatan insonparvarlik sadosi bo'lib yangragan?",
+"variantlar": {
+"A": "Ikkinchi jahon urushida ota-onasiz qolgan bolalar taqdiriga qaratilgan",
+"B": "Tabiat o'zgarishlariga bag'ishlangan",
+"C": "Chorizm davridagi qo'zg'olonlarga atalgan",
+"D": "O'quvchilar hayotiga bag'ishlangan"
+},
+"javob": "A"
+},
+{
+"id": 79,
+"sinf": 10,
+"savol": "Iste'dodli shoir Avaz O'tar qaysi shahar adabiy muhitining yorqin vakili hisoblanadi?",
+"variantlar": {
+"A": "Buxoro",
+"B": "Samarqand",
+"C": "Xiva",
+"D": "Qo'qon"
+},
+"javob": "C"
+},
+{
+"id": 80,
+"sinf": 10,
+"savol": "Abdulla Qodiriyning 'Mehrobdan chayon' asaridagi Solih maxdum qanday tip (xarakter) hisoblanadi?",
+"variantlar": {
+"A": "Buyuk insonparvar, ochiqko'ngil xalq vakili",
+"B": "O'ta xasis, munofiq, riyokor ulamo",
+"C": "Mard va jasur oddiy dehqon",
+"D": "Yangi ma'rifatparvar muallim"
+},
+"javob": "B"
+},
+{
+"id": 81,
+"sinf": 10,
+"savol": "Ahmad Donish o'z asarlarini asosan qaysi tilda (tillarda) yaratgan?",
+"variantlar": {
+"A": "Fors-tojik va turkiy (o'zbek) tillarida",
+"B": "Faqat arab tilida",
+"C": "Faqat rus tilida",
+"D": "Lotin tilida"
+},
+"javob": "A"
+},
+{
+"id": 82,
+"sinf": 10,
+"savol": "Cho'lponning 'Kecha va kunduz' asaridagi 'Kecha' so'zi nimani metaforik ifodalaydi?",
+"variantlar": {
+"A": "Sokin tun tabiatini",
+"B": "Xalqning chorizm istilosi ostidagi qorong'u, zulmatli mudroq hayotini",
+"C": "Faqatgina vaqt ko'rsatkichini",
+"D": "Yangi yorug' kelajakni"
+},
+"javob": "B"
+},
+{
+"id": 83,
+"sinf": 10,
+"savol": "Asqad Muxtorning 'Chinor' romanida Chinor nimaning ramzi hisoblanadi?",
+"variantlar": {
+"A": "Moddiy boylik",
+"B": "Insoniyatning ildizlari, avlodlar tutashuvi, xalqning boqiyligi ramzi",
+"C": "Bahor va yoshlik",
+"D": "Shohlar davlatining qudrati"
+},
+"javob": "B"
+},
+{
+"id": 84,
+"sinf": 10,
+"savol": "Muhammad Aminkho'ja Muqimiy XIX asr oxiri va XX asr boshlarida qaysi shahar adabiy markazida ijod qildi?",
+"variantlar": {
+"A": "Xiva",
+"B": "Buxoro",
+"C": "Qo'qon",
+"D": "Toshkent"
+},
+"javob": "C"
+},
+{
+"id": 85,
+"sinf": 10,
+"savol": "Firdavsiyning olamshumul 'Shohnoma' asari asosan nima haqida?",
+"variantlar": {
+"A": "Qadimgi Eron va Turon pahlavonlari (Rustam, Afrosiyob) hamda shohlari tarixi",
+"B": "Arab halifaligining kengayishi",
+"C": "Yunon olimlarining hikmatlari",
+"D": "Xitoy imperatorlari solnomasi"
+},
+"javob": "A"
+},
+{
+"id": 86,
+"sinf": 11,
+"savol": "Oybekning 'Qutlug' qon' romanida bosh qahramon Yo'lchi qaysi boyning xizmatida bo'ladi?",
+"variantlar": {
+"A": "Mirzakarimboyning",
+"B": "Qodirqul mingboshining",
+"C": "Hakimboyvachchaning",
+"D": "Razzoq so'fining"
+},
+"javob": "C"
+},
+{
+"id": 87,
+"sinf": 11,
+"savol": "Maqsud Shayxzodaning 'Mirzo Ulug'bek' tragediyasida Ulug'bekka taxt talashib fitna uyushtirgan o'g'li kim edi?",
+"variantlar": {
+"A": "Bobur",
+"B": "Abdullatif",
+"C": "Mironshoh",
+"D": "Shohrux"
+},
+"javob": "B"
+},
+{
+"id": 88,
+"sinf": 11,
+"savol": "Erkin Vohidovning o'zbek xalqi milliy tabiatini yumor va kulgi ostida aks ettirgan, xalqchil qahramoni nomi nima?",
+"variantlar": {
+"A": "Matmusa (Donishqishloq latifalari)",
+"B": "Afandi",
+"C": "Aldar ko'sa",
+"D": "Qoravoy"
+},
+"javob": "A"
+},
+{
+"id": 89,
+"sinf": 11,
+"savol": "Erkin Vohidovning 'Ruhlar isyoni' dostonida qaysi bengal (hind) isyonkor shoiri hayoti misol qilib olinadi?",
+"variantlar": {
+"A": "Alisher Navoiy",
+"B": "Cho'lpon",
+"C": "Nazrul Islom",
+"D": "Rabindranat Tagor"
+},
+"javob": "C"
+},
+{
+"id": 90,
+"sinf": 11,
+"savol": "O'zbekiston xalq shoiri Abdulla Oripovning ijtimoiy-falsafiy dostonlaridan birining nomi nima?",
+"variantlar": {
+"A": "Fido",
+"B": "Jannatga yo'l",
+"C": "Tong sirlari",
+"D": "Oltin soch"
+},
+"javob": "B"
+},
+{
+"id": 91,
+"sinf": 11,
+"savol": "O'tkir Hoshimovning 'Ikki eshik orasi' romanidagi yosh avlod vakillari (Kimsan, Umarali) qaysi fojiali voqealarning qurboniga aylanadilar?",
+"variantlar": {
+"A": "Faqat birinchi jahon urushi",
+"B": "Ikkinchi jahon urushi dahshatlari",
+"C": "Qatag'on yillari",
+"D": "Inqilob qurbonlari"
+},
+"javob": "B"
+},
+{
+"id": 92,
+"sinf": 11,
+"savol": "Yozuvchi Murod Muhammad Do'stning sobiq sho'ro davridagi soxta munosabatlarni qoralovchi 'Lolazor' asarida asosan nima tanqid qilinadi?",
+"variantlar": {
+"A": "Jinoiy guruhlar harakati",
+"B": "Qo'shib yozish, soxta rahbarlik illatlari va paxta yakka hokimligi",
+"C": "Tibbiyotdagi muammolar",
+"D": "Xorijga ko'chib ketish"
+},
+"javob": "B"
+},
+{
+"id": 93,
+"sinf": 11,
+"savol": "Chingiz Aytmatovning 'Asrga tatigulik kun' romaniga kirgan 'Mankurt' atamasi qanday shaxsga nisbatan ishlatiladi?",
+"variantlar": {
+"A": "Vatanini himoya qiluvchi qahramonga",
+"B": "Boshidan og'ir jarohat olib xotirasidan ayrilgan, o'zligini va yaqinlarini unutgan qulga",
+"C": "Katta boylik to'plagan zindondorga",
+"D": "Buyuk allomaga"
+},
+"javob": "B"
+},
+{
+"id": 94,
+"sinf": 11,
+"savol": "Uilyam Shekspirning butun dunyoga mashhur jahon adabiyoti durdonalaridan sanalgan fojiasi qaysi?",
+"variantlar": {
+"A": "Yoz kechasidagi tush",
+"B": "Gamlet (yoki Romeo va Julietta)",
+"C": "Venetsiya savdogari",
+"D": "Ko'ngildagidek"
+},
+"javob": "B"
+},
+{
+"id": 95,
+"sinf": 11,
+"savol": "Shoir Rauf Parfi o'zbek she'riyatida asosan qanday poetik xususiyatni kashf etdi va yuksaltirdi?",
+"variantlar": {
+"A": "Ochiq publitsistika va hajvni",
+"B": "O'ta nozik ruhiy kechinmalarni, ramziylikni, erkin vazn (verlibr) ni",
+"C": "Ulkan tarixiy-epos dostonlarni",
+"D": "Oddiy maishiy hajviyalarni"
+},
+"javob": "B"
+},
+{
+"id": 96,
+"sinf": 11,
+"savol": "O'lmas Umarbekovning o'zbek yoshlarining sevgi va axloqiy munosabatlari yoritilgan romani qaysi?",
+"variantlar": {
+"A": "Odam bo'lish qiyin",
+"B": "Qizimga maktublar",
+"C": "Ulug'bek xazinasi",
+"D": "Yulduzli tunlar"
+},
+"javob": "A"
+},
+{
+"id": 97,
+"sinf": 11,
+"savol": "Abdulla Oripovning inson qismati, xalqning o'tmishi va ruhiyati yuzasidan o'ta falsafiy, teran ma'noli she'ri qaysi?",
+"variantlar": {
+"A": "O'zbekiston",
+"B": "Munojotni tinglab",
+"C": "Bahor keldi",
+"D": "Vatan"
+},
+"javob": "B"
+},
+{
+"id": 98,
+"sinf": 11,
+"savol": "Shoira Zulfiya she'riyatining bosh mavzusi nimalardan iborat?",
+"variantlar": {
+"A": "Vafo, sadoqat, sharq ayoli qismati, hayot go'zalligi",
+"B": "Harbiy yurishlar bayoni",
+"C": "Faqat siyoziy-mafkuraviy targ'ibot",
+"D": "Mifologik qahramonlar tasviri"
+},
+"javob": "A"
+},
+{
+"id": 99,
+"sinf": 11,
+"savol": "Yozuvchi Shukur Xolmirzayev qalamiga mansub chuqur psixologik hikoyalardan biri qaysi?",
+"variantlar": {
+"A": "O'g'ri",
+"B": "Bodom qishda gulladi",
+"C": "Bemor",
+"D": "Yetti zog'ora qissasi"
+},
+"javob": "B"
+},
+{
+"id": 100,
+"sinf": 11,
+"savol": "Odil Yoqubovning 'Ko'hna dunyo' asarida asosan qaysi ikki buyuk tarixiy shaxsнинг ziddiyatli va murakkab taqdiri markaziy o'ringa qo'yilgan?",
+"variantlar": {
+"A": "Zahiriddin Muhammad Bobur va Shayboniyxon",
+"B": "Ibn Sino va Beruniy",
+"C": "Alisher Navoiy va Husayn Boyqaro",
+"D": "Amir Temur va Boyazid Yildirim"
+},
+"javob": "B"
+}
+]

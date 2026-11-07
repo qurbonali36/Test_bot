@@ -1,0 +1,1202 @@
+[
+{
+"id": 1,
+"sinf": 5,
+"savol": "Tabiatdagi barcha jism va narsalar nimalardan tashkil topgan?",
+"variantlar": {
+"A": "Faqat havodan",
+"B": "Moddalardan",
+"C": "Yorug'likdan",
+"D": "Faqat suvdan"
+},
+"javob": "B"
+},
+{
+"id": 2,
+"sinf": 5,
+"savol": "Moddalarning qanday agregat holatlari mavjud?",
+"variantlar": {
+"A": "Faqat qattiq va suyuq",
+"B": "Suyuq, gaz va plazma",
+"C": "Qattiq, suyuq, gaz",
+"D": "Qattiq va gaz"
+},
+"javob": "C"
+},
+{
+"id": 3,
+"sinf": 5,
+"savol": "Suv qotganda (muzlaganda) qanday agregat holatga o'tadi?",
+"variantlar": {
+"A": "Qattiq",
+"B": "Suyuq",
+"C": "Gaz",
+"D": "Plazma"
+},
+"javob": "A"
+},
+{
+"id": 4,
+"sinf": 5,
+"savol": "Kislorodning tabiatdagi eng asosiy vazifasi nima?",
+"variantlar": {
+"A": "Issiqlikni saqlash",
+"B": "Nafas olish va yonishni ta'minlash",
+"C": "Suvni tozalash",
+"D": "O'simliklarni quritish"
+},
+"javob": "B"
+},
+{
+"id": 5,
+"sinf": 5,
+"savol": "Yer yuzida eng ko'p tarqalgan modda qaysi?",
+"variantlar": {
+"A": "Oltin",
+"B": "Temir",
+"C": "Suv",
+"D": "Tuz"
+},
+"javob": "C"
+},
+{
+"id": 6,
+"sinf": 5,
+"savol": "Havoning asosiy qismini qaysi gaz tashkil etadi?",
+"variantlar": {
+"A": "Kislorod",
+"B": "Karbonat angidrid",
+"C": "Vodorod",
+"D": "Azot"
+},
+"javob": "D"
+},
+{
+"id": 7,
+"sinf": 5,
+"savol": "Shakar suvda to'liq eritilganda qanday aralashma hosil bo'ladi?",
+"variantlar": {
+"A": "Bir jinsli (gomogen)",
+"B": "Ko'p jinsli (geterogen)",
+"C": "Suspenziya",
+"D": "Emulsiya"
+},
+"javob": "A"
+},
+{
+"id": 8,
+"sinf": 5,
+"savol": "Temirning zanglashi qanday hodisa hisoblanadi?",
+"variantlar": {
+"A": "Fizik hodisa",
+"B": "Mexanik hodisa",
+"C": "Kimyoviy hodisa",
+"D": "Biologik hodisa"
+},
+"javob": "C"
+},
+{
+"id": 9,
+"sinf": 5,
+"savol": "Suvning qaynashi qanday hodisa hisoblanadi?",
+"variantlar": {
+"A": "Kimyoviy hodisa",
+"B": "Fizik hodisa",
+"C": "Yadroviy hodisa",
+"D": "Biologik hodisa"
+},
+"javob": "B"
+},
+{
+"id": 10,
+"sinf": 5,
+"savol": "Qattiq zarrachalarni suyuqlikdan ajratib olish usuli nima deb ataladi?",
+"variantlar": {
+"A": "Qaynatish",
+"B": "Muzlatish",
+"C": "Filtrlash",
+"D": "Sublimatsiya"
+},
+"javob": "C"
+},
+{
+"id": 11,
+"sinf": 5,
+"savol": "Issiqlik va elektr tokini eng yaxshi o'tkazuvchi moddalar guruhini toping.",
+"variantlar": {
+"A": "Plastmassalar",
+"B": "Yog'ochlar",
+"C": "Metallar",
+"D": "Shishalar"
+},
+"javob": "C"
+},
+{
+"id": 12,
+"sinf": 5,
+"savol": "Karbonat angidrid gazi tabiatda qanday jarayonda muhim rol o'ynaydi?",
+"variantlar": {
+"A": "O'simliklar fotosintezida",
+"B": "Metallar zanglashida",
+"C": "Tuzlarning erishida",
+"D": "Suvning tozalanishida"
+},
+"javob": "A"
+},
+{
+"id": 13,
+"sinf": 5,
+"savol": "Moddaning qattiq holatdan suyuqlikka aylanmasdan, to'g'ridan-to'g'ri gaz holatiga o'tishi nima deyiladi?",
+"variantlar": {
+"A": "Qaynash",
+"B": "Erish",
+"C": "Sublimatsiya",
+"D": "Kondensatsiya"
+},
+"javob": "C"
+},
+{
+"id": 14,
+"sinf": 5,
+"savol": "Oddiy magnit asosan qaysi elementdan tashkil topgan moddalarni o'ziga tortadi?",
+"variantlar": {
+"A": "Aluminiy",
+"B": "Temir",
+"C": "Mis",
+"D": "Rux"
+},
+"javob": "B"
+},
+{
+"id": 15,
+"sinf": 6,
+"savol": "O'simliklarda quyosh nuri ishtirokida noorganik moddalardan organik modda hosil bo'lish jarayoni qanday ataladi?",
+"variantlar": {
+"A": "Nafas olish",
+"B": "Fotosintez",
+"C": "Transpiratsiya",
+"D": "Kondensatsiya"
+},
+"javob": "B"
+},
+{
+"id": 16,
+"sinf": 6,
+"savol": "Qaysi gaz o'zi yonmaydi, lekin boshqa moddalarning yonishini ta'minlaydi?",
+"variantlar": {
+"A": "Azot",
+"B": "Karbonat angidrid",
+"C": "Kislorod",
+"D": "Vodorod"
+},
+"javob": "C"
+},
+{
+"id": 17,
+"sinf": 6,
+"savol": "Havo qanday moddalar sirasiga kiradi?",
+"variantlar": {
+"A": "Sof element",
+"B": "Gazlar aralashmasi",
+"C": "Murakkab modda",
+"D": "Suyuq kristal"
+},
+"javob": "B"
+},
+{
+"id": 18,
+"sinf": 6,
+"savol": "Kundalik turmushda ishlatiladigan osh tuzining kimyoviy nomi nima?",
+"variantlar": {
+"A": "Kalsiy karbonat",
+"B": "Natriy xlorid",
+"C": "Kaliy sulfat",
+"D": "Natriy gidroksid"
+},
+"javob": "B"
+},
+{
+"id": 19,
+"sinf": 6,
+"savol": "Suvning kimyoviy formulasi qanday yoziladi?",
+"variantlar": {
+"A": "HO",
+"B": "H2O2",
+"C": "H2O",
+"D": "CO2"
+},
+"javob": "C"
+},
+{
+"id": 20,
+"sinf": 6,
+"savol": "Tuproq unumdorligini oshirish va o'simliklarni oziqlantirish uchun qanday moddalar ishlatiladi?",
+"variantlar": {
+"A": "Pestitsidlar",
+"B": "Gerbitsidlar",
+"C": "O'g'itlar",
+"D": "Bo'yoqlar"
+},
+"javob": "C"
+},
+{
+"id": 21,
+"sinf": 6,
+"savol": "Tibbiyotda teridagi jarohatlarni dezinfeksiya qilishda asosan qaysi moddaning spirtli eritmasi ishlatiladi?",
+"variantlar": {
+"A": "Yod",
+"B": "Xlor",
+"C": "Kaliy permanganat",
+"D": "Brom"
+},
+"javob": "A"
+},
+{
+"id": 22,
+"sinf": 6,
+"savol": "Atrof-muhitga issiqlik ajralib chiqishi bilan boradigan reaksiyalar nima deb ataladi?",
+"variantlar": {
+"A": "Endotermik",
+"B": "Katalitik",
+"C": "Ekzotermik",
+"D": "Fizikaviy"
+},
+"javob": "C"
+},
+{
+"id": 23,
+"sinf": 6,
+"savol": "Modda zarralarining o'z-o'zidan harakatlanib, bir-biri bilan aralashib ketish hodisasi qanday nomlanadi?",
+"variantlar": {
+"A": "Diffuziya",
+"B": "Osmos",
+"C": "Filtrlash",
+"D": "Cho'kish"
+},
+"javob": "A"
+},
+{
+"id": 24,
+"sinf": 6,
+"savol": "Faqat bir xil atomlardan tashkil topgan moddalar qanday ataladi?",
+"variantlar": {
+"A": "Murakkab moddalar",
+"B": "Oddiy moddalar",
+"C": "Aralashmalar",
+"D": "Polimerlar"
+},
+"javob": "B"
+},
+{
+"id": 25,
+"sinf": 6,
+"savol": "Ikki yoki undan ortiq xil element atomlaridan tashkil topgan moddalarni aniqlang.",
+"variantlar": {
+"A": "Oddiy moddalar",
+"B": "Murakkab moddalar",
+"C": "Metallar",
+"D": "Asil gazlar"
+},
+"javob": "B"
+},
+{
+"id": 26,
+"sinf": 6,
+"savol": "Ohaktosh, bo'r va marmarning asosiy tarkibiy qismi qaysi modda hisoblanadi?",
+"variantlar": {
+"A": "Kalsiy oksidi",
+"B": "Kalsiy karbonat",
+"C": "Kalsiy sulfat",
+"D": "Kalsiy gidroksid"
+},
+"javob": "B"
+},
+{
+"id": 27,
+"sinf": 6,
+"savol": "Sirka kislotasi (uksus) suvli eritmasida asosan qanday ta'mga ega bo'ladi?",
+"variantlar": {
+"A": "Shirin",
+"B": "Sho'r",
+"C": "Achchiq",
+"D": "Nordon"
+},
+"javob": "D"
+},
+{
+"id": 28,
+"sinf": 6,
+"savol": "Atrofdan issiqlik yutilishi bilan boradigan kimyoviy reaksiyalar qanday ataladi?",
+"variantlar": {
+"A": "Ekzotermik",
+"B": "Katalitik",
+"C": "Endotermik",
+"D": "Qaytar"
+},
+"javob": "C"
+},
+{
+"id": 29,
+"sinf": 7,
+"savol": "Kimyoviy element tushunchasini fanga birinchi bo'lib kim kiritgan?",
+"variantlar": {
+"A": "M. Lomonosov",
+"B": "R. Boyl",
+"C": "A. Lavuazye",
+"D": "D. Mendeleyev"
+},
+"javob": "B"
+},
+{
+"id": 30,
+"sinf": 7,
+"savol": "Nisbiy atom massa kimyoda qaysi belgi bilan ifodalanadi?",
+"variantlar": {
+"A": "Mr",
+"B": "Ar",
+"C": "M",
+"D": "Na"
+},
+"javob": "B"
+},
+{
+"id": 31,
+"sinf": 7,
+"savol": "Xalqaro birliklar sistemasida modda miqdori qaysi birlikda o'lchanadi?",
+"variantlar": {
+"A": "Gramm",
+"B": "Litr",
+"C": "Mol",
+"D": "Kelvin"
+},
+"javob": "C"
+},
+{
+"id": 32,
+"sinf": 7,
+"savol": "Avogadro doimiysi (Na) qanday sonli qiymatga ega?",
+"variantlar": {
+"A": "6,02 * 10^22",
+"B": "6,02 * 10^23",
+"C": "6,02 * 10^24",
+"D": "6,02 * 10^21"
+},
+"javob": "B"
+},
+{
+"id": 33,
+"sinf": 7,
+"savol": "Vodorod atomining valentligi kimyoviy birikmalarda doimo nechaga teng deb qabul qilingan?",
+"variantlar": {
+"A": "I",
+"B": "II",
+"C": "III",
+"D": "IV"
+},
+"javob": "A"
+},
+{
+"id": 34,
+"sinf": 7,
+"savol": "Kislorod o'z birikmalarida asosan necha valentli bo'ladi?",
+"variantlar": {
+"A": "I",
+"B": "II",
+"C": "III",
+"D": "IV"
+},
+"javob": "B"
+},
+{
+"id": 35,
+"sinf": 7,
+"savol": "Moddalar massasining saqlanish qonunini kimlar yaratgan?",
+"variantlar": {
+"A": "D. Mendeleyev va N. Bor",
+"B": "M. Lomonosov va A. Lavuazye",
+"C": "R. Boyl va J. Dalton",
+"D": "A. Avogadro va S. Arrenius"
+},
+"javob": "B"
+},
+{
+"id": 36,
+"sinf": 7,
+"savol": "Tarkibida metall atomiga almasha oladigan vodorod atomi tutgan murakkab moddalar qaysi sinfga kiradi?",
+"variantlar": {
+"A": "Tuzlar",
+"B": "Oksidlar",
+"C": "Kislotalar",
+"D": "Asoslar"
+},
+"javob": "C"
+},
+{
+"id": 37,
+"sinf": 7,
+"savol": "Asoslar tarkibida qaysi funksional guruh bo'lishi shart?",
+"variantlar": {
+"A": "Karboksil",
+"B": "Gidroksid (-OH)",
+"C": "Sulfat",
+"D": "Nitrat"
+},
+"javob": "B"
+},
+{
+"id": 38,
+"sinf": 7,
+"savol": "Ikki elementdan tashkil topib, ulardan biri kislorod bo'lgan murakkab moddalar qanday ataladi?",
+"variantlar": {
+"A": "Oksidlar",
+"B": "Tuzlar",
+"C": "Asoslar",
+"D": "Kislotalar"
+},
+"javob": "A"
+},
+{
+"id": 39,
+"sinf": 7,
+"savol": "Metall atomlari va kislota qoldiqlaridan tashkil topgan murakkab moddalarga nimalar kiradi?",
+"variantlar": {
+"A": "Oksidlar",
+"B": "Asoslar",
+"C": "Kislotalar",
+"D": "Tuzlar"
+},
+"javob": "D"
+},
+{
+"id": 40,
+"sinf": 7,
+"savol": "Eritma muhitining reaksiyasiga (kislotali, asosli yoki neytral) qarab o'z rangini o'zgartiradigan moddalar nima deyiladi?",
+"variantlar": {
+"A": "Katalizatorlar",
+"B": "Inhibitorlar",
+"C": "Indikatorlar",
+"D": "Elektrolitlar"
+},
+"javob": "C"
+},
+{
+"id": 41,
+"sinf": 7,
+"savol": "1 mol suvning (H2O) massasi, ya'ni molyar massasi qanchaga teng?",
+"variantlar": {
+"A": "16 g/mol",
+"B": "18 g/mol",
+"C": "20 g/mol",
+"D": "22 g/mol"
+},
+"javob": "B"
+},
+{
+"id": 42,
+"sinf": 7,
+"savol": "Xalqaro nomenklaturaga ko'ra CuSO4 ning to'g'ri nomini ko'rsating.",
+"variantlar": {
+"A": "Mis (I) sulfat",
+"B": "Mis (II) sulfit",
+"C": "Mis (II) sulfat",
+"D": "Mis sulfid"
+},
+"javob": "C"
+},
+{
+"id": 43,
+"sinf": 8,
+"savol": "Kimyoviy elementlarning davriy qonunini kim kashf etgan?",
+"variantlar": {
+"A": "N. Bor",
+"B": "J. Tomson",
+"C": "D. Mendeleyev",
+"D": "E. Rezerford"
+},
+"javob": "C"
+},
+{
+"id": 44,
+"sinf": 8,
+"savol": "Davriy sistemadagi gorizontal qatorlar nima deb ataladi?",
+"variantlar": {
+"A": "Guruhlar",
+"B": "Oila",
+"C": "Bloklar",
+"D": "Davrlar"
+},
+"javob": "D"
+},
+{
+"id": 45,
+"sinf": 8,
+"savol": "Elementning tartib raqami uning atomidagi qanday zarrachalar soniga teng bo'ladi?",
+"variantlar": {
+"A": "Neytronlar soniga",
+"B": "Protonlar soniga",
+"C": "Yadro massasiga",
+"D": "Valent elektronlariga"
+},
+"javob": "B"
+},
+{
+"id": 46,
+"sinf": 8,
+"savol": "Yadro zaryadi (protonlar soni) bir xil, lekin neytronlar soni (massasi) farq qiluvchi atomlar nima deyiladi?",
+"variantlar": {
+"A": "Izobaralar",
+"B": "Izotoplar",
+"C": "Izotonlar",
+"D": "Izomerlar"
+},
+"javob": "B"
+},
+{
+"id": 47,
+"sinf": 8,
+"savol": "Barcha kimyoviy elementlar ichida elektromanfiyligi eng yuqori bo'lgan elementni toping.",
+"variantlar": {
+"A": "Kislorod",
+"B": "Xlor",
+"C": "Ftor",
+"D": "Azot"
+},
+"javob": "C"
+},
+{
+"id": 48,
+"sinf": 8,
+"savol": "Umumiy elektron juftlar hisobiga vujudga keladigan kimyoviy bog'lanish nima deyiladi?",
+"variantlar": {
+"A": "Ion bog'lanish",
+"B": "Kovalent bog'lanish",
+"C": "Metall bog'lanish",
+"D": "Vodorod bog'lanish"
+},
+"javob": "B"
+},
+{
+"id": 49,
+"sinf": 8,
+"savol": "Qarama-qarshi zaryadli ionlarning elektrostatik tortishishi natijasida qanday bog'lanish hosil bo'ladi?",
+"variantlar": {
+"A": "Ion bog'lanish",
+"B": "Kovalent bog'lanish",
+"C": "D donor-akseptor bog'lanish",
+"D": "Metall bog'lanish"
+},
+"javob": "A"
+},
+{
+"id": 50,
+"sinf": 8,
+"savol": "Galogenlar davriy sistemaning qaysi guruhida joylashgan?",
+"variantlar": {
+"A": "V A guruhida",
+"B": "VI A guruhida",
+"C": "VII A guruhida",
+"D": "VIII A guruhida"
+},
+"javob": "C"
+},
+{
+"id": 51,
+"sinf": 8,
+"savol": "Xlor oddiy sharoitda qanday holatda bo'ladi?",
+"variantlar": {
+"A": "Rangsiz, hidsiz gaz",
+"B": "Sariq-yashil rangli, zaharli gaz",
+"C": "Qizil-qo'ng'ir suyuqlik",
+"D": "Qora-binafsha qattiq modda"
+},
+"javob": "B"
+},
+{
+"id": 52,
+"sinf": 8,
+"savol": "Oltingugurt davriy sistemaning qaysi guruhi va guruhchasida joylashgan?",
+"variantlar": {
+"A": "V A",
+"B": "VI A",
+"C": "VII A",
+"D": "VI B"
+},
+"javob": "B"
+},
+{
+"id": 53,
+"sinf": 8,
+"savol": "Sulfat kislotasining (H2SO4) kimyo sanoatida olinishida asosan qaysi modda xomashyo hisoblanadi?",
+"variantlar": {
+"A": "Kalsiy sulfat",
+"B": "Pirit (FeS2) yoki oltingugurt",
+"C": "Mis kuporosi",
+"D": "Natriy sulfid"
+},
+"javob": "B"
+},
+{
+"id": 54,
+"sinf": 8,
+"savol": "Oleum deb nimaga aytiladi?",
+"variantlar": {
+"A": "Sulfat kislotaning suvli eritmasiga",
+"B": "SO2 ning suvdagi eritmasiga",
+"C": "SO3 ning 100% li sulfat kislotadagi eritmasiga",
+"D": "Vodorod sulfidning suvdagi eritmasiga"
+},
+"javob": "C"
+},
+{
+"id": 55,
+"sinf": 8,
+"savol": "Kovalent qutbsiz bog'lanish asosan qanday atomlar orasida vujudga keladi?",
+"variantlar": {
+"A": "Metall va metalmas orasida",
+"B": "Turli xil metalmas atomlari orasida",
+"C": "Bir xil metalmas atomlari orasida",
+"D": "Faqat metall atomlari orasida"
+},
+"javob": "C"
+},
+{
+"id": 56,
+"sinf": 8,
+"savol": "Moddalar qattiq holatda vujudga keltiradigan kristall panjaraning asosiy turlari qaysilar?",
+"variantlar": {
+"A": "Ionli, atomli, molekulyar, metall",
+"B": "Gazli, suyuq, qattiq, plazma",
+"C": "To'g'ri burchakli, oltiburchakli",
+"D": "Gomogen, geterogen, aralash"
+},
+"javob": "A"
+},
+{
+"id": 57,
+"sinf": 9,
+"savol": "Metallarning eng muhim va umumiy fizik xossalari nimalardan iborat?",
+"variantlar": {
+"A": "Mo'rtlik va shaffoflik",
+"B": "Elektr toki, issiqlikni o'tkazuvchanlik va yaltiroqlik",
+"C": "Gassimonlik va past zichlik",
+"D": "Suvda yaxshi eruvchanlik"
+},
+"javob": "B"
+},
+{
+"id": 58,
+"sinf": 9,
+"savol": "Tabiatdagi eng yengil metallni ko'rsating.",
+"variantlar": {
+"A": "Natriy",
+"B": "Kalsiy",
+"C": "Litiy",
+"D": "Aluminiy"
+},
+"javob": "C"
+},
+{
+"id": 59,
+"sinf": 9,
+"savol": "Oddiy xona haroratida suyuq holatda bo'ladigan yagona metall qaysi?",
+"variantlar": {
+"A": "Kumush",
+"B": "Simob",
+"C": "Qalay",
+"D": "Rux"
+},
+"javob": "B"
+},
+{
+"id": 60,
+"sinf": 9,
+"savol": "Ishqoriy metallar davriy sistemaning qayerida joylashgan?",
+"variantlar": {
+"A": "I A guruhida",
+"B": "II A guruhida",
+"C": "III A guruhida",
+"D": "I B guruhida"
+},
+"javob": "A"
+},
+{
+"id": 61,
+"sinf": 9,
+"savol": "Aluminiy qanday kimyoviy xususiyatga ega bo'lgan metall hisoblanadi?",
+"variantlar": {
+"A": "Faqat kislotali",
+"B": "Faqat asosli",
+"C": "Amfoter",
+"D": "Inert"
+},
+"javob": "C"
+},
+{
+"id": 62,
+"sinf": 9,
+"savol": "Temir va uglerod qotishmasi bo'lgan cho'yan tarkibida uglerod miqdori necha foizni tashkil qiladi?",
+"variantlar": {
+"A": "0,1 - 1,0 %",
+"B": "1,0 - 2,14 %",
+"C": "2,14 - 6,67 %",
+"D": "6,67 % dan yuqori"
+},
+"javob": "C"
+},
+{
+"id": 63,
+"sinf": 9,
+"savol": "Po'latning cho'yandan asosiy farqi nimada?",
+"variantlar": {
+"A": "Uglerod miqdori 2,14% dan kam va u bolg'alanuvchan",
+"B": "Uglerod miqdori juda ko'p va u mo'rt",
+"C": "Tarkibida faqat temir bo'ladi",
+"D": "U oson eriydigan bo'ladi"
+},
+"javob": "A"
+},
+{
+"id": 64,
+"sinf": 9,
+"savol": "Uglerodning tabiatdagi eng qattiq, shaffof allotropik shakl o'zgarishi qaysi?",
+"variantlar": {
+"A": "Grafit",
+"B": "Olmos",
+"C": "Karbin",
+"D": "Fulleren"
+},
+"javob": "B"
+},
+{
+"id": 65,
+"sinf": 9,
+"savol": "Is gazi (CO) inson organizmiga qanday ta'sir qiladi?",
+"variantlar": {
+"A": "Foydali ta'sir qiladi",
+"B": "Nafas olishni yaxshilaydi",
+"C": "Qondagi gemoglobin bilan birikib, zaharli ta'sir qiladi",
+"D": "Hech qanday ta'sir ko'rsatmaydi"
+},
+"javob": "C"
+},
+{
+"id": 66,
+"sinf": 9,
+"savol": "Karbonat kislotaning (H2CO3) tuzlari umumiy nom bilan nima deb ataladi?",
+"variantlar": {
+"A": "Karbidlar",
+"B": "Karbonatlar",
+"C": "Gidroksidlar",
+"D": "Silikatlar"
+},
+"javob": "B"
+},
+{
+"id": 67,
+"sinf": 9,
+"savol": "Shisha, sement va keramika ishlab chiqarish qaysi sanoat tarmog'iga kiradi?",
+"variantlar": {
+"A": "Metallurgiya sanoati",
+"B": "Silikat sanoati",
+"C": "Polimerlar sanoati",
+"D": "Oziq-ovqat sanoati"
+},
+"javob": "B"
+},
+{
+"id": 68,
+"sinf": 9,
+"savol": "Azot gazi (N2) havoning hajm jihatidan taxminan necha foizini tashkil qiladi?",
+"variantlar": {
+"A": "21 %",
+"B": "50 %",
+"C": "78 %",
+"D": "90 %"
+},
+"javob": "C"
+},
+{
+"id": 69,
+"sinf": 9,
+"savol": "Ammiak (NH3) oddiy sharoitda qanday xususiyatlarga ega?",
+"variantlar": {
+"A": "Hidsiz, rangsiz suyuqlik",
+"B": "O'tkir hidli, suvda yaxshi eriydigan gaz",
+"C": "Zaharli, yashil rangli gaz",
+"D": "Qattiq, kristall modda"
+},
+"javob": "B"
+},
+{
+"id": 70,
+"sinf": 9,
+"savol": "Nitrat kislota turli metallar bilan reaksiyaga kirishganda asosan qaysi gaz hech qachon ajralib chiqmaydi?",
+"variantlar": {
+"A": "Azot (II) oksidi",
+"B": "Azot (IV) oksidi",
+"C": "Ammiak",
+"D": "Vodorod"
+},
+"javob": "D"
+},
+{
+"id": 71,
+"sinf": 10,
+"savol": "Gomogen kimyoviy reaksiya tezligi nima bilan o'lchanadi?",
+"variantlar": {
+"A": "Massaning vaqt o'tishi bilan ortishi",
+"B": "Vaqt birligi ichida moddalar konsentratsiyasining o'zgarishi",
+"C": "Temperaturaning o'zgarishi bilan",
+"D": "Bosimning pasayishi bilan"
+},
+"javob": "B"
+},
+{
+"id": 72,
+"sinf": 10,
+"savol": "Harorat har 10°C ga ko'tarilganda kimyoviy reaksiya tezligi o'rtacha 2-4 marta ortadi. Bu xulosa qaysi olimning qoidasi hisoblanadi?",
+"variantlar": {
+"A": "Le-Shatelye",
+"B": "M. Lomonosov",
+"C": "Vant-Goff",
+"D": "S. Arrenius"
+},
+"javob": "C"
+},
+{
+"id": 73,
+"sinf": 10,
+"savol": "Reaksiya tezligini oshiradigan, lekin jarayon oxirida o'zi kimyoviy o'zgarmay qoladigan moddalar nima deyiladi?",
+"variantlar": {
+"A": "Inhibitorlar",
+"B": "Elektrolitlar",
+"C": "Indikatorlar",
+"D": "Katalizatorlar"
+},
+"javob": "D"
+},
+{
+"id": 74,
+"sinf": 10,
+"savol": "Kimyoviy muvozanatning siljishiga harorat, bosim va konsentratsiya ta'sirini tushuntiruvchi umumiy qoidani (prinsipni) kim taklif qilgan?",
+"variantlar": {
+"A": "A. Butlerov",
+"B": "A. Le-Shatelye",
+"C": "V. Nernst",
+"D": "F. Vyoler"
+},
+"javob": "B"
+},
+{
+"id": 75,
+"sinf": 10,
+"savol": "Endotermik (issiqlik yutilishi bilan boradigan) reaksiyalarda haroratning oshirilishi muvozanatni qaysi tomonga suradi?",
+"variantlar": {
+"A": "Dastlabki moddalar tomonga",
+"B": "To'g'ri reaksiya (mahsulotlar) tomonga",
+"C": "Muvozanatga ta'sir qilmaydi",
+"D": "Reaksiyani to'xtatadi"
+},
+"javob": "B"
+},
+{
+"id": 76,
+"sinf": 10,
+"savol": "Elektrolitik dissotsilanish nazariyasining (EDN) asoschisi qaysi olim?",
+"variantlar": {
+"A": "D. Mendeleyev",
+"B": "S. Arrenius",
+"C": "M. Faradey",
+"D": "G. Devi"
+},
+"javob": "B"
+},
+{
+"id": 77,
+"sinf": 10,
+"savol": "Suvli eritmalarida yoki suyuqlanma holatida elektr tokini o'tkazuvchi moddalar nima deyiladi?",
+"variantlar": {
+"A": "Noelektrolitlar",
+"B": "Elektrolitlar",
+"C": "Dielektriklar",
+"D": "Izolyatorlar"
+},
+"javob": "B"
+},
+{
+"id": 78,
+"sinf": 10,
+"savol": "Elektrolitlar dissotsilanganda (ionlarga parchalanganda) asosan qanday zarrachalar hosil bo'ladi?",
+"variantlar": {
+"A": "Neytral atomlar",
+"B": "Molekulalar va radikallar",
+"C": "Kationlar va anionlar",
+"D": "Faqat elektronlar"
+},
+"javob": "C"
+},
+{
+"id": 79,
+"sinf": 10,
+"savol": "Eritmada dissotsilanib kation sifatida faqat vodorod ionini (H+) hosil qiladigan moddalar qaysilar?",
+"variantlar": {
+"A": "Asoslar",
+"B": "Kislotalar",
+"C": "Tuzlar",
+"D": "Oksidlar"
+},
+"javob": "B"
+},
+{
+"id": 80,
+"sinf": 10,
+"savol": "Quyidagilardan suvli eritmada to'liq ionlarga ajraladigan kuchli elektrolitni ko'rsating.",
+"variantlar": {
+"A": "Sirka kislota",
+"B": "Karbonat kislota",
+"C": "Nitrat kislota",
+"D": "Vodorod sulfid kislota"
+},
+"javob": "C"
+},
+{
+"id": 81,
+"sinf": 10,
+"savol": "Tuzlarning suv molekulalari ta'sirida parchalanib, kuchsiz kislota yoki kuchsiz asos hosil qilish jarayoni nima deb ataladi?",
+"variantlar": {
+"A": "Elektroliz",
+"B": "Gidroliz",
+"C": "Polimerizatsiya",
+"D": "Neytrallanish"
+},
+"javob": "B"
+},
+{
+"id": 82,
+"sinf": 10,
+"savol": "Oksidlanish-qaytarilish reaksiyalari qanday reaksiyalar hisoblanadi?",
+"variantlar": {
+"A": "Faqat issiqlik ajralib chiqadigan reaksiyalar",
+"B": "Elementlarning oksidlanish darajasi o'zgarishi bilan boradigan reaksiyalar",
+"C": "Faqat cho'kma tushadigan reaksiyalar",
+"D": "Oksidlanish darajasi o'zgarmaydigan reaksiyalar"
+},
+"javob": "B"
+},
+{
+"id": 83,
+"sinf": 10,
+"savol": "Oksidlanish-qaytarilish reaksiyalarida elektron qabul qiluvchi atom yoki ion qanday nomlanadi?",
+"variantlar": {
+"A": "Qaytaruvchi",
+"B": "Katalizator",
+"C": "Oksidlovchi",
+"D": "Inhibitor"
+},
+"javob": "C"
+},
+{
+"id": 84,
+"sinf": 10,
+"savol": "Suvning ion ko'paytmasi (Kw) 22°C (yoki standart 25°C) da qanday miqdorga teng?",
+"variantlar": {
+"A": "10^-7",
+"B": "10^-14",
+"C": "10^-10",
+"D": "10^14"
+},
+"javob": "B"
+},
+{
+"id": 85,
+"sinf": 10,
+"savol": "Eritmaning vodorod ko'rsatkichi (pH) nimani ifodalaydi?",
+"variantlar": {
+"A": "Suvning umumiy massasini",
+"B": "Eritmadagi kislorod miqdorini",
+"C": "H+ ionlari konsentratsiyasining manfiy o'nli logarifmini",
+"D": "Erituvchining foiz konsentratsiyasini"
+},
+"javob": "C"
+},
+{
+"id": 86,
+"sinf": 11,
+"savol": "Organik kimyo fani asosan qaysi element va uning birikmalarini o'rganadi?",
+"variantlar": {
+"A": "Kislorod",
+"B": "Uglerod",
+"C": "Azot",
+"D": "Fosfor"
+},
+"javob": "B"
+},
+{
+"id": 87,
+"sinf": 11,
+"savol": "Organik birikmalarning kimyoviy tuzilish nazariyasini fanga kim kiritgan?",
+"variantlar": {
+"A": "D. Mendeleyev",
+"B": "A. Butlerov",
+"C": "N. Zinin",
+"D": "F. Vyoler"
+},
+"javob": "B"
+},
+{
+"id": 88,
+"sinf": 11,
+"savol": "Organik birikmalarda uglerod atomining valentligi doimo nechaga teng bo'ladi?",
+"variantlar": {
+"A": "II",
+"B": "III",
+"C": "IV",
+"D": "V"
+},
+"javob": "C"
+},
+{
+"id": 89,
+"sinf": 11,
+"savol": "Tarkibi va xossalari o'xshash, bir-biridan bir yoki bir nechta -CH2 (metilen) guruhiga farq qiluvchi moddalar qatori nima deyiladi?",
+"variantlar": {
+"A": "Izomerlar qatori",
+"B": "Polimerlar qatori",
+"C": "Gomologik qator",
+"D": "Izotoplar qatori"
+},
+"javob": "C"
+},
+{
+"id": 90,
+"sinf": 11,
+"savol": "To'yingan karbohidrogenlar — alkanlarning umumiy formulasi qaysi?",
+"variantlar": {
+"A": "CnH2n",
+"B": "CnH2n-2",
+"C": "CnH2n+2",
+"D": "CnH2n-6"
+},
+"javob": "C"
+},
+{
+"id": 91,
+"sinf": 11,
+"savol": "Alkanlar (masalan, metan) molekulasida uglerod atomlari qanday gibridlanish holatida bo'ladi?",
+"variantlar": {
+"A": "sp",
+"B": "sp2",
+"C": "sp3",
+"D": "gibridlanmagan"
+},
+"javob": "C"
+},
+{
+"id": 92,
+"sinf": 11,
+"savol": "Molekulasida bitta qo'shbog' tutgan alkenlarning umumiy formulasi qaysi?",
+"variantlar": {
+"A": "CnH2n+2",
+"B": "CnH2n",
+"C": "CnH2n-2",
+"D": "CnH2n-6"
+},
+"javob": "B"
+},
+{
+"id": 93,
+"sinf": 11,
+"savol": "Molekulasida uchbog' saqlagan alkinlarning eng sodda va muhim vakili qaysi modda?",
+"variantlar": {
+"A": "Etan",
+"B": "Etilen (eten)",
+"C": "Asetilen (etin)",
+"D": "Propan"
+},
+"javob": "C"
+},
+{
+"id": 94,
+"sinf": 11,
+"savol": "Aromatik uglevodorodlarning (arenlar) asosiy vakili va uning formulasi qaysi?",
+"variantlar": {
+"A": "Benzol (C6H6)",
+"B": "Geksan (C6H14)",
+"C": "Siklogeksan (C6H12)",
+"D": "Tolulol (C7H10)"
+},
+"javob": "A"
+},
+{
+"id": 95,
+"sinf": 11,
+"savol": "Spirtlar molekulasida o'ziga xos qanday funksional guruh mavjud bo'ladi?",
+"variantlar": {
+"A": "Karboksil (-COOH)",
+"B": "Gidroksil (-OH)",
+"C": "Amin guruhi (-NH2)",
+"D": "Aldegid guruhi (-CHO)"
+},
+"javob": "B"
+},
+{
+"id": 96,
+"sinf": 11,
+"savol": "Aldegidlarni boshqa sinf moddalaridan qaysi funksional guruh ajratib turadi?",
+"variantlar": {
+"A": "-OH",
+"B": "-COOH",
+"C": "-CHO",
+"D": "-NH2"
+},
+"javob": "C"
+},
+{
+"id": 97,
+"sinf": 11,
+"savol": "Karbon kislotalar tarkibida qaysi funksional guruh mavjud?",
+"variantlar": {
+"A": "Karboksil guruhi",
+"B": "Gidroksil guruhi",
+"C": "Keton guruhi",
+"D": "Amin guruhi"
+},
+"javob": "A"
+},
+{
+"id": 98,
+"sinf": 11,
+"savol": "Spirtlar va karbon kislotalar o'rtasidagi kimyoviy reaksiyadan asosan qanday moddalar hosil bo'ladi?",
+"variantlar": {
+"A": "Oddiy efirlar",
+"B": "Murakkab efirlar (esterlar)",
+"C": "Ketonlar",
+"D": "Aminokislotalar"
+},
+"javob": "B"
+},
+{
+"id": 99,
+"sinf": 11,
+"savol": "Tarkibida ham asos xossasini beruvchi amin (-NH2), ham kislota xossasini beruvchi karboksil (-COOH) guruhi bo'lgan organik moddalar nima deyiladi?",
+"variantlar": {
+"A": "Gidroksi kislotalar",
+"B": "Oqsillar",
+"C": "Aminokislotalar",
+"D": "Uglevodlar"
+},
+"javob": "C"
+},
+{
+"id": 100,
+"sinf": 11,
+"savol": "Hayot uchun eng muhim organik polimerlar bo'lmish oqsillar qanday monomerlarning birlashishidan hosil bo'ladi?",
+"variantlar": {
+"A": "Glyukoza molekulalaridan",
+"B": "Yog' kislotalaridan",
+"C": "Aminokislotalardan",
+"D": "Nukleotidlardan"
+},
+"javob": "C"
+}
+]
